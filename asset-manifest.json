@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dobrins.github.io/vedamo-ds/static/css/main.33993bec.css",
-    "main.js": "/dobrins.github.io/vedamo-ds/static/js/main.9cda5c52.js",
-    "static/media/forest.jpg": "/dobrins.github.io/vedamo-ds/static/media/forest.2960422b33776ec904d6.jpg",
-    "static/media/VEDAMO-IconFont.svg?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
-    "static/media/VEDAMO-IconFont.eot?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
-    "static/media/VEDAMO-IconFont.woff?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
-    "static/media/VEDAMO-IconFont.ttf?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
-    "index.html": "/dobrins.github.io/vedamo-ds/index.html",
-    "main.33993bec.css.map": "/dobrins.github.io/vedamo-ds/static/css/main.33993bec.css.map",
-    "main.9cda5c52.js.map": "/dobrins.github.io/vedamo-ds/static/js/main.9cda5c52.js.map"
+    "main.css": "/vedamo-ds/static/css/main.5a1bfbe2.css",
+    "main.js": "/vedamo-ds/static/js/main.9cda5c52.js",
+    "static/media/forest.jpg": "/vedamo-ds/static/media/forest.2960422b33776ec904d6.jpg",
+    "static/media/VEDAMO-IconFont.svg?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
+    "static/media/VEDAMO-IconFont.eot?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
+    "static/media/VEDAMO-IconFont.woff?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
+    "static/media/VEDAMO-IconFont.ttf?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
+    "index.html": "/vedamo-ds/index.html",
+    "main.5a1bfbe2.css.map": "/vedamo-ds/static/css/main.5a1bfbe2.css.map",
+    "main.9cda5c52.js.map": "/vedamo-ds/static/js/main.9cda5c52.js.map"
   },
   "entrypoints": [
-    "static/css/main.33993bec.css",
+    "static/css/main.5a1bfbe2.css",
     "static/js/main.9cda5c52.js"
   ]
 }
