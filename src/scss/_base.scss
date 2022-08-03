@@ -1,0 +1,35 @@
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    line-height: 1.5;
+    min-height: 100vh;
+    color: var(--clr-default-1000);
+}
+
+/* Easy working images */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: var(--clr-default-1000);
+    text-underline-offset: 2px;
+}
+
+/* Forms - easy forms elements */
+input, button, textarea {
+    font: inherit
+}
+
+/* Remove animations for people who turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

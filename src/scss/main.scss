@@ -1,0 +1,141 @@
+@function hsl($args...) {
+    @return #{'hsl(#{$args})'};
+}
+
+@import 'variables';
+@import 'icons';
+@import 'mixins';
+@import 'reset';
+@import 'base';
+@import 'utilities';
+@import 'buttons';
+@import 'typography';
+@import 'grid';
+@import 'forms';
+@import 'alerts';
+@import 'avatars';
+@import 'marketplace';
+
+
+@import 'header';
+
+
+/* classes - remove later */
+
+h1 {
+    margin-top:60px; 
+}
+
+h2 {
+    // margin-top: 20px;
+    font-weight: 600;
+}
+
+section {
+    --gap:0.6rem;
+    grid-template-columns:repeat(2, 1fr);
+
+    @include mq(xs) {
+        grid-template-columns:repeat(3, 1fr);  
+    }
+
+    @include mq(s) {
+        grid-template-columns:repeat(4, 1fr);  
+    }
+
+    @include mq(m) {
+        grid-template-columns:repeat(6, 1fr);  
+    }
+
+}
+
+.sidebar {
+    width: 12rem;
+    height: 100vh;
+    background-color: hsl(var(--clr-default-800));
+    position: fixed;
+    top: 0;
+}
+
+.navigation-vertical {
+    a {
+        color: hsl(var(--clr-default-0));
+    }
+}
+
+section p {
+    width: 150px;
+    // color: hsl( var(--clr-default-400)  );
+    color: hsl(var(--clr-default-400));
+    font-size: 14px;
+}
+
+section h4 {
+    text-align: left;
+    margin:0;
+}
+
+.color { 
+    margin: 0;
+    flex-wrap: wrap;
+}
+.color > div {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 24px 48px -12px hsla(219, 66%, 10%, 0.12);
+}
+
+// .color > div > div {
+//     // width: 100%;
+// }
+
+
+.typography > div {
+    background-color: #{'hsl( var(--clr-default-100) )'};
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.typography span {
+    display: block;
+    /* padding:10px */
+}
+
+/* FAST TABS */
+.tab {
+    padding: 20px 0;
+}
+.tabcontent {
+    display: none;
+}
+
+/* GRID */
+.grid-showcase div {
+    /* background-color: hsl( var(--clr-default-300) ); */
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.box {
+    background-color:#{' hsl( var(--clr-default-200) )'};
+    border-radius: 4px;
+    display: inline-flex;
+}
+
+.box div {
+    background-color: #{' hsl( var(--clr-default-600) )'};
+    width: 2.5rem;
+    height: 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.panel {
+    max-width: 440px;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-inline:auto;
+    padding: 2rem;
+}

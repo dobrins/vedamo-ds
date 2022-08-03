@@ -1,0 +1,66 @@
+/* https://erikmonjas.github.io/css-grid-12-column-layout/ */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    /*HERE YOU CAN SET YOUR CUSTOM COLUMN GAP*/
+    
+    grid-column-gap: calc( var(--gap) * 2);
+    grid-row-gap: calc( var(--gap) * 2 );
+
+    /*grid-auto-flow DETERMINES HOW THE GRID WILL FILL UP. IF YOU ENABLE THE grid-auto-flow PROPERTY, grid-column-gap WILL HAVE NO EFFECT ON THE AUTO-GENERATED ROWS, SO YOU WILL NEED TO SET A MARGIN TOP &/OR BOTTOM TO THE ELEMENTS INSIDE THE GRID CONTAINER IF YOU WANT A ROW GAP.
+    dense tells the auto-placement algorithm to attempt to fill in holes earlier in the grid if smaller items come up later,
+    row TELLS THE AUTO-PLACEMENT ALGORITHM TO FILL IN EACH ROW IN TURN, ADDING NEW ROWS AS NECESSARY
+    
+    column TELLS THE AUTO-PLACEMENT ALGORITHM TO FILL IN EACH COLUMN IN TURN, ADDING NEW COLUMNS AS NECESSARY */
+    grid-auto-flow: dense;
+
+    @include mq(l) {
+        grid-column-gap: calc( var(--gap) * 4 );
+    }
+}
+
+@for $width from 1 through $columns {
+	.col-xs-#{$width} {
+		grid-column-end: span $width;
+	}  
+    .col-xs-offset-#{$width} {
+		grid-column-start: $width;
+	}  
+}
+
+@media only screen and (min-width:48em){    
+  
+    @for $width from 1 through $columns {
+        .col-sm-#{$width} {
+            grid-column-end: span $width;
+        }  
+        .col-sm-offset-#{$width} {
+            grid-column-start: $width;
+        }  
+    }
+}
+
+@media only screen and (min-width:62em){    
+    
+    @for $width from 1 through $columns {
+        .col-md-#{$width} {
+            grid-column-end: span $width;
+        }  
+        .col-md-offset-#{$width} {
+            grid-column-start: $width;
+        }  
+    }
+}
+
+@media only screen and (min-width:75em) {    
+    
+    @for $width from 1 through $columns {
+        .col-lg-#{$width} {
+            grid-column-end: span $width;
+        }  
+        .col-lg-offset-#{$width} {
+            grid-column-start: $width;
+        }  
+    }
+}

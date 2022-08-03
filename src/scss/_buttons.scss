@@ -1,0 +1,247 @@
+
+.btn {
+    position: relative;
+    display: inline-flex;
+    gap:0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    height: 2.5rem;
+    background-color: hsl(var(--clr-default-0));
+    color: hsl(var(--clr-default-1000));
+    border:1px solid hsl(var(--clr-default-300));
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1;
+    outline: none;
+    z-index: auto;
+    box-shadow: 0px 1px 2px hsl(var(--clr-default-600-shadow));
+}
+
+.btn:not(:disabled):hover {
+    border-color: hsl((--clr-default-900));
+    color: hsl(var(--clr-default-1000));
+    box-shadow: 0px 1rem 1.5rem -0.875rem hsl(var(--clr-default-600-shadow));
+}
+
+.btn:focus {
+    outline: 0.25rem solid hsl(var(--clr-default-900-shadow));
+    color: hsl(var(--clr-default-1000));
+}
+
+.btn:disabled {
+    color: hsl(var(--clr-default-0));
+    background-color: hsl(var(--clr-default-500-shadow));
+    border-color: hsl(var(--clr-default-500-shadow));
+    cursor: auto;
+    border: none;
+}
+
+/* ------------------------- */
+/* Button primary */
+/* ------------------------- */
+
+.btn-primary {
+    background-color: hsl(var(--clr-main-400));
+    color: hsl(var(--clr-default-1000));
+    border-color: hsl(var(--clr-main-400));
+}
+
+.btn-primary:not(:disabled):hover {
+    background-color: hsl(var(--clr-main-300));
+    border-color: hsl(var(--clr-main-300));
+    box-shadow: 0px 16px 24px -12px hsl(var(--clr-main-300-24))	;
+}
+
+.btn-primary:focus {
+    outline-color: hsl(var(--clr-main-300-24));
+}
+
+/* ------------------------- */
+/* Button secondary */
+/* ------------------------- */
+
+.btn-secondary {
+    background-color: hsl(var(--clr-default-700));
+    color: hsl(var(--clr-default-0));
+    border-color: hsl(var(--clr-default-700));
+}
+
+.btn-secondary:not(:disabled):hover {
+    background-color: hsl(var(--clr-default-900));
+    color: hsl(var(--clr-default-0));
+    border-color: hsl(var(--clr-default-900));
+}
+
+.btn-secondary:focus {
+    color:hsl(var(--clr-default-0));
+}
+
+/* ------------------------- */
+/* Button tertiary */
+/* ------------------------- */
+
+.btn-tertiary {
+    background-color: hsl(var(--clr-default-0));
+    color: hsl(var(--clr-default-600));
+    border-color: hsl(var(--clr-default-300));
+}
+
+.btn-tertiary:not(:disabled):hover {
+    border-color: hsl(var(--clr-default-1000));
+    color: hsl(var(--clr-default-1000));
+}
+
+/* ------------------------- */
+/* Button ghost */
+/* ------------------------- */
+
+.btn-ghost {
+    background-color: transparent;
+    color: hsl(var(--clr-main-900));
+    border-color: transparent;
+    box-shadow: none;
+
+    i.i {   
+        text-decoration: underline;
+    }
+}
+
+.btn-ghost:not(:disabled):hover {
+    background-color: hsl(var(--clr-default-150));
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* icon ban*/
+
+.icon-sup {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: -10px;
+    right: -10px;
+    background: hsl(var(--clr-default-0));
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: hsl(var(--clr-default-1000));
+    box-shadow: 0px 4px 8px -2px rgba(9, 21, 44, 0.12), 0px 2px 4px -2px rgba(9, 21, 44, 0.06);
+}
+
+/* ----------- */
+
+.icon-sup {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: -10px;
+    right: -10px;
+    background: white;
+    padding: 4px;
+    border-radius: 50%;
+    color: black;
+    box-shadow: 0px 4px 8px -2px rgba(9, 21, 44, 0.12), 0px 2px 4px -2px rgba(9, 21, 44, 0.06);
+}
+
+/* ------------------------- */
+/* Button Sizes */
+/* ------------------------- */
+
+/* button 2XL */
+
+.btn-2xl {
+    padding-inline: 1.75rem;
+    height:3.75rem;
+    font-size: 1.125rem;
+
+    .icon-sup {
+        width: 2.25rem;
+    }
+}
+
+/* button XL */
+
+.btn-xl {
+    padding-inline: 1.25rem;
+    height: 3rem;
+    font-size: 1rem;
+
+    .icon-sup {
+        width: 28px;
+    }
+}
+
+/* button LG */
+
+.btn-l {
+    padding-inline: 1.125rem;
+    height: 2.75rem;
+    font-size: 1rem;
+
+    .icon-sup {
+        width: 28px;
+    }
+}
+
+/* button MD */
+
+.btn-m {
+    padding-inline: 1rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+
+    .icon-sup {
+        width: 24px;
+    }
+}
+
+/* button S */
+
+.btn-s {
+    padding-inline: 0.75rem;
+    height: 2.25rem;
+    font-size: 0.875rem;
+    
+    .icon-sup {
+        width: 24px;
+    }
+}
+
+/* button XS */
+
+.btn-xs {
+    padding-inline: 0.75rem;
+    height: 2rem;
+    font-size: 0.875rem;
+
+    .icon-sup {
+        width: 24px;
+    }
+}
+
+/* Button Square - ICON*/
+
+.btn-square {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+}
+
+/* Button Circle - ICON */
+
+.btn-circle {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+    aspect-ratio: 1;
+}
+
+

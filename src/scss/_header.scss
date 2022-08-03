@@ -1,0 +1,198 @@
+.header {
+    // --gap: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, .8);
+    // backdrop-filter: blur(5rem);
+    display: flex;
+    // padding: 1rem 0;
+    flex-direction: column;
+   
+    @include mq(m) {
+        flex-direction: row;
+    }
+
+    @include mq(l) {
+        // --gap: 2rem;
+        padding: 1rem 0;   
+    }
+}
+
+.om {
+    height: 300px;
+    background-image: url(../../public/forest.jpg);
+    background-repeat: no-repeat;
+}
+
+.utility-header {
+    display: none;
+    padding: 0 1rem;
+    box-shadow: inset 0px -1px 0px hsl( var(--clr-default-200) );
+
+    @include mq(m) {
+        display: block;
+    }
+
+    ul {
+        justify-content: flex-end;
+    }
+}
+
+.nav-l {
+    align-items: center;
+    flex:1;
+    display: none;
+
+    @include mq(m) {
+        display: flex;
+    }
+}
+
+.navigation {
+    list-style: none;
+
+    li.active a {
+        color: hsl( var(--clr-main-600) );
+    }
+
+   
+}
+
+.secondary-navigation {
+    --gap: 0.5rem;
+    margin-left: auto;
+    align-items: center;
+    a {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+    @include mq(m) {
+        --gap: inherit;
+    }
+}
+
+.right-header {
+    margin-left: auto;
+    align-items: center;
+}
+
+.navigation-link {
+    color: inherit;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+
+    &:hover {
+        color: hsl( var(--clr-main-600) );
+    }
+}
+
+.navigation-link-icon {
+    display: none;
+    
+    @include mq(m) {
+        display: inline;
+    }
+}
+
+.vertical-divider {
+    display: none;
+    width: 1px;
+    height: 15px;
+
+    @include mq(m) {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    background: hsl( var(--clr-default-200) );
+    left: 0;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    border-top: 1px solid hsl( var(--clr-default-300) )
+}
+
+.dropdown.active > .dropdown-button + .dropdown-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px);
+}
+
+.logo {
+    // background-image: url(../../public/logo.svg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    width: 125px;
+    height: 40px;
+   
+    @include mq(m) {
+        width: 150px;
+        height: 40px;
+    }
+
+    svg {
+        width: 100%;
+    }
+}
+
+.start-btn {
+
+    width: 100%;
+
+    padding-inline: 0.5rem;
+
+
+    @include mq(m) {
+        padding-inline: 1rem;
+    }
+    
+    @include mq(l) {
+        margin-left: auto;
+        padding-inline: 1.25rem;
+        height: 3rem;
+        font-size: 1rem;
+        width:auto;
+    }
+}
+
+.mobile-nav-open {   
+    @include mq(m) {
+        display: none;
+    }
+}
+
+.mobile-nav-close {
+    position: absolute;
+    top: 1rem;
+    left:1rem;
+    display: none;
+    z-index: 10;
+}
+
+.nav-sliding {
+    position: fixed;
+    
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    overflow: scroll;
+    transform: translateX(-100%);
+    transition: transform 100ms ease-in-out;
+    &[data-visible="true"] {
+        transform: translateX(0);
+        transition: transform 320ms ease-in-out;
+    }
+}
+

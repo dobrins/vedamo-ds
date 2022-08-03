@@ -1,0 +1,52 @@
+/* Typography */
+
+.ff-sans-normal { font-family: var(--ff-sans-normal); }
+
+
+.fz-hero-xl { font-size: var(--fz-hero-xl); line-height: 1.29; letter-spacing: -0.02em;}
+
+.fz-display-2xl { font-size: var(--fz-display-2xl); line-height: 1.25; letter-spacing: -0.02em;}
+.fz-display-xl  { font-size: var(--fz-display-xl);line-height: 1.2; letter-spacing: -0.02em; }
+.fz-display-l   { font-size: var(--fz-display-l); line-height: 1.25; letter-spacing: -0.02em; }
+.fz-display-m   { font-size: var(--fz-display-m); line-height: 1.22; letter-spacing: -0.02em; }
+.fz-display-s   { font-size: var(--fz-display-s); line-height: 1.27 }
+.fz-display-xs  { font-size: var(--fz-display-xs); line-height: 1.33; }
+ 
+.fz-text-xl     { font-size: var(--fz-text-xl); line-height: 1.5; }
+.fz-text-l      { font-size: var(--fz-text-l);  line-height: 1.5; }
+.fz-text-m      { font-size: var(--fz-text-m);  line-height: 1.5; }
+.fz-text-s      { font-size: var(--fz-text-s);  line-height: 1.5; }
+.fz-text-xs     { font-size: var(--fz-text-xs); line-height: 1.5; }
+        
+.txt-regular { font-weight: normal;}
+.txt-medium { font-weight: 500;}
+.txt-semibold { font-weight: 600;}
+.txt-bold { font-weight: 700;}
+
+.txt-underline {text-decoration: underline;}
+
+.uppercase {text-transform: uppercase;}
+
+h1 {
+    @extend .fz-display-2xl
+}
+
+h2 {
+    @extend .fz-display-xl
+}
+
+h3 {
+    @extend .fz-display-l
+}
+
+h4 {
+    @extend .fz-display-m
+}
+
+h5 {
+    @extend .fz-display-s
+}
+
+h6 {
+    @extend .fz-display-xs
+}

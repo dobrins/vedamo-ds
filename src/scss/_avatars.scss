@@ -1,0 +1,54 @@
+.avatar {
+    display: inline-flex;
+    width: 2.5rem;
+    background-color: hsl(var(--clr-default-100));
+    border-radius: 10rem;
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--clr-default-900));
+    text-decoration: none;
+}
+
+/* ------------------------- */
+/* Avatar Sizes */
+/* ------------------------- */
+
+.avatar-2xl {
+    width: 4rem;
+    height: 4rem;
+    font-size: var(--fz-display-xs);
+}
+
+.avatar-xl {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: var(--fz-text-xl);
+
+
+}
+
+.avatar-l {
+    width: 3rem;
+    height: 3rem;
+    font-size: var(--fz-text-l);
+}
+
+// default size
+.avatar-m {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.avatar-s {
+    width: 2rem;
+    height: 2rem;
+    font-size: var(--fz-text-s);
+
+}
+
+.avatar-xs {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: var(--fz-text-xs);
+}

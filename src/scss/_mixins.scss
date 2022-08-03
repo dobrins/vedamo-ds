@@ -1,0 +1,10 @@
+/* media queries */
+
+@mixin mq($key) {
+
+    $size: map-get($breakpoints, $key);
+    
+    @media (min-width: $size) {
+        @content;
+    }
+}
