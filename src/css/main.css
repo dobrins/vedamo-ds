@@ -1131,6 +1131,9 @@ a {
   color: var(--clr-default-1000);
   text-underline-offset: 2px; }
 
+code {
+  color: hsl(var(--clr-error-600)); }
+
 /* Forms - easy forms elements */
 input, button, textarea {
   font: inherit; }
@@ -1170,6 +1173,9 @@ input, button, textarea {
 .grid {
   display: grid;
   gap: var(--gap, 1rem); }
+
+.inline-grid {
+  display: inline-grid; }
 
 .block {
   display: block; }
@@ -3199,7 +3205,7 @@ input, button, textarea {
   font-size: var(--fz-text-xs);
   line-height: 1.5; }
 
-.txt-regular {
+.txt-regular, h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 .txt-medium {
@@ -3214,8 +3220,14 @@ input, button, textarea {
 .txt-underline {
   text-decoration: underline; }
 
-.uppercase {
-  text-transform: uppercase; }
+.txt-uppercase {
+  text-transform: uppercase !important; }
+
+.txt-lowercase {
+  text-transform: lowercase !important; }
+
+.txt-capitalize {
+  text-transform: capitalize !important; }
 
 /* https://erikmonjas.github.io/css-grid-12-column-layout/ */
 .grid-container {
@@ -3810,19 +3822,6 @@ h1 {
 h2 {
   font-weight: 600; }
 
-section {
-  --gap: 0.6rem;
-  grid-template-columns: repeat(2, 1fr); }
-  @media (min-width: 40rem) {
-    section {
-      grid-template-columns: repeat(3, 1fr); } }
-  @media (min-width: 48rem) {
-    section {
-      grid-template-columns: repeat(4, 1fr); } }
-  @media (min-width: 64rem) {
-    section {
-      grid-template-columns: repeat(6, 1fr); } }
-
 .sidebar {
   width: 12rem;
   height: 100vh;
@@ -3893,5 +3892,11 @@ section h4 {
   border-radius: 0.5rem;
   margin-inline: auto;
   padding: 2rem; }
+
+.tints {
+  grid-template-columns: repeat(1, 1fr); }
+  .tints .tint-val {
+    aspect-ratio: 1/1;
+    width: 2.5rem; }
 
 /*# sourceMappingURL=main.css.map */

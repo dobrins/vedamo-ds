@@ -37,11 +37,11 @@ function App() {
     
           </div>
 
-          <div className="container">
+          <div className="container pv-7">
 
 
             <Routes>
-              <Route path="/vedamo-ds" element={<Home />} />
+              <Route path="/vedamo-ds/" element={<Home />} />
               <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/buttons" element={<Buttons />} />

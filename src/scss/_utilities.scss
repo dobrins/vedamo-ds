@@ -33,6 +33,10 @@
     gap: var(--gap, 1rem);
 }
 
+.inline-grid {
+    display: inline-grid;
+}
+
 .block {
     display: block;
 }

@@ -17,6 +17,10 @@ a {
     text-underline-offset: 2px;
 }
 
+code {
+    color: hsl(var(--clr-error-600));
+}
+
 /* Forms - easy forms elements */
 input, button, textarea {
     font: inherit

@@ -31,23 +31,23 @@ h2 {
     font-weight: 600;
 }
 
-section {
-    --gap:0.6rem;
-    grid-template-columns:repeat(2, 1fr);
+// section {
+//     --gap:0.6rem;
+//     grid-template-columns:repeat(2, 1fr);
 
-    @include mq(xs) {
-        grid-template-columns:repeat(3, 1fr);  
-    }
+//     @include mq(xs) {
+//         grid-template-columns:repeat(3, 1fr);  
+//     }
 
-    @include mq(s) {
-        grid-template-columns:repeat(4, 1fr);  
-    }
+//     @include mq(s) {
+//         grid-template-columns:repeat(4, 1fr);  
+//     }
 
-    @include mq(m) {
-        grid-template-columns:repeat(6, 1fr);  
-    }
+//     @include mq(m) {
+//         grid-template-columns:repeat(6, 1fr);  
+//     }
 
-}
+// }
 
 .sidebar {
     width: 12rem;
@@ -138,4 +138,13 @@ section h4 {
     border-radius: 0.5rem;
     margin-inline:auto;
     padding: 2rem;
+}
+
+.tints {
+    grid-template-columns:repeat(1, 1fr);  
+    
+    .tint-val {
+        aspect-ratio: 1/1;
+        width: 2.5rem
+    }
 }

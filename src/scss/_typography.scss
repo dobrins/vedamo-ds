@@ -25,7 +25,13 @@
 
 .txt-underline {text-decoration: underline;}
 
-.uppercase {text-transform: uppercase;}
+.txt-uppercase {text-transform: uppercase !important;}
+.txt-lowercase {text-transform: lowercase !important;}
+.txt-capitalize {text-transform: capitalize !important;}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend .txt-regular
+}
 
 h1 {
     @extend .fz-display-2xl

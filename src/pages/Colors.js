@@ -1,4 +1,5 @@
 import ColorBox from "./colorBox/ColorBox"
+import Tint from "./colorBox/Tint"
 
 const clrMain = {
     title : 'main',
@@ -95,47 +96,32 @@ const clrSuccess = {
     ]
 }
 
-const getShadow = () => {
-    let content = [];
-        for( let i = 0, len = 1; i < len; i=i+.04 ) {
+const tints = [0, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 92, 96];
 
-            // i = i.toFixed(2)
-
-        let style = {
-            backgroundColor: `hsla(var(--clr-default-1000) , ${i.toFixed(2)})`
-        }
-
-      content.push(
-        <div key={i} className="br-1">
-            <div style={style} >{i.toFixed(2)}</div>
-            <div className="bg-default-0 p-2">
-                {i.toFixed(2)}
-            </div>
-        </div>
-      );
-    }
-    return content;
-  };
+function Tints(props) {
+    const tints = props.map((number) =>
+      <Tint key={number.toString()}
+                value={number} />
+    );
+    return tints
+}
 
 export default function Colors() {
     return (
-        <>
+        <>  
+            
+            <div className="mt-12 bg-default-900 p-5 br-2 tints grid gap-2">
+                {Tints(tints)}   
+            </div>
+            
+            
             <ColorBox code={clrMain.code} title={clrMain.title} desc={clrMain.desc} />
             <ColorBox code={clrDefault.code} title={clrDefault.title} desc={clrDefault.desc} />
             <ColorBox code={clrSuccess.code} title={clrSuccess.title} desc={clrSuccess.desc} />
             <ColorBox code={clrWarning.code} title={clrWarning.title} desc={clrWarning.desc} />
             <ColorBox code={clrError.code} title={clrError.title} desc={clrError.desc} />
             <ColorBox code={clrInfo.code} title={clrInfo.title} desc={clrInfo.desc} />
-
-            <div className="grid-container mt-12">
-            
-            <div className="col-lg-9 col-xs-12">
-                <section className="grid color">
-                {getShadow()}
-                </section>
-            </div>
-            </div>
-
+W
         </>
     )
 }
