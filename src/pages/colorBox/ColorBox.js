@@ -4,7 +4,7 @@ export default function ColorBox(props) {
         <div key={i} className="br-1">
             <div class="grid-container bg-default-0">
                 
-                <div className={`bg-${props.title}-${code.code} p-5 col-xs-3 flex flex-center fz-display-s txt-bold txt-default-0`} >
+                <div className={`bg-${props.title}-${code.code} p-5 txt-shadow col-xs-3 flex flex-center fz-display-s txt-bold txt-default-0`} >
                     {code.code}
                 </div>
             

@@ -148,3 +148,7 @@ section h4 {
         width: 2.5rem
     }
 }
+
+.txt-shadow {
+    text-shadow: 0 0 4px hsl(var(--clr-default-1000), 0.24)
+}

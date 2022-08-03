@@ -3899,4 +3899,7 @@ section h4 {
     aspect-ratio: 1/1;
     width: 2.5rem; }
 
+.txt-shadow {
+  text-shadow: 0 0 4px hsl(var(--clr-default-1000), 0.24); }
+
 /*# sourceMappingURL=main.css.map */

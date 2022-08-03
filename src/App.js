@@ -9,15 +9,15 @@ import Icons from "./pages/Icons"
 import Login from "./pages/Login"
 import Marketplace from "./pages/Marketplace.js"
 import Alerts from "./pages/Alerts"
-import { Route, Routes, Link, useResolvedPath, useMatch, useParams, useLocation  } from "react-router-dom"
+import { Route, Routes, useLocation  } from "react-router-dom"
 
 function App() {
 
 
   const location = useLocation();
-  console.log('hash', location.hash);
-  console.log('pathname', location.pathname);
-  console.log('search', location.search);
+  // console.log('hash', location.hash);
+  // console.log('pathname', location.pathname);
+  // console.log('search', location.search);
 
   return (
       <div>
