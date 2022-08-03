@@ -41,7 +41,7 @@ function App() {
 
 
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/vedamo-ds" element={<Home />} />
               <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/buttons" element={<Buttons />} />
