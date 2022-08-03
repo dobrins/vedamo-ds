@@ -2,7 +2,7 @@
   "name": "react-router-new",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "dobrins.github.io",
+  "homepage" : "dobrins.github.io/Vedamo-Design-System/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
