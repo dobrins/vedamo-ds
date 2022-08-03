@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/dobrins.github.com/static/css/main.1e7a5686.css",
+    "main.js": "/dobrins.github.com/static/js/main.eb33f9ac.js",
+    "static/media/forest.jpg": "/dobrins.github.com/static/media/forest.2960422b33776ec904d6.jpg",
+    "static/media/VEDAMO-IconFont.svg?e27xf1": "/dobrins.github.com/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
+    "static/media/VEDAMO-IconFont.eot?e27xf1": "/dobrins.github.com/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
+    "static/media/VEDAMO-IconFont.woff?e27xf1": "/dobrins.github.com/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
+    "static/media/VEDAMO-IconFont.ttf?e27xf1": "/dobrins.github.com/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
+    "index.html": "/dobrins.github.com/index.html",
+    "main.1e7a5686.css.map": "/dobrins.github.com/static/css/main.1e7a5686.css.map",
+    "main.eb33f9ac.js.map": "/dobrins.github.com/static/js/main.eb33f9ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e7a5686.css",
+    "static/js/main.eb33f9ac.js"
+  ]
+}
