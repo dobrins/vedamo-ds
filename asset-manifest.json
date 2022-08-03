@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vedamo-ds/static/css/main.1e50781d.css",
-    "main.js": "/vedamo-ds/static/js/main.8c2f551a.js",
+    "main.js": "/vedamo-ds/static/js/main.8c9be60c.js",
     "static/media/forest.jpg": "/vedamo-ds/static/media/forest.2960422b33776ec904d6.jpg",
     "static/media/VEDAMO-IconFont.svg?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
     "static/media/VEDAMO-IconFont.eot?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
@@ -9,10 +9,10 @@
     "static/media/VEDAMO-IconFont.ttf?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
     "index.html": "/vedamo-ds/index.html",
     "main.1e50781d.css.map": "/vedamo-ds/static/css/main.1e50781d.css.map",
-    "main.8c2f551a.js.map": "/vedamo-ds/static/js/main.8c2f551a.js.map"
+    "main.8c9be60c.js.map": "/vedamo-ds/static/js/main.8c9be60c.js.map"
   },
   "entrypoints": [
     "static/css/main.1e50781d.css",
-    "static/js/main.8c2f551a.js"
+    "static/js/main.8c9be60c.js"
   ]
 }
