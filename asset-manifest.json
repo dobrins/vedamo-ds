@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/dobrins.github.io/static/css/main.ca7a5f9d.css",
-    "main.js": "/dobrins.github.io/static/js/main.eb33f9ac.js",
-    "static/media/forest.jpg": "/dobrins.github.io/static/media/forest.2960422b33776ec904d6.jpg",
-    "static/media/VEDAMO-IconFont.svg?e27xf1": "/dobrins.github.io/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
-    "static/media/VEDAMO-IconFont.eot?e27xf1": "/dobrins.github.io/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
-    "static/media/VEDAMO-IconFont.woff?e27xf1": "/dobrins.github.io/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
-    "static/media/VEDAMO-IconFont.ttf?e27xf1": "/dobrins.github.io/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
-    "index.html": "/dobrins.github.io/index.html",
-    "main.ca7a5f9d.css.map": "/dobrins.github.io/static/css/main.ca7a5f9d.css.map",
-    "main.eb33f9ac.js.map": "/dobrins.github.io/static/js/main.eb33f9ac.js.map"
+    "main.css": "/dobrins.github.io/vedamo-ds/static/css/main.33993bec.css",
+    "main.js": "/dobrins.github.io/vedamo-ds/static/js/main.9cda5c52.js",
+    "static/media/forest.jpg": "/dobrins.github.io/vedamo-ds/static/media/forest.2960422b33776ec904d6.jpg",
+    "static/media/VEDAMO-IconFont.svg?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
+    "static/media/VEDAMO-IconFont.eot?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.838f0ddd9a3af8505d6c.eot",
+    "static/media/VEDAMO-IconFont.woff?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
+    "static/media/VEDAMO-IconFont.ttf?e27xf1": "/dobrins.github.io/vedamo-ds/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
+    "index.html": "/dobrins.github.io/vedamo-ds/index.html",
+    "main.33993bec.css.map": "/dobrins.github.io/vedamo-ds/static/css/main.33993bec.css.map",
+    "main.9cda5c52.js.map": "/dobrins.github.io/vedamo-ds/static/js/main.9cda5c52.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca7a5f9d.css",
-    "static/js/main.eb33f9ac.js"
+    "static/css/main.33993bec.css",
+    "static/js/main.9cda5c52.js"
   ]
 }
