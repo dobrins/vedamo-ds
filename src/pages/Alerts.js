@@ -20,7 +20,7 @@ export default function Alerts() {
                                 <strong>Info Alert</strong> with <a href="#">text link</a>
                             </span>
                         </span>
-                    </div>
+                    </div>       
                 </div>
 
                 <div className="grid-container mt-5">

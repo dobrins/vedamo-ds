@@ -20,11 +20,11 @@ export default function Marketplace() {
                     </svg>
                 </a>
                
-                <div class="flex flex-1">
+                <div className="flex flex-1">
                     <button className="btn btn-tertiary btn-l" type="button">Categories</button>
                     <a href="#t" type="button">Find a Tutor</a>
                 </div>
-                <div class="flex">
+                <div className="flex">
                     <a href="#t" className="btn btn-ghost" type="button">Become a Tutor</a>
                     <a href="#t" className="btn btn-tertiary" type="button">Register</a>
                     <a href="#t" className="btn btn-secondary" type="button">Login</a>

@@ -15,7 +15,7 @@ export default function Tint(props) {
     }
 
     return (
-        <div class="flex flex-center-v gap-5">
+        <div className="flex flex-center-v gap-5">
             <div 
                 key={props.key} 
                 className="br-16 txt-default-900 flex flex-center txt-bold fz-text-xs tint-val" 

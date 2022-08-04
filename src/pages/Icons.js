@@ -324,8 +324,7 @@ const icons = [
 
 return(
   <>    
-    <h1>Icons</h1>
-
+    
     <div className="flex flex-wrap">
     
     {icons.map( (icon, i) =>

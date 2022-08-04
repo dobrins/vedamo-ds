@@ -22,13 +22,13 @@
 
 /* classes - remove later */
 
-h1 {
-    margin-top:60px; 
-}
+// h1 {
+//     margin-top:60px; 
+// }
 
 h2 {
     // margin-top: 20px;
-    font-weight: 600;
+    // font-weight: 600;
 }
 
 // section {
@@ -151,4 +151,8 @@ section h4 {
 
 .txt-shadow {
     text-shadow: 0 0 4px hsl(var(--clr-default-1000), 0.24)
+}
+
+.box-shadow {
+    box-shadow: 0 24px 48px -12px hsl(var(--clr-default-1000), 0.04)
 }

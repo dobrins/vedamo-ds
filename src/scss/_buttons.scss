@@ -20,6 +20,7 @@
     outline: none;
     z-index: auto;
     box-shadow: 0px 1px 2px hsl(var(--clr-default-600-shadow));
+    vertical-align: middle;
 }
 
 .btn:not(:disabled):hover {
@@ -38,7 +39,7 @@
     background-color: hsl(var(--clr-default-500-shadow));
     border-color: hsl(var(--clr-default-500-shadow));
     cursor: auto;
-    border: none;
+    border-color: transparent;
 }
 
 /* ------------------------- */

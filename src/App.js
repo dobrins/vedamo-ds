@@ -27,17 +27,17 @@ function App() {
         
         <div className="pl-17">
 
-          <div className="flex flex-center-v bg-default-200 p-2 gap-5">
+          <div className="flex flex-center-v bg-default-300 p-2 gap-5">
 
             <button type="button" className="btn btn-tertiary btn-square btn-l">
-              <i className="i i icon-align-justify"></i>
+              <i className="i icon-menu"></i>
             </button>
 
-            <h2 class="fz-display-xs">{ location.pathname.substring(1) }</h2>
+            <h2 className="fz-display-xs">{ location.pathname.substring(1) }</h2>
     
           </div>
 
-          <div className="container pv-7">
+          <div className="container pv-7 bg-default-150">
 
 
             <Routes>

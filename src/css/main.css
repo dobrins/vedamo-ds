@@ -1105,7 +1105,7 @@ i.i {
   box-sizing: border-box; }
 
 body,
-h1, h2, h3, h4, h5, h5,
+h1, h2, h3, h4, h5, h5, h6,
 p,
 figure, picture,
 li, ul {
@@ -2976,7 +2976,8 @@ input, button, textarea {
   line-height: 1;
   outline: none;
   z-index: auto;
-  box-shadow: 0px 1px 2px hsl(var(--clr-default-600-shadow)); }
+  box-shadow: 0px 1px 2px hsl(var(--clr-default-600-shadow));
+  vertical-align: middle; }
 
 .btn:not(:disabled):hover {
   border-color: hsl(--clr-default-900);
@@ -2992,7 +2993,7 @@ input, button, textarea {
   background-color: hsl(var(--clr-default-500-shadow));
   border-color: hsl(var(--clr-default-500-shadow));
   cursor: auto;
-  border: none; }
+  border-color: transparent; }
 
 /* ------------------------- */
 /* Button primary */
@@ -3816,12 +3817,6 @@ textarea {
     transition: transform 320ms ease-in-out; }
 
 /* classes - remove later */
-h1 {
-  margin-top: 60px; }
-
-h2 {
-  font-weight: 600; }
-
 .sidebar {
   width: 12rem;
   height: 100vh;
@@ -3901,5 +3896,8 @@ section h4 {
 
 .txt-shadow {
   text-shadow: 0 0 4px hsl(var(--clr-default-1000), 0.24); }
+
+.box-shadow {
+  box-shadow: 0 24px 48px -12px hsl(var(--clr-default-1000), 0.04); }
 
 /*# sourceMappingURL=main.css.map */
