@@ -44,10 +44,10 @@
 @media only screen and (min-width:62em){    
     
     @for $width from 1 through $columns {
-        .col-md-#{$width} {
+        .col-m-#{$width} {
             grid-column-end: span $width;
         }  
-        .col-md-offset-#{$width} {
+        .col-m-offset-#{$width} {
             grid-column-start: $width;
         }  
     }
@@ -56,10 +56,10 @@
 @media only screen and (min-width:75em) {    
     
     @for $width from 1 through $columns {
-        .col-lg-#{$width} {
+        .col-l-#{$width} {
             grid-column-end: span $width;
         }  
-        .col-lg-offset-#{$width} {
+        .col-l-offset-#{$width} {
             grid-column-start: $width;
         }  
     }

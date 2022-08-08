@@ -40,6 +40,36 @@ export default function Typography() {
                     ) 
                 }
             </div>
+            <h6 class="mt-10">Size examples</h6>
+            <div className="contentBox">
+                <div className="bg-default-100 p-2">
+                    <code>
+                        {classes.map( (h, i) =>
+                                (
+                                    <>
+                                    &lt;p class="{h.class}"&gt;...&lt;/p&gt;<br />
+                                    </>
+                                ) 
+                            ) 
+                        }
+                    </code>
+                </div>
+                {classes.map( (h, i) =>
+                        (
+                            <>
+                                <div key={i} className="grid-container">
+                                    <div className="col-xs-2">
+                                        {h.class.substring(3)}
+                                    </div>
+                                    <div className={`col-xs-10 ${h.class}`}>
+                                    {h.size}
+                                    </div>
+                                </div>
+                            </>
+                        ) 
+                    ) 
+                }
+            </div>
         </>
     )
 }

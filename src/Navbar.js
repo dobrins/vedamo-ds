@@ -9,13 +9,13 @@ export default function Navbar() {
 
                
             <ul className="navigation-vertical p-3">
-                <CustomLink to="vedamo-ds/colors">Colors</CustomLink>
-                <CustomLink to="vedamo-ds/typography">Typography</CustomLink>
-                <CustomLink to="vedamo-ds/buttons">Buttons</CustomLink>
-                <CustomLink to="vedamo-ds/grid">Grid</CustomLink>
-                <CustomLink to="vedamo-ds/spacing-system">Spacing System</CustomLink>
-                <CustomLink to="vedamo-ds/icons">Icons</CustomLink>
-                <CustomLink to="vedamo-ds/alerts">Alerts</CustomLink>
+                <CustomLink to="/colors">Colors</CustomLink>
+                <CustomLink to="/typography">Typography</CustomLink>
+                <CustomLink to="/buttons">Buttons</CustomLink>
+                <CustomLink to="/grid">Grid</CustomLink>
+                <CustomLink to="/spacing-system">Spacing System</CustomLink>
+                <CustomLink to="/icons">Icons</CustomLink>
+                <CustomLink to="/alerts">Alerts</CustomLink>
             </ul>           
 
         </>)

@@ -3,7 +3,7 @@ export default function Alerts() {
     <>
 
     <div className="grid-container mt-5">
-                    <div className="col-md-4">
+                    <div className="col-m-4">
                         <span className="alert alert-default">
                             <i className="i icon-info"></i>
                             <span className="alert-text">
@@ -13,7 +13,7 @@ export default function Alerts() {
                 </div>
 
                 <div className="grid-container mt-5">
-                    <div className="col-md-4">
+                    <div className="col-m-4">
                         <span className="alert alert-info">
                             <i className="i icon-download"></i>
                             <span className="alert-text">
@@ -24,7 +24,7 @@ export default function Alerts() {
                 </div>
 
                 <div className="grid-container mt-5">
-                    <div className="col-md-4">
+                    <div className="col-m-4">
                         <span className="alert alert-success">
                             <i className="i icon-vico-done"></i>
                             <span className="alert-text">
@@ -35,7 +35,7 @@ export default function Alerts() {
                 </div>
 
                 <div className="grid-container mt-5">
-                    <div className="col-md-4">
+                    <div className="col-m-4">
                         <span className="alert alert-warning">
                             <i className="i icon-vico-warning"></i>
                             <span className="alert-text">
@@ -46,7 +46,7 @@ export default function Alerts() {
                 </div>
 
                 <div className="grid-container mt-5">
-                    <div className="col-md-4">
+                    <div className="col-m-4">
                         <span className="alert alert-error">
                             <i className="i icon-vico-error"></i>
                             <span className="alert-text">

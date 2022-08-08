@@ -324,21 +324,27 @@ const icons = [
 
 return(
   <>    
-    
-    <div className="flex flex-wrap">
+    <div className="grid-container">
     
     {icons.map( (icon, i) =>
             (
-                <button className="btn btn-tertiary btn-square btn-l" key={i}>
-                    <i className={`i ${icon} `}>{}</i>
-                </button>
+                <div className="col-xs-6 col-sm-4 col-l-3 br-1 box-shadow overflow-hidden flex flex-vertical gap-0" key={i}>
+                    <div className="bg-default-100 txt-center p-2">
+                      <i className={`fz-display-m i ${icon} `}>{}</i>
+                    </div>
+                    <div className="bg-default-0 p-2 grid gap-0 flex-1">
+                        {icon.substring(5)}
+                        <code>
+                          &lt;i class="i {icon}"&gt;&lt;/i&gt;
+                          </code>
+                    </div>
+                  </div>
             ) 
         ) 
         
     }
 
     </div>
-
   </>
 )
 }

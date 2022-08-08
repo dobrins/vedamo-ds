@@ -26,7 +26,7 @@ function App() {
           <Navbar />
         </aside>
         
-        <div className="pl-17">
+        <div className="pl-17 flex flex-vertical gap-0">
 
           <div className="flex flex-center-v bg-default-300 p-2 gap-5">
 
@@ -37,24 +37,19 @@ function App() {
             <h2 className="fz-display-xs">{ location.pathname.substring(1) }</h2>
     
           </div>
-
-          <div className="container pv-7 bg-default-150">
-
-
+          <div className="container pv-7 bg-default-150 flex-1">
             <Routes>
-              <Route path="/vedamo-ds">
-                <Route index element={<Home />} />
-                <Route path="colors" element={<Colors />} />
-                <Route path="typography" element={<Typography />} />
-                <Route path="buttons" element={<Buttons />} />
-                <Route path="grid" element={<Grid />} />
-                <Route path="spacing-system" element={<SpacingSystem />} />
-                <Route path="icons" element={<Icons />} />
-                <Route path="login" element={<Login />} />  
-                <Route path="marketplace" element={<Marketplace />} />  
-                <Route path="alerts" element={<Alerts />} />  
-                <Route path="*" element={<NotFound />} />  
-              </Route>              
+              <Route path="/" element={<Home />} />
+              <Route path="/colors" element={<Colors />} />
+              <Route path="/typography" element={<Typography />} />
+              <Route path="/buttons" element={<Buttons />} />
+              <Route path="/grid" element={<Grid />} />
+              <Route path="/spacing-system" element={<SpacingSystem />} />
+              <Route path="/icons" element={<Icons />} />
+              <Route path="/login" element={<Login />} />  
+              <Route path="/marketplace" element={<Marketplace />} />  
+              <Route path="/alerts" element={<Alerts />} />  
+              <Route path="*" element={<NotFound />} />  
             </Routes>
           
           </div>
