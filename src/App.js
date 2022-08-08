@@ -9,6 +9,7 @@ import Icons from "./pages/Icons"
 import Login from "./pages/Login"
 import Marketplace from "./pages/Marketplace.js"
 import Alerts from "./pages/Alerts"
+import NotFound from "./pages/NotFound"
 import { Route, Routes, useLocation  } from "react-router-dom"
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
               <Route path="/login" element={<Login />} />  
               <Route path="/marketplace" element={<Marketplace />} />  
               <Route path="/alerts" element={<Alerts />} />  
+              <Route path="*" element={<NotFound />} />  
             </Routes>
           
           </div>

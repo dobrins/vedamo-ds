@@ -1170,7 +1170,7 @@ input, button, textarea {
 .flex-wrap {
   flex-wrap: wrap; }
 
-.grid {
+.grid, .contentBox {
   display: grid;
   gap: var(--gap, 1rem); }
 
@@ -1297,7 +1297,7 @@ input, button, textarea {
   color: hsl(var(--clr-main-900)); }
 
 /* Default Color */
-.bg-default-0 {
+.bg-default-0, .contentBox {
   background-color: hsl(var(--clr-default-0)); }
 
 .txt-default-0 {
@@ -1758,7 +1758,7 @@ input, button, textarea {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
-.br-2 {
+.br-2, .contentBox {
   border-radius: 0.5rem; }
 
 .brt-2 {
@@ -1845,7 +1845,7 @@ input, button, textarea {
   border-bottom-left-radius: 0.75rem;
   border-top-left-radius: 0.75rem; }
 
-.gap-3 {
+.gap-3, .contentBox {
   gap: 0.75rem; }
 
 .p-4 {
@@ -1916,7 +1916,7 @@ input, button, textarea {
 .gap-4 {
   gap: 1rem; }
 
-.p-5 {
+.p-5, .contentBox {
   padding: 1.25rem; }
 
 .pr-5 {
@@ -3897,7 +3897,7 @@ section h4 {
 .txt-shadow {
   text-shadow: 0 0 4px hsl(var(--clr-default-1000), 0.24); }
 
-.box-shadow {
+.box-shadow, .contentBox {
   box-shadow: 0 24px 48px -12px hsl(var(--clr-default-1000), 0.04); }
 
 /*# sourceMappingURL=main.css.map */

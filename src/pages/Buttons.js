@@ -15,7 +15,7 @@ export default function Buttons() {
 
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">value</p>
+                            <p className="txt-semibold">value</p>
                         </div>
                         <div className="col-xs-12 col-sm-2 flex gap-3">
                             <button type="button" className="btn">{btnValue}</button>
@@ -29,7 +29,7 @@ export default function Buttons() {
 
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">icon & value</p>
+                            <p className="txt-semibold">icon & value</p>
                         </div>
                         <div className="col-xs-12 col-sm-2 flex gap-3">
                             <button type="button" className="btn">
@@ -45,7 +45,7 @@ export default function Buttons() {
                     </div>
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">Value & Dropdown</p>
+                            <p className="txt-semibold">Value & Dropdown</p>
                         </div>
                         <div className="col-xs-12 col-sm-2 flex gap-3">
                             <button type="button" className="btn">
@@ -62,7 +62,7 @@ export default function Buttons() {
             
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">Icon, Value & Dropdown</p>
+                            <p className="txt-semibold">Icon, Value & Dropdown</p>
                         </div>
                         
                         <div className="col-xs-12 col-sm-2 flex gap-3">
@@ -80,7 +80,7 @@ export default function Buttons() {
                     </div>
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">Icon</p>
+                            <p className="txt-semibold">Icon</p>
                         </div>
                         <div className="col-xs-12 col-sm-2 flex gap-3">
                             <button type="button" className="btn btn-square">
@@ -95,7 +95,7 @@ export default function Buttons() {
                     </div>
                     <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-uppercase txt-semibold">Icon/rounded</p>
+                            <p className="txt-semibold">Icon/rounded</p>
                         </div>
                         <div className="col-xs-12 col-sm-2 flex gap-3">
                             <button type="button" className="btn btn-circle">
@@ -115,7 +115,14 @@ export default function Buttons() {
             {btnType.map( (type, i) =>
                     (
                         <div key={i} className="grid gap-2">
-                            <h4 className="txt-capitalize txt-semibold">{type} Button</h4>
+                            <h4 className="txt-capitalize txt-semibold">{type} Button </h4>
+                            <div className="flex flex-center-v">
+                                <button className={`btn btn-${type}`}>
+                                    {btnValue}
+                                </button>
+                                <code>.btn-{type}</code>
+
+                            </div>
                             <div className="bg-default-0 p-5 br-2 box-shadow grid gap-3">
                             {
                                 btnSize.map( (size, i) =>
@@ -129,7 +136,7 @@ export default function Buttons() {
                                                 <div className="col-xs-12 col-sm-1 flex flex-center-v">
                                                     <code>.btn-{size}</code>
                                                 </div>
-                                                <div className="col-xs-12 col-sm-6 flex gap-3">
+                                                <div className="col-xs-12 col-sm-2 flex gap-3">
                                                     <button className={`btn btn-${size} btn-${type}`}>
                                                         {btnValue}
                                                     </button>
@@ -151,7 +158,7 @@ export default function Buttons() {
                                                         <i className="i icon-more-vertical"></i>
                                                     </button> */}
                                                 </div>
-                                                <div className="col-xs-12 col-sm-4 flex flex-center-v">
+                                                <div className="col-xs-12 col-sm-8 flex flex-center-v">
                                                     <code>
                                                         &lt;button type="button" class="btn btn-{type} btn-{size}"&gt;{btnValue}&lt;/button&gt;
                                                     </code>
@@ -167,26 +174,7 @@ export default function Buttons() {
                 ) 
                 
             }
-            {/* <div className="flex mt-5">
-                <button className="btn btn-primary btn-m" type="button"><i className="i icon-menu-2"></i>Button</button>
-                <button className="btn btn-primary btn-m btn-square" type="button"><i className="i icon-menu-2"></i></button>
-                <button className="btn btn-primary btn-m btn-circle" type="button"><i className="i icon-menu-2"></i></button>
-            </div> 
-            <div className="flex mt-5">
-                <button className="btn btn-secondary btn-m" type="button"><i className="i icon-menu-2"></i>Button</button>
-                <button className="btn btn-secondary btn-m btn-square" type="button"><i className="i icon-menu-2"></i></button>
-                <button className="btn btn-secondary btn-m btn-circle" type="button"><i className="i icon-menu-2"></i></button>
-            </div>
-            <div className="flex mt-5">
-                <button className="btn btn-tertiary btn-m" type="button"><i className="i icon-menu-2"></i>Button</button>
-                <button className="btn btn-tertiary btn-m btn-square" type="button"><i className="i icon-menu-2"></i></button>
-                <button className="btn btn-tertiary btn-m btn-circle" type="button"><i className="i icon-menu-2"></i></button>
-            </div>
-            <div className="flex mt-5">
-                <button className="btn btn-ghost btn-m" type="button"><i className="i icon-menu-2"></i>Button</button>
-                <button className="btn btn-ghost btn-m btn-square" type="button"><i className="i icon-menu-2"></i></button>
-                <button className="btn btn-ghost btn-m btn-circle" type="button"><i className="i icon-menu-2"></i></button>
-            </div> */}
+            
         </div>
     )
 }

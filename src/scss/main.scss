@@ -156,3 +156,7 @@ section h4 {
 .box-shadow {
     box-shadow: 0 24px 48px -12px hsl(var(--clr-default-1000), 0.04)
 }
+
+.contentBox {
+    @extend .bg-default-0, .p-5, .br-2, .box-shadow, .grid, .gap-3
+}
