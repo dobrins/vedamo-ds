@@ -42,17 +42,19 @@ function App() {
 
 
             <Routes>
-              <Route path="/vedamo-ds/" element={<Home />} />
-              <Route path="/colors" element={<Colors />} />
-              <Route path="/typography" element={<Typography />} />
-              <Route path="/buttons" element={<Buttons />} />
-              <Route path="/grid" element={<Grid />} />
-              <Route path="/spacing-system" element={<SpacingSystem />} />
-              <Route path="/icons" element={<Icons />} />
-              <Route path="/login" element={<Login />} />  
-              <Route path="/marketplace" element={<Marketplace />} />  
-              <Route path="/alerts" element={<Alerts />} />  
-              <Route path="*" element={<NotFound />} />  
+              <Route path="/vedamo-ds">
+                <Route index element={<Home />} />
+                <Route path="colors" element={<Colors />} />
+                <Route path="typography" element={<Typography />} />
+                <Route path="buttons" element={<Buttons />} />
+                <Route path="grid" element={<Grid />} />
+                <Route path="spacing-system" element={<SpacingSystem />} />
+                <Route path="icons" element={<Icons />} />
+                <Route path="login" element={<Login />} />  
+                <Route path="marketplace" element={<Marketplace />} />  
+                <Route path="alerts" element={<Alerts />} />  
+                <Route path="*" element={<NotFound />} />  
+              </Route>              
             </Routes>
           
           </div>
