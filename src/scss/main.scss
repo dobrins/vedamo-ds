@@ -14,6 +14,8 @@
 @import 'forms';
 @import 'alerts';
 @import 'avatars';
+@import 'shadows';
+
 @import 'marketplace';
 
 
@@ -22,32 +24,6 @@
 
 /* classes - remove later */
 
-// h1 {
-//     margin-top:60px; 
-// }
-
-h2 {
-    // margin-top: 20px;
-    // font-weight: 600;
-}
-
-// section {
-//     --gap:0.6rem;
-//     grid-template-columns:repeat(2, 1fr);
-
-//     @include mq(xs) {
-//         grid-template-columns:repeat(3, 1fr);  
-//     }
-
-//     @include mq(s) {
-//         grid-template-columns:repeat(4, 1fr);  
-//     }
-
-//     @include mq(m) {
-//         grid-template-columns:repeat(6, 1fr);  
-//     }
-
-// }
 
 .sidebar {
     width: 12rem;
@@ -55,11 +31,25 @@ h2 {
     background-color: hsl(var(--clr-default-800));
     position: fixed;
     top: 0;
+    display: none;
+
+    @include mq(m) {
+        display: block;  
+    }
+ 
 }
 
 .navigation-vertical {
     a {
         color: hsl(var(--clr-default-0));
+    }
+}
+
+.main-container {
+    height: 100vh;
+    
+    @include mq(m) {
+       padding-left: 12rem;
     }
 }
 
@@ -86,11 +76,6 @@ section h4 {
     box-shadow: 0 24px 48px -12px hsla(219, 66%, 10%, 0.12);
 }
 
-// .color > div > div {
-//     // width: 100%;
-// }
-
-
 .typography > div {
     background-color: #{'hsl( var(--clr-default-100) )'};
     padding: 10px;
@@ -112,7 +97,6 @@ section h4 {
 
 /* GRID */
 .grid-showcase div {
-    /* background-color: hsl( var(--clr-default-300) ); */
     padding: 1rem;
     border-radius: 4px;
     font-weight: 600;
@@ -159,4 +143,19 @@ section h4 {
 
 .contentBox {
     @extend .bg-default-0, .p-5, .br-2, .box-shadow, .grid, .gap-3, .mt-3
+}
+
+.dropdownMenu {
+    position: relative
+}
+.dropdownContent {
+    position: absolute;
+    top: 50px;
+    background-color: hsl(var(--clr-default-800));
+}
+
+.octopus {
+    background-image: url(../img/blur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

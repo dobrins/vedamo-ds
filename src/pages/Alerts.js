@@ -1,60 +1,37 @@
+import { TabTitle } from "../utils/functions"
+import ContentBox from "./components/ContentBox"
+import Heading from "./components/Heading"
+
 export default function Alerts() {
+
+    TabTitle('Alerts')
+   
     return (
     <>
-
-    <div className="grid-container mt-5">
-                    <div className="col-m-4">
-                        <span className="alert alert-default">
-                            <i className="i icon-info"></i>
-                            <span className="alert-text">
-                                <strong>Default Alert</strong> with <a href="#">text link</a></span>
-                            </span>
-                    </div>
-                </div>
-
-                <div className="grid-container mt-5">
-                    <div className="col-m-4">
-                        <span className="alert alert-info">
-                            <i className="i icon-download"></i>
-                            <span className="alert-text">
-                                <strong>Info Alert</strong> with <a href="#">text link</a>
-                            </span>
-                        </span>
-                    </div>       
-                </div>
-
-                <div className="grid-container mt-5">
-                    <div className="col-m-4">
-                        <span className="alert alert-success">
-                            <i className="i icon-vico-done"></i>
-                            <span className="alert-text">
-                                <strong>Success Alert</strong> with <a href="#">text link</a>
-                            </span>
-                        </span>
-                    </div>
-                </div>
-
-                <div className="grid-container mt-5">
-                    <div className="col-m-4">
-                        <span className="alert alert-warning">
-                            <i className="i icon-vico-warning"></i>
-                            <span className="alert-text">
-                                <strong>Warning Alert</strong> with <a href="#">text link</a>
-                            </span>
-                        </span>
-                    </div>
-                </div>
-
-                <div className="grid-container mt-5">
-                    <div className="col-m-4">
-                        <span className="alert alert-error">
-                            <i className="i icon-vico-error"></i>
-                            <span className="alert-text">
-                                <strong>Warning Alert</strong> with <a href="#">text link</a>
-                            </span>
-                        </span>
-                    </div>
-                </div>
+        <Heading title="Alerts" />
+        <ContentBox>
+            <Alert type="default" icon="icon-info" />
+            <Alert type="info" icon="icon-download" />
+            <Alert type="success" icon="icon-vico-done" />
+            <Alert type="warning" icon="icon-vico-warning" />
+            <Alert type="error" icon="icon-vico-error" />
+        </ContentBox>
     </>
     )
+}
+
+function Alert(props) {
+    return (
+        <div className="grid-container">
+            <div className="col-xs-12 col-sm-6">
+                <span className={`alert alert-${props.type}`}>
+                    <i className={`i ${props.icon}`}></i>
+                    <span className="alert-text">
+                        <strong>{props.type} Alert</strong> with <a href="./#5">text link</a>
+                    </span>
+                </span>
+            </div>
+        </div>
+    )
+
 }

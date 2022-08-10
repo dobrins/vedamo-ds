@@ -1,3 +1,6 @@
+import { TabTitle } from "../utils/functions"
+import ContentBox from "./components/ContentBox"
+
 export default function Buttons() {
 
     const btnType = ["primary" , "secondary", "tertiary", "ghost"]
@@ -5,15 +8,15 @@ export default function Buttons() {
     // const btnState = ["normal", "loading", "disabled", "disabled-noperm"]
     const btnValue = "button"
 
+    TabTitle('Buttons')
+
     return (
         
-        <div className="grid gap-10">  
-        
-            <div className="grid gap-2">
-                <h4 className="txt-capitalize txt-semibold">Button types</h4>
-                <div className="bg-default-0 p-5 br-2 box-shadow grid gap-3">
+        <>  
 
-                    <div className="grid-container">
+                <ContentBox title="Button Types">
+
+                <div className="grid-container">
                         <div className="col-xs-12 col-sm-2 flex flex-center-v">
                             <p className="txt-semibold">value</p>
                         </div>
@@ -108,14 +111,12 @@ export default function Buttons() {
                             </code> 
                         </div>
                     </div>
-                </div>
-            </div>
-
+                </ContentBox>
+            
 
             {btnType.map( (type, i) =>
                     (
-                        <div key={i} className="grid gap-2">
-                            <h4 className="txt-capitalize txt-semibold">{type} Button </h4>
+                        <ContentBox key={i} title={`${type} Button`}>
                             <div className="flex flex-center-v">
                                 <button className={`btn btn-${type}`}>
                                     {btnValue}
@@ -123,7 +124,7 @@ export default function Buttons() {
                                 <code>.btn-{type}</code>
 
                             </div>
-                            <div className="bg-default-0 p-5 br-2 box-shadow grid gap-3">
+                            
                             {
                                 btnSize.map( (size, i) =>
                                     (
@@ -140,23 +141,7 @@ export default function Buttons() {
                                                     <button className={`btn btn-${size} btn-${type}`}>
                                                         {btnValue}
                                                     </button>
-                                                    {/* <button className={`btn btn-${size} btn-${type}`}>
-                                                        <i className="i icon-menu-2"></i>{btnValue}
-                                                    </button>
-                                                    <button className={`btn btn-${size} btn-${type}`}>
-                                                        {btnValue}<i className="i icon-chevron-down"></i>
-                                                    </button>
-                                                    <button className={`btn btn-${size} btn-${type}`}>
-                                                        <i className="i icon-menu-2"></i>
-                                                        {btnValue}
-                                                        <i className="i icon-chevron-down "></i>
-                                                    </button>
-                                                    <button className={`btn btn-${size} btn-${type} btn-square`}>
-                                                        <i className="i icon-home"></i>
-                                                    </button>
-                                                    <button className={`btn btn-${size} btn-${type} btn-circle`}>
-                                                        <i className="i icon-more-vertical"></i>
-                                                    </button> */}
+                                                   
                                                 </div>
                                                 <div className="col-xs-12 col-sm-8 flex flex-center-v">
                                                     <code>
@@ -168,13 +153,11 @@ export default function Buttons() {
                                     ) 
                                 )    
                             }    
-                            </div>
-                        </div>             
+                            
+                        </ContentBox>
                     ) 
                 ) 
-                
             }
-            
-        </div>
+        </>
     )
 }

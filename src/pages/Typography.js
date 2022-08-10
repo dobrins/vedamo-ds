@@ -1,6 +1,11 @@
+import { TabTitle } from "../utils/functions";
+import ContentBox from "./components/ContentBox";
+
 export default function Typography() {
 
-    const h = ["h1", "h2", "h3", "h4", "h5", "h6"];
+    TabTitle('Typography')
+
+    // const h = ["h1", "h2", "h3", "h4", "h5", "h6"];
     const classes = [
         { class: "fz-hero-xl"       ,   size: "96px"        }, 
         { class: "fz-display-2xl"   ,   size: "72px"        }, 
@@ -16,14 +21,11 @@ export default function Typography() {
         { class: "fz-text-xs"       ,   size: "12px"        }
     ];
 
-    
-
     return (
         <>
             <h5>Primary font: <span className="txt-bold">INTER</span></h5>
-            <p><a href="https://fonts.google.com/specimen/Inter?query=inter#standard-styles" target="_blank" className="txt-bold">Inter</a> is our primary Font Family.It's open Google Font and is used for “Text”, “Display” and “Hero” type of heading/paragraph sizing. </p>
-            <h6 class="mt-10">Sizes</h6>
-            <div className="contentBox">
+            <p><a href="https://fonts.google.com/specimen/Inter?query=inter#standard-styles" rel="noreferrer"  target="_blank" className="txt-bold">Inter</a> is our primary Font Family.It's open Google Font and is used for “Text”, “Display” and “Hero” type of heading/paragraph sizing. </p>
+            <ContentBox title="Sizes">
                 {classes.map( (h, i) =>
                         (
                             <>
@@ -39,10 +41,9 @@ export default function Typography() {
                         ) 
                     ) 
                 }
-            </div>
-            <h6 class="mt-10">Size examples</h6>
-            <div className="contentBox">
-                <div className="bg-default-100 p-2">
+            </ContentBox>
+            <ContentBox title="Size examples">
+            <div className="bg-default-100 p-2">
                     <code>
                         {classes.map( (h, i) =>
                                 (
@@ -69,7 +70,7 @@ export default function Typography() {
                         ) 
                     ) 
                 }
-            </div>
+            </ContentBox>
         </>
     )
 }

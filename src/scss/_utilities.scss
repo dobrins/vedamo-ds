@@ -100,7 +100,7 @@
     .blur-l  {
         backdrop-filter: blur(1rem);
     }
-    .blur-l  {
+    .blur-xl  {
         backdrop-filter: blur(.75rem);
     }
     .blur-s, .blur-m, .blur-l, .blur-xl {
@@ -176,12 +176,16 @@ $count: 0;
     .brb-#{$count} {border-bottom-right-radius: #{$size}rem;border-bottom-left-radius: #{$size}rem;}
     .brl-#{$count} {border-bottom-left-radius: #{$size}rem;border-top-left-radius: #{$size}rem;}
 
+    .brtl-#{$count} {border-top-left-radius: #{$size}rem;}
+    .brtr-#{$count} {border-top-right-radius: #{$size}rem;}
+    .brbr-#{$count} {border-bottom-right-radius: #{$size}rem;}
+    .brbl-#{$count} {border-bottom-left-radius: #{$size}rem;}
+
     .gap-#{$count} {gap: #{$size}rem}
     
     $count: $count + 1;
 }
 
-.hidden { display: none; }
 .aspect-1 { aspect-ratio: 1;}
 
 .list {
@@ -205,4 +209,10 @@ $count: 0;
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.hidden-m {
+    @include mq(m) {
+        display: none
+    }
 }

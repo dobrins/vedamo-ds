@@ -1,4 +1,8 @@
+import { TabTitle } from "../utils/functions";
+
 export default function Icons() {
+
+  TabTitle('Icons')
 
 const icons = [
 "icon-vico-bin"

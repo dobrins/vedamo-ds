@@ -1,3 +1,5 @@
+import { Route, Routes, useLocation  } from "react-router-dom"
+import {useState} from 'react'
 import Navbar from "./Navbar"
 import Home from "./pages/Home"
 import Grid from "./pages/Grid"
@@ -10,15 +12,26 @@ import Login from "./pages/Login"
 import Marketplace from "./pages/Marketplace.js"
 import Alerts from "./pages/Alerts"
 import NotFound from "./pages/NotFound"
-import { Route, Routes, useLocation  } from "react-router-dom"
+import Dropdown from "./pages/Dropdown"
+import Shadows from "./pages/Shadows"
+import BorderRadius from "./pages/BorderRadius"
+import Blur from "./pages/Blur"
 
 function App() {
 
-
   const location = useLocation();
-  // console.log('hash', location.hash);
-  // console.log('pathname', location.pathname);
-  // console.log('search', location.search);
+  const [open, setOpen] = useState(false);
+
+  const dropdown = () => {
+    if(open) {
+
+      return (
+        <div className="dropdownContent p-2">
+          <Dropdown />
+        </div>
+      )
+    }
+  }
 
   return (
       <div>
@@ -26,15 +39,17 @@ function App() {
           <Navbar />
         </aside>
         
-        <div className="pl-17 flex flex-vertical gap-0">
-
+        <div className="main-container flex flex-vertical gap-0">
           <div className="flex flex-center-v bg-default-300 p-2 gap-5">
-
-            <button type="button" className="btn btn-tertiary btn-square btn-l">
-              <i className="i icon-menu"></i>
-            </button>
-
-            <h2 className="fz-display-xs">{ location.pathname.substring(1) }</h2>
+            
+            <div className="dropdownMenu hidden-m">
+              <button className="dropdownBtn btn btn-tertiary btn-square" onClick={() => setOpen(!open)}>
+                <i className="i icon-menu"></i>
+              </button>
+                {dropdown()}
+            </div>
+            
+            <h2 className="fz-display-xs" id="pageTitle">{ location.pathname.substring(1) }</h2>
     
           </div>
           <div className="container pv-7 bg-default-150 flex-1">
@@ -49,6 +64,9 @@ function App() {
               <Route path="/login" element={<Login />} />  
               <Route path="/marketplace" element={<Marketplace />} />  
               <Route path="/alerts" element={<Alerts />} />  
+              <Route path="/shadows" element={<Shadows />} />  
+              <Route path="/border-radius" element={<BorderRadius />} />  
+              <Route path="/Blur" element={<Blur />} />  
               <Route path="*" element={<NotFound />} />  
             </Routes>
           

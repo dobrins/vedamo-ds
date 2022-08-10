@@ -134,6 +134,14 @@
 
     --clr-accent-1:75, 100%, 44%; 
     --clr-accent-2: 256, 84%, 59%;
+
+    --bs-xs: 0px 1px 2px hsl( var(--clr-default-900), 0.08);
+    --bs-s: 0px 3px 6px -1px hsl( var(--clr-default-900), 0.04), 0px 1px 3px hsl( var(--clr-default-900), 0.04);
+    --bs-m: 0px 4px 8px -2px hsl( var(--clr-default-900), 0.06), 0px 2px 4px -2px hsl( var(--clr-default-900), 0.06);
+    --bs-l: 0px 12px 12px -4px hsl( var(--clr-default-900), 0.04), 0px 4px 6px -2px hsl( var(--clr-default-900), 0.04);
+    --bs-xl: 0px 20px 16px -4px hsl( var(--clr-default-900), 0.02), 0px 8px 16px -4px hsl( var(--clr-default-900), 0.02);
+    --bs-2xl: 0px 24px 48px -12px hsl( var(--clr-default-900), 0.08); 
+    --bs-3xl: 0px 32px 64px -12px hsl( var(--clr-default-900), 0.12); 
 }
 
 /* Sizes */

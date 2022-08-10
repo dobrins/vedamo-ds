@@ -1,3 +1,4 @@
+import { TabTitle } from "../utils/functions"
 import ColorBox from "./colorBox/ColorBox"
 // import Tint from "./colorBox/Tint"
 import Tints from "./colorBox/Tints"
@@ -100,6 +101,9 @@ const clrSuccess = {
 const tints = [0, 4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 92, 96];
 
 export default function Colors() {
+
+    TabTitle('Colors')
+
     return (
         <>  
             <ColorBox code={clrMain.code} title={clrMain.title} desc={clrMain.desc} />
