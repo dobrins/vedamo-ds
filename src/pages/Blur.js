@@ -21,12 +21,12 @@ export default function Blur() {
                 </div>
                 <div className="octopus ph-14">
                     <div className="grid-container">
-                        <div className="col-xs-12 col-sm-4 col-sm-offset-3 p-10"><BlurItem class="blur-s" /></div>
-                        <div className="col-xs-12 col-sm-4  p-10"><BlurItem class="blur-m" /></div>
+                        <div className="col-xs-12 col-sm-4 col-sm-offset-3 p-5"><BlurItem class="blur-s" /></div>
+                        <div className="col-xs-12 col-sm-4 p-5"><BlurItem class="blur-m" /></div>
                     </div>
                     <div className="grid-container">
-                        <div className="col-xs-12 col-sm-4 col-sm-offset-3 p-10"><BlurItem class="blur-l" /></div>
-                        <div className="col-xs-12 col-sm-4 p-10"><BlurItem class="blur-xl" /></div>
+                        <div className="col-xs-12 col-sm-4 col-sm-offset-3 p-5"><BlurItem class="blur-l" /></div>
+                        <div className="col-xs-12 col-sm-4 p-5"><BlurItem class="blur-xl" /></div>
                     </div>
                 </div>
             </ContentBox>

@@ -29,7 +29,8 @@
 	}  
 }
 
-@media only screen and (min-width:48em){    
+// @media only screen and (min-width:48em){    
+@include mq(s) {
   
     @for $width from 1 through $columns {
         .col-sm-#{$width} {
@@ -41,7 +42,8 @@
     }
 }
 
-@media only screen and (min-width:62em){    
+// @media only screen and (min-width:62em){    
+@include mq(m) {
     
     @for $width from 1 through $columns {
         .col-m-#{$width} {
@@ -53,7 +55,8 @@
     }
 }
 
-@media only screen and (min-width:75em) {    
+// @media only screen and (min-width:75em) {   
+@include mq(l) { 
     
     @for $width from 1 through $columns {
         .col-l-#{$width} {

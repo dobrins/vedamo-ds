@@ -25,6 +25,12 @@ export default function Grid() {
         <GridItems rows={[9, 3]} />
         <GridItems rows={[10, 2]} />
         <GridItems rows={[11, 1]} />
+
+        <div className="grid-container mt-10">
+            <div className="col-l-3 col-l-offset-5 bg-default-300">1</div>
+            {/* <div className="col-l-3 bg-default-300">2</div> */}
+        </div>
+
     </ContentBox>
     )
 }

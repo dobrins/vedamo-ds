@@ -16,10 +16,15 @@ import Dropdown from "./pages/Dropdown"
 import Shadows from "./pages/Shadows"
 import BorderRadius from "./pages/BorderRadius"
 import Blur from "./pages/Blur"
+import ButtonGroups from "./pages/ButtonGroups"
+import Navigation from "./pages/Navigation"
+import Badges from "./pages/Badges"
+
 
 function App() {
 
   const location = useLocation();
+  
   const [open, setOpen] = useState(false);
 
   const dropdown = () => {
@@ -33,8 +38,10 @@ function App() {
     }
   }
 
+  if(location.pathname !== '/marketplace') {
+  
   return (
-      <div>
+      <>
         <aside className="sidebar">
           <Navbar />
         </aside>
@@ -58,6 +65,7 @@ function App() {
               <Route path="/colors" element={<Colors />} />
               <Route path="/typography" element={<Typography />} />
               <Route path="/buttons" element={<Buttons />} />
+              <Route path="/button-groups" element={<ButtonGroups />} />
               <Route path="/grid" element={<Grid />} />
               <Route path="/spacing-system" element={<SpacingSystem />} />
               <Route path="/icons" element={<Icons />} />
@@ -67,13 +75,24 @@ function App() {
               <Route path="/shadows" element={<Shadows />} />  
               <Route path="/border-radius" element={<BorderRadius />} />  
               <Route path="/Blur" element={<Blur />} />  
+              <Route path="/Badges" element={<Badges />} />  
               <Route path="*" element={<NotFound />} />  
             </Routes>
           
           </div>
         </div>
-      </div>
+      </>
   )
+  } else {
+    return (
+      <>
+        <Navigation />
+        <Routes>
+          <Route path="/marketplace" element={<Marketplace />} />  
+        </Routes>
+       </>
+    )
+  }
 }
 
 export default App;

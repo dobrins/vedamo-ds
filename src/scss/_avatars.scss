@@ -8,11 +8,19 @@
     justify-content: center;
     color: hsl(var(--clr-default-900));
     text-decoration: none;
+    font-weight: 500;
+    overflow: hidden;
 }
 
 /* ------------------------- */
 /* Avatar Sizes */
 /* ------------------------- */
+
+.avatar-3xl {
+    width: 7.5rem;
+    height: 7.5rem;
+    font-size: var(--fz-display-s);
+}
 
 .avatar-2xl {
     width: 4rem;

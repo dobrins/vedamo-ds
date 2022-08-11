@@ -50,6 +50,12 @@
     }
 }
 
+.container-m {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 1rem
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -206,6 +212,16 @@ $count: 0;
 .full-width {
     width: 100%;
 }
+
+.full-width-m {
+    width: 100%;
+
+    @include mq(s) {
+        width: auto
+    }
+
+}
+
 
 .overflow-hidden {
     overflow: hidden;

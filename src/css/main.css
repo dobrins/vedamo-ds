@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @use 'sass:map';
 :root {
   /* ------------------------- */
@@ -1127,7 +1128,7 @@ body {
   font-size: var(--fs-400);
   line-height: 1.5;
   min-height: 100vh;
-  color: var(--clr-default-1000); }
+  color: hsl(var(--clr-default-900)); }
 
 /* Easy working images */
 img, picture {
@@ -1193,6 +1194,11 @@ input, button, textarea {
   @media (min-width: 80rem) {
     .container {
       padding-inline: 2rem; } }
+
+.container-m {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1rem; }
 
 .sr-only {
   position: absolute;
@@ -3200,6 +3206,12 @@ input, button, textarea {
 .full-width {
   width: 100%; }
 
+.full-width-m {
+  width: 100%; }
+  @media (min-width: 48rem) {
+    .full-width-m {
+      width: auto; } }
+
 .overflow-hidden {
   overflow: hidden; }
 
@@ -3400,6 +3412,23 @@ input, button, textarea {
   border-radius: 5rem;
   aspect-ratio: 1; }
 
+/* Button Groups */
+.btn-group {
+  position: relative; }
+  .btn-group .btn:hover, .btn-group .btn:focus {
+    z-index: 1; }
+
+.btn-group:not(:last-child) > .btn, .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.btn-group:not(:first-child) > .btn, .btn-group > .btn:nth-child(n+3), .btn-group > :not(.btn-check) + .btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.btn-group:not(:first-child), .btn-group > .btn:not(:first-child) {
+  margin-left: -1px; }
+
 /* Typography */
 .ff-sans-normal {
   font-family: var(--ff-sans-normal); }
@@ -3570,7 +3599,7 @@ input, button, textarea {
 .col-xs-offset-12 {
   grid-column-start: 12; }
 
-@media only screen and (min-width: 48em) {
+@media (min-width: 48rem) {
   .col-sm-1 {
     grid-column-end: span 1; }
 
@@ -3642,7 +3671,7 @@ input, button, textarea {
 
   .col-sm-offset-12 {
     grid-column-start: 12; } }
-@media only screen and (min-width: 62em) {
+@media (min-width: 64rem) {
   .col-m-1 {
     grid-column-end: span 1; }
 
@@ -3714,7 +3743,7 @@ input, button, textarea {
 
   .col-m-offset-12 {
     grid-column-start: 12; } }
-@media only screen and (min-width: 75em) {
+@media (min-width: 80rem) {
   .col-l-1 {
     grid-column-end: span 1; }
 
@@ -3871,11 +3900,18 @@ textarea {
   align-items: center;
   justify-content: center;
   color: hsl(var(--clr-default-900));
-  text-decoration: none; }
+  text-decoration: none;
+  font-weight: 500;
+  overflow: hidden; }
 
 /* ------------------------- */
 /* Avatar Sizes */
 /* ------------------------- */
+.avatar-3xl {
+  width: 7.5rem;
+  height: 7.5rem;
+  font-size: var(--fz-display-s); }
+
 .avatar-2xl {
   width: 4rem;
   height: 4rem;
@@ -3929,6 +3965,69 @@ textarea {
 .bs-3xl {
   box-shadow: var(--bs-3xl) !important; }
 
+.divider {
+  background-color: hsl(var(--clr-default-250));
+  height: 1px; }
+
+.badge {
+  position: relative;
+  display: inline-flex;
+  gap: 0.5em;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(var(--clr-default-200));
+  color: hsl(var(--clr-default-700));
+  border: 1px solid hsl(var(--clr-default-200));
+  border-radius: 10rem;
+  font-size: 0.75em;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1;
+  outline: none;
+  z-index: auto;
+  padding: 0.2em 0.5em;
+  white-space: nowrap;
+  vertical-align: baseline; }
+  .badge i.i {
+    font-size: 0.9em;
+    color: hsl(var(--clr-default-500)); }
+
+.badge-primary {
+  background-color: hsl(var(--clr-main-50));
+  color: hsl(var(--clr-main-700));
+  border-color: hsl(var(--clr-main-50)); }
+  .badge-primary i.i {
+    color: hsl(var(--clr-main-500)); }
+
+.badge-warning {
+  background-color: hsl(var(--clr-warning-100));
+  color: hsl(var(--clr-warning-600));
+  border-color: hsl(var(--clr-warning-100)); }
+  .badge-warning i.i {
+    color: hsl(var(--clr-warning-400)); }
+
+.badge-error {
+  background-color: hsl(var(--clr-error-100));
+  color: hsl(var(--clr-error-600));
+  border-color: hsl(var(--clr-error-100)); }
+  .badge-error i.i {
+    color: hsl(var(--clr-error-400)); }
+
+.badge-info {
+  background-color: hsl(var(--clr-info-100));
+  color: hsl(var(--clr-info-600));
+  border-color: hsl(var(--clr-info-100)); }
+  .badge-info i.i {
+    color: hsl(var(--clr-info-400)); }
+
+/* ------------------------- */
+/* Circle Badge */
+/* ------------------------- */
+.badge-circle {
+  aspect-ratio: 1/1;
+  padding: 0.2em; }
+
 .subtitle {
   text-transform: uppercase;
   letter-spacing: -0.02em;
@@ -3942,6 +4041,75 @@ textarea {
 .bg-mp-gradient {
   background: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
   box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48); }
+
+/* ----------------- */
+/* Home */
+/* ----------------- */
+.hero-title {
+  font-size: var(--fz-display-m); }
+  @media (min-width: 64rem) {
+    .hero-title {
+      font-size: var(--fz-display-l); } }
+
+.top-categories {
+  margin-top: 1.75rem;
+  padding: 1.5rem; }
+  @media (min-width: 64rem) {
+    .top-categories {
+      margin-top: 4rem;
+      padding: 3.5rem; } }
+
+.container-za-trista-i-dvaise-na-dvesta-i-dvaise {
+  gap: 1.5rem;
+  padding: 0 0 40px 0;
+  background-color: hsl(var(--clr-main-100)); }
+  @media (min-width: 64rem) {
+    .container-za-trista-i-dvaise-na-dvesta-i-dvaise {
+      gap: 2.5rem; } }
+
+.teacher-card {
+  min-width: 320px;
+  aspect-ratio: 1/0.6875;
+  position: relative; }
+
+.teacher-card-name {
+  text-decoration: none;
+  bottom: -0.75rem;
+  left: 1.75rem; }
+  .teacher-card-name:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+
+.avatar-border {
+  border: 0.25rem solid hsl(var(--clr-default-0)); }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(calc(-360px * 5)); } }
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-360px * 5)); }
+  100% {
+    transform: translateX(0); } }
+.slider {
+  margin: auto;
+  overflow: hidden;
+  position: relative; }
+  .slider .slide-track {
+    animation: scroll 320s linear infinite;
+    display: flex;
+    width: calc(360px * 10); }
+    .slider .slide-track.slide-track-right {
+      animation: scrollRight 320s linear infinite; }
+  .slider .slide {
+    height: 260px;
+    width: 360px; }
 
 .header {
   position: sticky;

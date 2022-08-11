@@ -1,0 +1,78 @@
+.badge {
+    position: relative;
+    display: inline-flex;
+    gap: 0.5em;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--clr-default-200));
+    color: hsl(var(--clr-default-700));
+    border:1px solid hsl(var(--clr-default-200));
+    border-radius: 10rem;
+    font-size: 0.75em;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1;
+    outline: none;
+    z-index: auto;
+    padding: 0.2em 0.5em;
+    white-space: nowrap;
+    vertical-align: baseline;
+
+    i.i {   
+        font-size: 0.9em;
+        color: hsl(var(--clr-default-500));
+    }
+}
+
+.badge-primary {
+    background-color: hsl(var(--clr-main-50));
+    color: hsl(var(--clr-main-700));
+    border-color: hsl(var(--clr-main-50));
+
+    i.i {   
+        color: hsl(var(--clr-main-500));
+    }
+}
+
+
+.badge-warning {
+    background-color: hsl(var(--clr-warning-100));
+    color: hsl(var(--clr-warning-600));
+    border-color: hsl(var(--clr-warning-100));
+
+    i.i {   
+        color: hsl(var(--clr-warning-400));
+    }
+}
+
+.badge-error {
+    background-color: hsl(var(--clr-error-100));
+    color: hsl(var(--clr-error-600));
+    border-color: hsl(var(--clr-error-100));
+
+    i.i {   
+        color: hsl(var(--clr-error-400));
+    }
+}
+
+.badge-info {
+    background-color: hsl(var(--clr-info-100));
+    color: hsl(var(--clr-info-600));
+    border-color: hsl(var(--clr-info-100));
+
+    i.i {   
+        color: hsl(var(--clr-info-400));
+    }
+}
+
+/* ------------------------- */
+/* Circle Badge */
+/* ------------------------- */
+
+.badge-circle {
+    aspect-ratio: 1/1;
+    padding: 0.2em;
+
+}
+

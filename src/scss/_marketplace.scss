@@ -16,5 +16,115 @@
 }
 
 
+/* ----------------- */
+/* Home */
+/* ----------------- */
+
+.hero-title {
+    font-size: var(--fz-display-m);
+
+    @include mq(m) {
+        font-size: var(--fz-display-l);
+     }
+}
+
+.top-categories {
+
+    margin-top: 1.75rem;
+    padding: 1.5rem; 
+
+    @include mq(m) {
+        margin-top: 4rem;
+        padding: 3.5rem; 
+    }
+}
+
+.container-za-trista-i-dvaise-na-dvesta-i-dvaise {
+    gap: 1.5rem;
+    padding: 0 0 40px 0;
+    background-color: hsl(var(--clr-main-100));
+
+    @include mq(m) {
+        gap: 2.5rem;
+    }
+}
+
+.teacher-card {
+    min-width: 320px;
+    aspect-ratio: 1/0.6875;
+    position: relative;
+
+
+}
+
+.teacher-card-name {
+    text-decoration: none;
+    // position: absolute;
+    bottom: -0.75rem;
+    left: 1.75rem;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+
+.avatar-border {
+    border: .25rem solid hsl(var(--clr-default-0));
+}
+
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 320s;
+
+// Animation
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-360px * 5))}
+}
+
+@keyframes scrollRight {
+	0% {transform: translateX(calc(-360px * 5)) }
+	100% {  transform: translateX(0); }
+}
+
+
+// Styling
+.slider {	
+	margin: auto;
+	overflow:hidden;
+	position: relative;	
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(360px * 10);
+
+        &.slide-track-right {
+		    animation: scrollRight $animationSpeed linear infinite;
+
+        }
+	}
+	
+	.slide {
+		height: 260px;
+		width: 360px;
+	}
+}
+
+
+
+
+
+
 
   

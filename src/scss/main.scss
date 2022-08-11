@@ -2,6 +2,8 @@
     @return #{'hsl(#{$args})'};
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @import 'variables';
 @import 'icons';
 @import 'mixins';
@@ -15,6 +17,8 @@
 @import 'alerts';
 @import 'avatars';
 @import 'shadows';
+@import 'divider';
+@import 'badges';
 
 @import 'marketplace';
 

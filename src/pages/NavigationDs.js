@@ -13,7 +13,9 @@ export default function NavigationDs() {
             <CustomLink to="/alerts">Alerts</CustomLink>
             <CustomLink to="/shadows">Shadows</CustomLink>
             <CustomLink to="/border-radius">Border Radius</CustomLink>
+            <CustomLink to="/button-groups">Button Groups</CustomLink>
             <CustomLink to="/blur">Blur</CustomLink>
+            <CustomLink to="/badges">Badges</CustomLink>
         </ul>
     )
 }
