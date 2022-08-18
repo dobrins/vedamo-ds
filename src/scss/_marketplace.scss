@@ -1,3 +1,8 @@
+:root {
+    --bg-mp-gradient : linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
+    --bg-mp-gradient-dark :  linear-gradient(90.62deg, hsla(72, 89%, 49%, 1) -2.44%, hsla(155, 94%, 45%, 1) 70.86%);
+}
+
 .subtitle {
     text-transform: uppercase;
     letter-spacing: -0.02em;
@@ -5,15 +10,29 @@
 }
 
 .txt-mp-gradient {
-    background: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
+    background: var(--bg-mp-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .bg-mp-gradient {
-    background: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
+    background: var( --bg-mp-gradient);
     box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
+    border: none
 }
+
+.txt-mp-gradient-dark {
+    background: var(--bg-mp-gradient-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-mp-gradient-dark {
+    background: var( --bg-mp-gradient-dark);
+    box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
+    border: none
+}
+
 
 
 /* ----------------- */
@@ -59,10 +78,19 @@
 
 .teacher-card-name {
     text-decoration: none;
-    // position: absolute;
     bottom: -0.75rem;
     left: 1.75rem;
+    position: absolute;
+    left: 0;
+    bottom: -1rem; 
+    left: 1.5rem;
+    
+}
 
+a.teacher-card-name-link {
+    width: 0;
+    height: 0;
+    visibility: hidden;
     &:after {
         content: "";
         position: absolute;
@@ -70,6 +98,16 @@
         left: 0;
         right: 0;
         bottom: 0;
+        visibility: visible;
+    }
+}
+
+.slide-track-bottomGradient {
+    a.teacher-card-name-link {
+        &::after {
+            bottom: -30px;
+            background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(0,0,0,0) 100%);
+        }
     }
 }
 
@@ -119,6 +157,10 @@ $animationSpeed: 320s;
 		height: 260px;
 		width: 360px;
 	}
+}
+
+.home-step {
+    border: 1px solid hsl(var(--clr-default-250))
 }
 
 

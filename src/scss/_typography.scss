@@ -2,7 +2,6 @@
 
 .ff-sans-normal { font-family: var(--ff-sans-normal); }
 
-
 .fz-hero-xl { font-size: var(--fz-hero-xl); line-height: 1.29; letter-spacing: -0.02em;}
 
 .fz-display-2xl { font-size: var(--fz-display-2xl); line-height: 1.25; letter-spacing: -0.02em;}
@@ -22,8 +21,12 @@
 .txt-medium { font-weight: 500;}
 .txt-semibold { font-weight: 600;}
 
-.txt-bold { font-weight: 700;}
+.txt-start {text-align: left!important;}
+.txt-center {text-align: center!important;}
+.txt-end {text-align: right!important;}
 
+
+.txt-bold { font-weight: 700;}
 .txt-underline {text-decoration: underline;}
 
 .txt-uppercase {text-transform: uppercase !important;}

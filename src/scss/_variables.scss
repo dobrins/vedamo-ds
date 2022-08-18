@@ -142,6 +142,11 @@
     --bs-xl: 0px 20px 16px -4px hsl( var(--clr-default-900), 0.02), 0px 8px 16px -4px hsl( var(--clr-default-900), 0.02);
     --bs-2xl: 0px 24px 48px -12px hsl( var(--clr-default-900), 0.08); 
     --bs-3xl: 0px 32px 64px -12px hsl( var(--clr-default-900), 0.12); 
+
+    /* Custom Variables */
+
+    --header-height: 5rem;
+
 }
 
 /* Sizes */

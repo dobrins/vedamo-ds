@@ -56,7 +56,8 @@ function App() {
                 {dropdown()}
             </div>
             
-            <h2 className="fz-display-xs" id="pageTitle">{ location.pathname.substring(1) }</h2>
+            {/* <h2 className="fz-display-xs" id="pageTitle">{ location.pathname.substring(1) }</h2> */}
+            <h2 className="fz-display-xs" id="pageTitle">Storybook</h2>
     
           </div>
           <div className="container pv-7 bg-default-150 flex-1">

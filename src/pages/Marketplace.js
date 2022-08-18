@@ -16,7 +16,7 @@ export default function Marketplace() {
 
     return (
         <>
-        <div className="container-m">
+        <div className="container-m mt-15">
             <div className="grid-container">
                 <div className="col-xs-12 col-sm-8 col-sm-offset-3">
                     <h1 className="hero-title txt-semibold">On-demand Online Tutoring.<br />Tutors & Students Matched.</h1>
@@ -29,7 +29,8 @@ export default function Marketplace() {
             <div className="grid-container">
                 <div className="col-xs-12 col-sm-8 col-sm-offset-3">
                     <div className="top-categories blur-s br-6" style={ style }>
-                        <div className="grid-container">
+                        <p className="txt-uppercase fz-text-xs txt-semibold txt-default-600">Top categories</p>
+                        <div className="grid-container mt-3">
                             <div className="col-sm-4 col-xs-12">
                                 <a href={ahref} className="btn btn-tertiary btn-xl full-width">Languages</a>
                             </div>
@@ -84,7 +85,7 @@ export default function Marketplace() {
         </div>
 
         <div className="slider">
-	        <div className="slide-track slide-track-right">
+	        <div className="slide-track slide-track-right slide-track-bottomGradient">
                 <div className="slide">
                     <CardTeacher /> 
                 </div>
@@ -117,7 +118,6 @@ export default function Marketplace() {
                 </div>
             </div>
         </div>
-        
 
         <div className="bg-default-100 mt-10 pv-15">
             <div className="container-m">
@@ -132,6 +132,17 @@ export default function Marketplace() {
                 <CardSection />
                 <div className="pt-13 flex flex-center">
                     <button className="btn btn-primary btn-xl bg-mp-gradient">Find a Tutor</button>
+                </div>
+            </div>
+        </div>
+
+        <div className="bg-default-0 mt-10 pv-15">
+            <div className="grid-container">
+                <div className="col-sm-8 col-sm-offset-3">
+                    <div className="flex flex-column">
+                        <p className="subtitle txt-mp-gradient-dark txt-center">how it works</p>
+                        <h5 className="fz-display-m txt-semibold txt-center">Find the perfect Tutors in 3 simple steps</h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,16 +219,13 @@ function CardTeacher(props) {
     return (
         <div className="ph-5">
             <div className="br-4 bg-main-200 teacher-card" style={style}>
-                
-                <a href={ahref} className="flex flex-center-v teacher-card-name">
-
+                <div className="flex flex-center-v teacher-card-name">
                     <div className="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' />
+                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
                     </div>
-
-                    <span className=" txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                
-                </a>
+                    <span className="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
+                </div>
+                <a href={ahref} className="teacher-card-name-link">123</a>
             </div>
         </div>
     )

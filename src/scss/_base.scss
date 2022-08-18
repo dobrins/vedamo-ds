@@ -4,6 +4,7 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     color: hsl(var(--clr-default-900));
+    height: 100vh;
 }
 
 /* Easy working images */
@@ -13,7 +14,7 @@ img, picture {
 }
 
 a {
-    color: var(--clr-default-1000);
+    color: hsl(var(--clr-default-1000));
     text-underline-offset: 2px;
 }
 
@@ -37,3 +38,7 @@ input, button, textarea {
         scroll-behavior: auto !important;
     }
 }
+
+::-webkit-scrollbar-thumb {background: hsl(var(--clr-default-300)); border-radius:0.5rem;}
+::-webkit-scrollbar-track	{background: hsl(var(--clr-default-100));border-radius: 0.5rem;}
+::-webkit-scrollbar {width:0.5rem;height:0.5rem;}

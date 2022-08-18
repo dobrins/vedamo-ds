@@ -1,28 +1,19 @@
 .header {
-    // --gap: 1.5rem;
     position: sticky;
     top: 0;
     z-index: 1;
     background-color: rgba(255, 255, 255, .8);
-    // backdrop-filter: blur(5rem);
     display: flex;
-    // padding: 1rem 0;
     flex-direction: column;
+    z-index: 3;
    
     @include mq(m) {
         flex-direction: row;
     }
 
     @include mq(l) {
-        // --gap: 2rem;
-        padding: 1rem 0;   
+       height: var(--header-height);
     }
-}
-
-.om {
-    height: 300px;
-    background-image: url(../../public/forest.jpg);
-    background-repeat: no-repeat;
 }
 
 .utility-header {
@@ -109,20 +100,41 @@
     }
 }
 
-.dropdown-menu {
-    position: absolute;
-    background: hsl( var(--clr-default-200) );
+.backdropMenu, .backdropMenu1 {
+    position: fixed;
+    top: var(--header-height);
     left: 0;
-    top: 100%;
+    display: none;
+    z-index: 2;
     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    // overflow-y: auto;
+    outline: 0;
+    background-color: hsl( var(--clr-default-900), 16% );
+
+}
+
+.dropdown-menu,
+.dropdown-menu-inner {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    top: 100%;
+    // width: 100%;
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-    border-top: 1px solid hsl( var(--clr-default-300) )
+    border-top: 1px solid hsl( var(--clr-default-300) );
+    max-height: 100vh;
 }
 
-.dropdown.active > .dropdown-button + .dropdown-menu {
+
+
+.dropdown.active > .dropdown-button + .dropdown-menu ,
+.dropdown-inner.active > .dropdown-button-inner + .dropdown-menu-inner 
+{
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0px);
@@ -181,7 +193,6 @@
 
 .nav-sliding {
     position: fixed;
-    
     flex-direction: column;
     width: 100%;
     height: 100vh;
@@ -196,3 +207,6 @@
     }
 }
 
+.header-dropdown-menu {
+    height: calc(100vh - var(--header-height));
+}

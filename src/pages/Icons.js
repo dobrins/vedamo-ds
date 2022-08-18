@@ -332,7 +332,7 @@ return(
     
     {icons.map( (icon, i) =>
             (
-                <div className="col-xs-6 col-sm-4 col-l-3 br-1 box-shadow overflow-hidden flex flex-vertical gap-0" key={i}>
+                <div className="col-xs-6 col-sm-4 col-l-3 br-1 box-shadow overflow-hidden flex flex-column gap-0" key={i}>
                     <div className="bg-default-100 txt-center p-2">
                       <i className={`fz-display-m i ${icon} `}>{}</i>
                     </div>
