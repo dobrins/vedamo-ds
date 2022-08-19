@@ -163,6 +163,42 @@ $animationSpeed: 320s;
     border: 1px solid hsl(var(--clr-default-250))
 }
 
+.home-card {
+    display: grid;
+    position: relative;
+
+    @include mq(m) {
+        display: flex;
+    }
+
+    .home-card-description {
+        @include mq(m) {
+            margin-left: 1.5rem;
+        }
+        
+    }
+
+    .home-card-price {
+        
+        order: 1;
+
+        @include mq(m) {
+            order: 2
+        }
+
+        div {
+            flex-direction: row;
+            align-items: end;
+
+            @include mq(m) {
+                flex-direction: column;
+                align-items: center;
+        }
+    }   
+    }
+
+    
+}
 
 
 

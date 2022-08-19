@@ -1,6 +1,7 @@
 const backdrop = document.querySelector('.backdropMenu1');
 const menuInner = document.querySelector('.menu-inner');
 const menuClose = document.querySelector('.menu-close');
+const body = document.querySelector('body');
 
 document.addEventListener("click", e => {
 
@@ -15,7 +16,8 @@ document.addEventListener("click", e => {
         currentDropdown = e.target.closest("[data-dropdown]");
         currentDropdown.classList.toggle("active");
         backdrop.classList.toggle("block");
-        menuInner.classList.remove("block")
+        menuInner.classList.remove("block");
+        body.classList.toggle('backdropBody');
     }
 
     closeMenu();
@@ -43,6 +45,8 @@ document.addEventListener("click", e => {
     
             dropdown.classList.remove("active");
             backdrop.classList.remove("block");
+            body.classList.remove('backdropBody');
+
             menuInner.classList.remove("block");
         })
     }

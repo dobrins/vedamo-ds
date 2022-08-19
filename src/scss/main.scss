@@ -20,10 +20,11 @@
 @import 'divider';
 @import 'badges';
 
-@import 'marketplace';
+/* Marketplace specific */
 
-
-@import 'header';
+@import 'marketplace/marketplace';
+@import 'marketplace/header';
+@import 'marketplace/home';
 
 
 /* classes - remove later */
@@ -57,17 +58,17 @@
     }
 }
 
-section p {
-    width: 150px;
-    // color: hsl( var(--clr-default-400)  );
-    color: hsl(var(--clr-default-400));
-    font-size: 14px;
-}
+// section p {
+//     width: 150px;
+//     // color: hsl( var(--clr-default-400)  );
+//     color: hsl(var(--clr-default-400));
+//     font-size: 14px;
+// }
 
-section h4 {
-    text-align: left;
-    margin:0;
-}
+// section h4 {
+//     text-align: left;
+//     margin:0;
+// }
 
 .color { 
     margin: 0;

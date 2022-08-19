@@ -1,0 +1,8 @@
+.hero-section {
+    margin-top: 2.5rem;
+
+    @include mq(m) {
+        margin-top: 8rem;
+    }
+    
+}

@@ -20,18 +20,18 @@
 .txt-regular { font-weight: normal;}
 .txt-medium { font-weight: 500;}
 .txt-semibold { font-weight: 600;}
+.txt-bold { font-weight: 700;}
 
 .txt-start {text-align: left!important;}
 .txt-center {text-align: center!important;}
 .txt-end {text-align: right!important;}
 
-
-.txt-bold { font-weight: 700;}
-.txt-underline {text-decoration: underline;}
-
 .txt-uppercase {text-transform: uppercase !important;}
 .txt-lowercase {text-transform: lowercase !important;}
 .txt-capitalize {text-transform: capitalize !important;}
+
+.txt-decoration-none {text-decoration: none !important;}
+.txt-underline {text-decoration: underline;}
 
 h1, h2, h3, h4, h5, h6 {
     @extend .txt-regular

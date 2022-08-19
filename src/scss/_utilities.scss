@@ -1,7 +1,104 @@
+/* ----------- */
+/* Displays    */
+/* ----------- */
+
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
 }
+
+.inline-flex {
+    display: inline-flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.inline-grid {
+    display: inline-grid;
+    gap: var(--gap, 1rem);
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+/* ------------ */
+/* Positions    */
+/* ------------ */
+
+.position-static {
+    position: static !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-sticky {
+    position: sticky !important;
+}
+
+/* --------------------*/
+/* Arrange elements    */
+/* --------------------*/
+
+//  Top and Bottom - for vertical positioning
+
+.top-0 { top: 0 !important;}
+.top-50 { top: 50% !important;}
+.top-100 { top: 100% !important;}
+
+.bottom-0 { bottom: 0 !important;}
+.bottom-50 { bottom: 50% !important;}
+.bottom-100 { bottom: 100% !important;}
+
+//  Start and End - for horizontal positioning
+
+.start-0 { left: 0 !important;}
+.start-50 { left: 50% !important;}
+.start-100 { left: 100% !important;}
+
+.end-0 { right: 0 !important;}
+.end-50 { right: 50% !important;}
+.end-100 { right: 100% !important;}
+
+/* --------------------*/
+/* Center elements     */
+/* --------------------*/
+
+.translate-middle {
+    transform: translate(-50%,-50%) !important;
+}
+.translate-middle-x {
+    transform: translateX(-50%)!important;
+}
+.translate-middle-y {
+    transform: translateY(-50%)!important;
+}
+
+/* --------*/
+/* Flex    */
+/* --------*/
 
 .flex-row {
     flex-direction:row;
@@ -10,8 +107,6 @@
 .flex-column {
     flex-direction: column;
 }
-
-
 
 .flex-1 {
     flex: 1;
@@ -30,14 +125,15 @@
     justify-content: center;
 }
 
+.flex-end-v {
+    align-items: end;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
 
-.grid {
-    display: grid;
-    gap: var(--gap, 1rem);
-}
+
 
 .inline-grid {
     display: inline-grid;
@@ -81,6 +177,7 @@
 .pointer-event-none {
     pointer-events: none;
 }
+
 
 /* -------- */
 /* Blurs    */
@@ -244,6 +341,6 @@ $count: 0;
 
 .hidden-m {
     @include mq(m) {
-        display: none
+        display: none !important
     }
 }

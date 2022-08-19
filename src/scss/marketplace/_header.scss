@@ -6,13 +6,20 @@
     display: flex;
     flex-direction: column;
     z-index: 3;
-   
+    padding: 1rem;
+    
     @include mq(m) {
+        height: var(--header-height);
         flex-direction: row;
+        padding: 2rem
     }
+}
 
-    @include mq(l) {
-       height: var(--header-height);
+.nav-desktop {
+    display: none;
+
+    @include mq(m) {
+        display: inherit
     }
 }
 
@@ -102,7 +109,8 @@
 
 .backdropMenu, .backdropMenu1 {
     position: fixed;
-    top: var(--header-height);
+    // top: var(--header-height);
+    top: 0;
     left: 0;
     display: none;
     z-index: 2;
@@ -112,7 +120,12 @@
     // overflow-y: auto;
     outline: 0;
     background-color: hsl( var(--clr-default-900), 16% );
+}
 
+// put this .backdropBody on <body> when opening the menu
+.backdropBody {
+    overflow: hidden; 
+    padding-right: 8px;
 }
 
 .dropdown-menu,

@@ -1130,8 +1130,7 @@ body {
   font-size: var(--fs-400);
   line-height: 1.5;
   min-height: 100vh;
-  color: hsl(var(--clr-default-900));
-  height: 100vh; }
+  color: hsl(var(--clr-default-900)); }
 
 /* Easy working images */
 img, picture {
@@ -1170,10 +1169,106 @@ input, button, textarea {
   width: 0.5rem;
   height: 0.5rem; }
 
+/* ----------- */
+/* Displays    */
+/* ----------- */
 .flex {
   display: flex;
   gap: var(--gap, 1rem); }
 
+.inline-flex {
+  display: inline-flex;
+  gap: var(--gap, 1rem); }
+
+.grid, .contentBox {
+  display: grid;
+  gap: var(--gap, 1rem); }
+
+.inline-grid {
+  display: inline-grid;
+  gap: var(--gap, 1rem); }
+
+.block {
+  display: block; }
+
+.inline {
+  display: inline; }
+
+.inline-block {
+  display: inline-block; }
+
+/* ------------ */
+/* Positions    */
+/* ------------ */
+.position-static {
+  position: static !important; }
+
+.position-relative {
+  position: relative !important; }
+
+.position-absolute {
+  position: absolute !important; }
+
+.position-fixed {
+  position: fixed !important; }
+
+.position-sticky {
+  position: sticky !important; }
+
+/* --------------------*/
+/* Arrange elements    */
+/* --------------------*/
+.top-0 {
+  top: 0 !important; }
+
+.top-50 {
+  top: 50% !important; }
+
+.top-100 {
+  top: 100% !important; }
+
+.bottom-0 {
+  bottom: 0 !important; }
+
+.bottom-50 {
+  bottom: 50% !important; }
+
+.bottom-100 {
+  bottom: 100% !important; }
+
+.start-0 {
+  left: 0 !important; }
+
+.start-50 {
+  left: 50% !important; }
+
+.start-100 {
+  left: 100% !important; }
+
+.end-0 {
+  right: 0 !important; }
+
+.end-50 {
+  right: 50% !important; }
+
+.end-100 {
+  right: 100% !important; }
+
+/* --------------------*/
+/* Center elements     */
+/* --------------------*/
+.translate-middle {
+  transform: translate(-50%, -50%) !important; }
+
+.translate-middle-x {
+  transform: translateX(-50%) !important; }
+
+.translate-middle-y {
+  transform: translateY(-50%) !important; }
+
+/* --------*/
+/* Flex    */
+/* --------*/
 .flex-row {
   flex-direction: row; }
 
@@ -1193,12 +1288,11 @@ input, button, textarea {
 .flex-center-h {
   justify-content: center; }
 
+.flex-end-v {
+  align-items: end; }
+
 .flex-wrap {
   flex-wrap: wrap; }
-
-.grid, .contentBox {
-  display: grid;
-  gap: var(--gap, 1rem); }
 
 .inline-grid {
   display: inline-grid; }
@@ -3301,7 +3395,7 @@ input, button, textarea {
 
 @media (min-width: 64rem) {
   .hidden-m {
-    display: none; } }
+    display: none !important; } }
 
 .btn {
   position: relative;
@@ -3579,6 +3673,9 @@ input, button, textarea {
 .txt-semibold {
   font-weight: 600; }
 
+.txt-bold {
+  font-weight: 700; }
+
 .txt-start {
   text-align: left !important; }
 
@@ -3588,12 +3685,6 @@ input, button, textarea {
 .txt-end {
   text-align: right !important; }
 
-.txt-bold {
-  font-weight: 700; }
-
-.txt-underline {
-  text-decoration: underline; }
-
 .txt-uppercase {
   text-transform: uppercase !important; }
 
@@ -3602,6 +3693,12 @@ input, button, textarea {
 
 .txt-capitalize {
   text-transform: capitalize !important; }
+
+.txt-decoration-none {
+  text-decoration: none !important; }
+
+.txt-underline {
+  text-decoration: underline; }
 
 /* https://erikmonjas.github.io/css-grid-12-column-layout/ */
 .grid-container {
@@ -4029,7 +4126,7 @@ textarea {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  padding: 10px 14px;
+  padding: 0 1rem;
   border: 1px solid hsl(var(--clr-default-300));
   border-radius: 0.25rem;
   transition: box-shadow .15s ease-in-out; }
@@ -4229,6 +4326,7 @@ textarea {
   aspect-ratio: 1/1;
   padding: 0.2em; }
 
+/* Marketplace specific */
 :root {
   --bg-mp-gradient: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
   --bg-mp-gradient-dark: linear-gradient(90.62deg, #c0ec0e -2.44%, #07df85 70.86%); }
@@ -4344,6 +4442,28 @@ a.teacher-card-name-link {
 .home-step {
   border: 1px solid hsl(var(--clr-default-250)); }
 
+.home-card {
+  display: grid;
+  position: relative; }
+  @media (min-width: 64rem) {
+    .home-card {
+      display: flex; } }
+  @media (min-width: 64rem) {
+    .home-card .home-card-description {
+      margin-left: 1.5rem; } }
+  .home-card .home-card-price {
+    order: 1; }
+    @media (min-width: 64rem) {
+      .home-card .home-card-price {
+        order: 2; } }
+    .home-card .home-card-price div {
+      flex-direction: row;
+      align-items: end; }
+      @media (min-width: 64rem) {
+        .home-card .home-card-price div {
+          flex-direction: column;
+          align-items: center; } }
+
 .header {
   position: sticky;
   top: 0;
@@ -4351,13 +4471,19 @@ a.teacher-card-name-link {
   background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
-  z-index: 3; }
+  z-index: 3;
+  padding: 1rem; }
   @media (min-width: 64rem) {
     .header {
-      flex-direction: row; } }
-  @media (min-width: 80rem) {
-    .header {
-      height: var(--header-height); } }
+      height: var(--header-height);
+      flex-direction: row;
+      padding: 2rem; } }
+
+.nav-desktop {
+  display: none; }
+  @media (min-width: 64rem) {
+    .nav-desktop {
+      display: inherit; } }
 
 .utility-header {
   display: none;
@@ -4424,7 +4550,7 @@ a.teacher-card-name-link {
 
 .backdropMenu, .backdropMenu1 {
   position: fixed;
-  top: var(--header-height);
+  top: 0;
   left: 0;
   display: none;
   z-index: 2;
@@ -4433,6 +4559,10 @@ a.teacher-card-name-link {
   overflow-x: hidden;
   outline: 0;
   background-color: hsl(var(--clr-default-900), 16%); }
+
+.backdropBody {
+  overflow: hidden;
+  padding-right: 8px; }
 
 .dropdown-menu,
 .dropdown-menu-inner {
@@ -4505,6 +4635,12 @@ a.teacher-card-name-link {
 .header-dropdown-menu {
   height: calc(100vh - var(--header-height)); }
 
+.hero-section {
+  margin-top: 2.5rem; }
+  @media (min-width: 64rem) {
+    .hero-section {
+      margin-top: 8rem; } }
+
 /* classes - remove later */
 .sidebar {
   width: 12rem;
@@ -4525,15 +4661,6 @@ a.teacher-card-name-link {
   @media (min-width: 64rem) {
     .main-container {
       padding-left: 12rem; } }
-
-section p {
-  width: 150px;
-  color: hsl(var(--clr-default-400));
-  font-size: 14px; }
-
-section h4 {
-  text-align: left;
-  margin: 0; }
 
 .color {
   margin: 0;
