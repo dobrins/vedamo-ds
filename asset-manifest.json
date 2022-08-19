@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vedamo-ds/static/css/main.93ca793c.css",
+    "main.css": "/vedamo-ds/static/css/main.4d91f21b.css",
     "main.js": "/vedamo-ds/static/js/main.01bd48b3.js",
     "static/media/blur.jpg": "/vedamo-ds/static/media/blur.bc7a37b83ca4e580f436.jpg",
     "static/media/VEDAMO-IconFont.svg?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.e14a85cc7716492dbe6e.svg",
@@ -8,11 +8,11 @@
     "static/media/VEDAMO-IconFont.woff?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.da4a3f2927589248eb0a.woff",
     "static/media/VEDAMO-IconFont.ttf?e27xf1": "/vedamo-ds/static/media/VEDAMO-IconFont.cb85eb6c0a04e281ac18.ttf",
     "index.html": "/vedamo-ds/index.html",
-    "main.93ca793c.css.map": "/vedamo-ds/static/css/main.93ca793c.css.map",
+    "main.4d91f21b.css.map": "/vedamo-ds/static/css/main.4d91f21b.css.map",
     "main.01bd48b3.js.map": "/vedamo-ds/static/js/main.01bd48b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.93ca793c.css",
+    "static/css/main.4d91f21b.css",
     "static/js/main.01bd48b3.js"
   ]
 }
