@@ -33,6 +33,12 @@
 .txt-decoration-none {text-decoration: none !important;}
 .txt-underline {text-decoration: underline;}
 
+.txt-truncate { 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 h1, h2, h3, h4, h5, h6 {
     @extend .txt-regular
 }

@@ -11,7 +11,7 @@
     @include mq(m) {
         height: var(--header-height);
         flex-direction: row;
-        padding: 2rem
+        padding: 0 
     }
 }
 

@@ -2,9 +2,6 @@ import {useEffect} from 'react';
 
 const ahref = '#/marketplace';
 
-
-
-
 export default function Marketplace() {
 
     useEffect(() => {

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="../src/css/main.css" />
+    <link rel="stylesheet" type="text/css"  href="../src/css/dashboard/dashboard.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper-dashboard">
+
+        <!-- 
+            SIDEBAR 
+        -->
+
+        <aside class="sidebar-dashboard bs-2xl position-relative">
+            <div>
+                <div class="p-5 position-relative">
+                    <div class="logo flex flex-center-v">
+                        <a href="#">
+                            <img src="../public/logo.svg" alt="" />
+                        </a>
+                    </div>
+                    <button type="button" class="toggleSidebar btn btn-tertiary btn-circle position-absolute translate-middle top-50 start-100">
+                        <i class="i icon-chevron-left"></i>
+                    </button>
+                </div>
+                <ul class="p-4 sidebar-nav grid gap-1">
+                    <li class="active">
+                        <a href="#">
+                            <i class="i icon-cast"></i>
+                            <span>Sessions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="i icon-layout"></i>
+                            <span>Session Templates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="i icon-inbox"></i>
+                            <span>File library</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="i icon-star"></i>
+                            <span>Reviews and Notes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="i icon-coin-stack"></i>
+                            <span>Financials</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="i icon-settings"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>  
+                </ul>
+            </div>
+            <ul class="p-4 sidebar-nav grid gap-4">
+                <li>
+                    <a href="#">
+                        <i class="i icon-log-out"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>               
+            </ul>
+        </aside>
+
+        <!-- 
+            MAIN CONTAINER 
+        -->
+
+        <main class="main-dashboard flex-1">
+            
+            <div class="container bg-default-0 pv-5">
+                <div class="header-dashboard position-relative flex flex-end-h flex-center-v gap-6">
+                    <a href="#">My Offer</a>
+                    <div class="divider-vertical"></div>
+                    <a href="#" class="avatar avatar-m avatar-border">
+                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
+                    </a>
+                    <span class="badge badge-info txt-uppercase">
+                        tutor
+                    </span>
+                </div>
+            </div>
+           
+            <div class="container bg-default-0 pv-9 position-sticky">
+                <div class="bg-success-100 br-2 p-9 ">
+                    <div class="fz-text-xl">
+                        <span class="badge">11:00 - 12:00</span>
+                    </div>
+                    <div class="flex gap-9 mt-2">
+                        <p class="fz-display-xs txt-medium flex-1">You have a session with Sasha Grey starting in 8 mins. Hurry up! Don't miss your class.</p>
+                        <div class="flex">
+                            <button class="btn btn-tertiary btn-xl">View</button>
+                            <button class="btn btn-tertiary btn-xl">Start the Session</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container pv-9">
+                    
+                <div class="bg-default-250 br-2 ph-4 pv-3 flex flex-space-between flex-center-v">
+                    <div class="flex gap-6 flex-center-v">
+                        <button type="button" class="btn btn-tertiary btn-square">
+                            <i class="i icon-arrow-left"></i>
+                        </button>
+                        <div>
+                            <p class="fz-text-l txt-semibold">June 27 - July 03</p>
+                            <span class="txt-uppercase fz-text-xs txt-semibold">30 Sessions</span>
+                        </div>
+                        <button type="button" class="btn btn-tertiary btn-square">
+                            <i class="i icon-arrow-right"></i>
+                        </button>
+                        <a href="#" class="fz-text-s txt-semibold">This week</a>
+                    </div>
+                    <div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-tertiary">Leading</button>
+                            <button type="button" class="btn btn-tertiary">Middle</button>
+                            <button type="button" class="btn btn-tertiary">Trailing</button>
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="bg-default-0 br-2 p-9 mt-4">
+                    <div class="grid-container">
+                        <div class="col-sm-2">
+                            <div class="flex full-height flex-center-v ">
+                                <div class="txt-center ph-4 flex-1 position-sticky">
+                                    <div class="bg-default-0  brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250" style="border-bottom: none">
+                                        <p class="fz-display-xs">27</p>
+                                        <p class="txt-uppercase">sun</p>
+                                    </div>
+                                    <div class="bg-accent-1 brb-2 txt-default-0 txt-semibold txt-uppercase fz-txt-s pv-2">Today</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-10">
+                            
+                            <table class="table">
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>
+                                        <div class="txt-truncate">
+                                            A very long studen name
+                                        </div>
+                                    </td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="bg-default-50 br-2 p-9 mt-4">
+                    <div class="grid-container">
+                        <div class="col-sm-2">
+                            <div class="flex full-height flex-center-v">
+                                <div class="txt-center ph-4 flex-1">
+                                    <div class="bg-default-0  brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250" style="border-bottom: none">
+                                        <p class="fz-display-xs">27</p>
+                                        <p class="txt-uppercase">sun</p>
+                                    </div>
+                                    <div class="bg-accent-1 brb-2 txt-default-0 txt-semibold txt-uppercase fz-txt-s pv-2">Today</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-10">
+                            
+                            <table class="table">
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>
+                                        <div class="txt-truncate">
+                                            A very long studen name
+                                        </div>
+                                    </td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                    <td>Student Name</td>
+                                    <td class="td-50">
+                                        <div class="txt-truncate">
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
+                                        </div>
+                                    <td class="td-10 txt-end">
+                                        <button class="btn btn-tertiary btn-circle btn-xs">
+                                            <i class="i icon-more-vertical"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

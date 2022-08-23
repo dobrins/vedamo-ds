@@ -3,35 +3,35 @@
 /* ----------- */
 
 .flex {
-    display: flex;
+    display: flex !important;
     gap: var(--gap, 1rem);
 }
 
 .inline-flex {
-    display: inline-flex;
+    display: inline-flex !important;
     gap: var(--gap, 1rem);
 }
 
 .grid {
-    display: grid;
+    display: grid !important;
     gap: var(--gap, 1rem);
 }
 
 .inline-grid {
-    display: inline-grid;
+    display: inline-grid !important;
     gap: var(--gap, 1rem);
 }
 
 .block {
-    display: block;
+    display: block !important;
 }
 
 .inline {
-    display: inline;
+    display: inline !important;
 }
 
 .inline-block {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 /* ------------ */
@@ -56,6 +56,8 @@
 
 .position-sticky {
     position: sticky !important;
+    top: 0; // Default value
+    z-index: 1;
 }
 
 /* --------------------*/
@@ -129,19 +131,18 @@
     align-items: end;
 }
 
+.flex-end-h {
+    justify-content: end;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
 
-
-
-.inline-grid {
-    display: inline-grid;
+.flex-space-between {
+    justify-content: space-between;
 }
 
-.block {
-    display: block !important;
-}
 
 .container {
     padding-inline: 1rem;
@@ -177,7 +178,6 @@
 .pointer-event-none {
     pointer-events: none;
 }
-
 
 /* -------- */
 /* Blurs    */
@@ -233,12 +233,14 @@ $clrSecondaries: (100, 200, 300, 400, 600, 900);
 @each $clrVarMain in $clrVarMains {
     .bg-main-#{$clrVarMain} { background-color: hsl(var(--clr-main-#{$clrVarMain})); }
     .txt-main-#{$clrVarMain} { color: hsl(var(--clr-main-#{$clrVarMain})); }
+    .border-main-#{$clrVarMain} {border: 1px solid hsl(var(--clr-main-#{$clrVarMain})); }
 }
 
 /* Default Color */
 @each $clrVarDefault in $clrVarDefaults {
     .bg-default-#{$clrVarDefault} { background-color: hsl(var(--clr-default-#{$clrVarDefault})); }
     .txt-default-#{$clrVarDefault} { color: hsl(var(--clr-default-#{$clrVarDefault})); } 
+    .border-default-#{$clrVarDefault} {border: 1px solid hsl(var(--clr-default-#{$clrVarDefault})); }
 }
 
 @each $clrSecondary in $clrSecondaries {
@@ -250,7 +252,18 @@ $clrSecondaries: (100, 200, 300, 400, 600, 900);
     .txt-warning-#{$clrSecondary} { color: hsl(var(--clr-warning-#{$clrSecondary})); }
     .txt-error-#{$clrSecondary} { color: hsl(var(--clr-error-#{$clrSecondary})); } 
     .txt-info-#{$clrSecondary} { color: hsl(var(--clr-info-#{$clrSecondary})); } 
-    .txt-success-#{$clrSecondary} { color: hsl(var(--clr-success-#{$clrSecondary})); } }
+    .txt-success-#{$clrSecondary} { color: hsl(var(--clr-success-#{$clrSecondary})); } 
+
+    .border-warning-#{$clrSecondary} {border: 1px solid hsl(var(--clr-warning-#{$clrSecondary})); }
+}
+
+.bg-accent-1 { background-color: hsl(var(--clr-accent-1)); }
+.txt-accent-1 { color: hsl(var(--clr-accent-1)); } 
+.border-accent-1 {border: 1px solid hsl(var(--clr-accent-1)); }
+
+.bg-accent-2 { background-color: hsl(var(--clr-accent-2)); }
+.txt-accent-2 { color: hsl(var(--clr-accent-2)); } 
+.border-accent-2 {border: 1px solid hsl(var(--clr-accent-2)); }
 
 
 /* ------------------------------ */
@@ -333,7 +346,6 @@ $count: 0;
     }
 
 }
-
 
 .overflow-hidden {
     overflow: hidden;

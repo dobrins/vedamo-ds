@@ -2,3 +2,9 @@
     background-color: hsl(var(--clr-default-250));
     height: 1px;
 }
+
+.divider-vertical {
+    width: 1px;
+    background-color: hsl(var(--clr-default-400));
+    height: 100%;
+}

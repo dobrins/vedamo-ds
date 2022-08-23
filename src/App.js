@@ -19,7 +19,8 @@ import Blur from "./pages/Blur"
 import ButtonGroups from "./pages/ButtonGroups"
 import Navigation from "./pages/Navigation"
 import Badges from "./pages/Badges"
-
+import Position from "./pages/Position"
+import companyLogo from './img/logo.svg';
 
 function App() {
 
@@ -41,45 +42,44 @@ function App() {
   if(location.pathname !== '/marketplace') {
   
   return (
-      <>
-        <aside className="sidebar">
-          <Navbar />
-        </aside>
-        
-        <div className="main-container flex flex-vertical gap-0">
-          <div className="flex flex-center-v bg-default-300 p-2 gap-5">
-            
+      <>        
+        <div className="grid gap-0 main-container">
+          <div className="flex flex-center-v bg-default-300 ph-4 gap-5">
             <div className="dropdownMenu hidden-m">
-              <button className="dropdownBtn btn btn-tertiary btn-square" onClick={() => setOpen(!open)}>
+              <button className="dropdownBtn btn btn-tertiary btn-square btn-xs" onClick={() => setOpen(!open)}>
                 <i className="i icon-menu"></i>
               </button>
                 {dropdown()}
             </div>
-            
-            {/* <h2 className="fz-display-xs" id="pageTitle">{ location.pathname.substring(1) }</h2> */}
-            <h2 className="fz-display-xs" id="pageTitle">Storybook</h2>
-    
+            <img src={companyLogo} alt="Vedamo Logo" width="140" />
           </div>
-          <div className="container pv-7 bg-default-150 flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/colors" element={<Colors />} />
-              <Route path="/typography" element={<Typography />} />
-              <Route path="/buttons" element={<Buttons />} />
-              <Route path="/button-groups" element={<ButtonGroups />} />
-              <Route path="/grid" element={<Grid />} />
-              <Route path="/spacing-system" element={<SpacingSystem />} />
-              <Route path="/icons" element={<Icons />} />
-              <Route path="/login" element={<Login />} />  
-              <Route path="/marketplace" element={<Marketplace />} />  
-              <Route path="/alerts" element={<Alerts />} />  
-              <Route path="/shadows" element={<Shadows />} />  
-              <Route path="/border-radius" element={<BorderRadius />} />  
-              <Route path="/Blur" element={<Blur />} />  
-              <Route path="/Badges" element={<Badges />} />  
-              <Route path="*" element={<NotFound />} />  
-            </Routes>
+
+          <div className="flex gap-0">
+            <aside className="sidebar bg-default-0 bs-xl position-relative">
+              <Navbar />
+            </aside>
           
+            <div className="container pv-4 bg-default-150 flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/colors" element={<Colors />} />
+                <Route path="/typography" element={<Typography />} />
+                <Route path="/buttons" element={<Buttons />} />
+                <Route path="/button-groups" element={<ButtonGroups />} />
+                <Route path="/grid" element={<Grid />} />
+                <Route path="/spacing-system" element={<SpacingSystem />} />
+                <Route path="/icons" element={<Icons />} />
+                <Route path="/login" element={<Login />} />  
+                <Route path="/marketplace" element={<Marketplace />} />  
+                <Route path="/alerts" element={<Alerts />} />  
+                <Route path="/shadows" element={<Shadows />} />  
+                <Route path="/border-radius" element={<BorderRadius />} />  
+                <Route path="/Blur" element={<Blur />} />  
+                <Route path="/Badges" element={<Badges />} />  
+                <Route path="/Position" element={<Position />} />  
+                <Route path="*" element={<NotFound />} />  
+              </Routes>
+            </div>
           </div>
         </div>
       </>

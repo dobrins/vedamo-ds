@@ -19,23 +19,19 @@
 @import 'shadows';
 @import 'divider';
 @import 'badges';
-
-/* Marketplace specific */
-
-@import 'marketplace/marketplace';
-@import 'marketplace/header';
-@import 'marketplace/home';
+@import 'tables';
 
 
 /* classes - remove later */
 
+.main-container {
+    height: 100vh;
+    align-content: stretch;
+    grid-template-rows: 3rem;
+}
 
 .sidebar {
-    width: 12rem;
-    height: 100vh;
-    background-color: hsl(var(--clr-default-800));
-    position: fixed;
-    top: 0;
+    flex-basis: 12rem;
     display: none;
 
     @include mq(m) {
@@ -45,30 +41,31 @@
 }
 
 .navigation-vertical {
+    position: sticky;
+    top: 0;
     a {
-        color: hsl(var(--clr-default-0));
+        color: hsl(var(--clr-default-500));
+        text-decoration: none;
+        font-size: 0.875rem;
+        // display: block;
+        padding: 0.5rem;
+
+        &:hover {
+            background-color: hsl(var(--clr-default-200));
+        }
+    }
+
+    .active {
+        a {
+            font-weight: 700;
+            color: hsl(var(--clr-default-900));
+        }
+
+        i {
+            color: hsl(var(--clr-main-600));
+        }
     }
 }
-
-.main-container {
-    height: 100vh;
-    
-    @include mq(m) {
-       padding-left: 12rem;
-    }
-}
-
-// section p {
-//     width: 150px;
-//     // color: hsl( var(--clr-default-400)  );
-//     color: hsl(var(--clr-default-400));
-//     font-size: 14px;
-// }
-
-// section h4 {
-//     text-align: left;
-//     margin:0;
-// }
 
 .color { 
     margin: 0;
