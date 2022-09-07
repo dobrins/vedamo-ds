@@ -2,15 +2,24 @@
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
+    
 }
 
-.table > :not(caption) > * > * {
+.table > * > * > * {
     border-bottom-width: 1px;
     border-style: solid;
-    border-color: hsl(var(--clr-default-250));
-    padding: 0.75rem 0.5rem;
+    border-color: hsl(var(--clr-default-200));
+    padding: 0.5rem 0.5rem;
     font-size: var(--fz-text-s);
-    font-weight: 600;
+    font-weight: 500;
+    vertical-align: initial
+}
+
+
+.table  > * > * {
+    &:last-child > * {
+        border:none
+    }
 }
 
 .table {
@@ -23,4 +32,12 @@
     .td-70 { width: 70% }
     .td-80 { width: 80% }
     .td-90 { width: 90% }
+}
+
+.table-hover {
+    tr:hover {
+        td {
+            background: hsl(var(--clr-default-100));
+        }
+    }
 }
