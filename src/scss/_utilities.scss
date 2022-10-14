@@ -26,12 +26,12 @@
     display: block !important;
 }
 
-.inline {
-    display: inline !important;
-}
-
 .inline-block {
     display: inline-block !important;
+}
+
+.inline {
+    display: inline !important;
 }
 
 /* ------------ */
@@ -131,6 +131,10 @@
     align-items: end;
 }
 
+.flex-start-v {
+    align-items: flex-start;
+}
+
 .flex-end-h {
     justify-content: end;
 }
@@ -142,7 +146,6 @@
 .flex-space-between {
     justify-content: space-between;
 }
-
 
 .container {
     padding-inline: 1rem;
@@ -171,164 +174,34 @@
     border: 0;
 }
 
-.hidden {
-    display: none;
-}
+
+
+
+// NON ClICKABLE ELEMENTS IN ONCLICK ELEMENT
 
 .pointer-event-none {
     pointer-events: none;
 }
 
-/* -------- */
-/* Blurs    */
-/* -------- */
-
-.blur-s {
-    background-color: rgba(255, 255, 255, 1);
+.pointer-event-none-children > * {
+    pointer-events: none;
 }
-
-.blur-m {
-    background-color: rgba(255, 255, 255, 2);
-}
-
-.blur-l {
-    background-color: rgba(255, 255, 255, 4);
-}
-
-.blur-xl {
-    background-color: rgba(255, 255, 255, 6);
-}
-
-
-@supports(backdrop-filter: blur(1rem)) { 
-    .blur-s  {
-        backdrop-filter: saturate(180%) blur(0.25rem);
-        background-color: inherit;
-    }
-    
-    .blur-m  {
-        backdrop-filter: saturate(180%) blur(0.5rem);
-    }
-    
-    .blur-l  {
-        backdrop-filter: saturate(180%) blur(1rem);
-    }
-    .blur-xl  {
-        backdrop-filter: saturate(180%) blur(.75rem);
-    }
-    .blur-s, .blur-m, .blur-l, .blur-xl {
-        background-color: rgba(255, 255, 255, .8);
-    }
-}
-
-/* ------------------------------       */
-/* Background and text color classes    */
-/* ------------------------------       */
-
-$clrVarMains: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900);
-$clrVarDefaults: (0, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 1000);
-$clrSecondaries: (100, 200, 300, 400, 600, 900);
-
-/* Main Color */
-@each $clrVarMain in $clrVarMains {
-    .bg-main-#{$clrVarMain} { background-color: hsl(var(--clr-main-#{$clrVarMain})); }
-    .txt-main-#{$clrVarMain} { color: hsl(var(--clr-main-#{$clrVarMain})); }
-    .border-main-#{$clrVarMain} {border: 1px solid hsl(var(--clr-main-#{$clrVarMain})); }
-}
-
-/* Default Color */
-@each $clrVarDefault in $clrVarDefaults {
-    .bg-default-#{$clrVarDefault} { background-color: hsl(var(--clr-default-#{$clrVarDefault})); }
-    .txt-default-#{$clrVarDefault} { color: hsl(var(--clr-default-#{$clrVarDefault})); } 
-    .border-default-#{$clrVarDefault} {border: 1px solid hsl(var(--clr-default-#{$clrVarDefault})); }
-}
-
-@each $clrSecondary in $clrSecondaries {
-    .bg-warning-#{$clrSecondary} { background-color:  hsl(var(--clr-warning-#{$clrSecondary})); }
-    .bg-error-#{$clrSecondary} { background-color: hsl(var(--clr-error-#{$clrSecondary})); }
-    .bg-info-#{$clrSecondary} { background-color: hsl(var(--clr-info-#{$clrSecondary})); }
-    .bg-success-#{$clrSecondary} { background-color: hsl(var(--clr-success-#{$clrSecondary})); }
-
-    .txt-warning-#{$clrSecondary} { color: hsl(var(--clr-warning-#{$clrSecondary})); }
-    .txt-error-#{$clrSecondary} { color: hsl(var(--clr-error-#{$clrSecondary})); } 
-    .txt-info-#{$clrSecondary} { color: hsl(var(--clr-info-#{$clrSecondary})); } 
-    .txt-success-#{$clrSecondary} { color: hsl(var(--clr-success-#{$clrSecondary})); } 
-
-    .border-warning-#{$clrSecondary} {border: 1px solid hsl(var(--clr-warning-#{$clrSecondary})); }
-}
-
-.bg-accent-1 { background-color: hsl(var(--clr-accent-1)); }
-.txt-accent-1 { color: hsl(var(--clr-accent-1)); } 
-.border-accent-1 {border: 1px solid hsl(var(--clr-accent-1)); }
-
-.bg-accent-2 { background-color: hsl(var(--clr-accent-2)); }
-.txt-accent-2 { color: hsl(var(--clr-accent-2)); } 
-.border-accent-2 {border: 1px solid hsl(var(--clr-accent-2)); }
-
-
-/* ------------------------------ */
-/* Text alignment */
-/* ------------------------------ */
-
-.txt-start {text-align: left;}
-.txt-center {text-align: center;}
-.txt-end {text-align: right;}
 
 /* ------------------------------ */
 /* Spacing system */
 /* ------------------------------ */
 
-$count: 0;
-@each $size in $sizes {
-    .p-#{$count} {padding: #{$size}rem;}
-    .pr-#{$count} {padding-right: #{$size}rem;}
-    .pl-#{$count} {padding-left: #{$size}rem;}
-    .pb-#{$count} {padding-bottom: #{$size}rem;}
-    .pt-#{$count} {padding-top: #{$size}rem;}
-    .pv-#{$count} {padding-top: #{$size}rem;padding-bottom: #{$size}rem;}
-    .ph-#{$count} {padding-left: #{$size}rem;padding-right: #{$size}rem;}
-    
-    .m-#{$count} {margin: #{$size}rem;}
-    .mr-#{$count} {margin-right: #{$size}rem;}
-    .ml-#{$count} {margin-left: #{$size}rem;}
-    .mb-#{$count} {margin-bottom: #{$size}rem;}
-    .mt-#{$count} {margin-top: #{$size}rem;}
-    .mv-#{$count} {margin-top: #{$size}rem;margin-bottom: #{$size}rem;}
-    .mh-#{$count} {margin-left: #{$size}rem;margin-right: #{$size}rem;}
+    @include sizes($sizes, 1);
 
-    .br-#{$count} {border-radius: #{$size}rem;}
-    .brt-#{$count} {border-top-left-radius: #{$size}rem; border-top-right-radius: #{$size}rem;}
-    .brr-#{$count} {border-top-right-radius: #{$size}rem; border-bottom-right-radius: #{$size}rem;}
-    .brb-#{$count} {border-bottom-right-radius: #{$size}rem;border-bottom-left-radius: #{$size}rem;}
-    .brl-#{$count} {border-bottom-left-radius: #{$size}rem;border-top-left-radius: #{$size}rem;}
+    // @include mq(m) {
+    //     @include sizes($sizes, 1);
+    // }
 
-    .brtl-#{$count} {border-top-left-radius: #{$size}rem;}
-    .brtr-#{$count} {border-top-right-radius: #{$size}rem;}
-    .brbr-#{$count} {border-bottom-right-radius: #{$size}rem;}
-    .brbl-#{$count} {border-bottom-left-radius: #{$size}rem;}
-
-    .gap-#{$count} {gap: #{$size}rem !important}
-    .grid-column-gap-#{$count} {grid-column-gap: #{$size}rem !important}
-    
-    $count: $count + 1;
-}
+/* ------------------------------ */
+/* Box model */
+/* ------------------------------ */
 
 .aspect-1 { aspect-ratio: 1;}
-
-.list {
-    --gap: 1px;
-    margin-top: auto
-}
-
-.list-item {
-    color: hsl(var(--clr-default-900));
-    &:first-child {
-        border-radius: .5rem .5rem 0 0;
-    }
-    &:last-child {
-        border-radius: 0 0 .5rem .5rem;
-    }
-}
 
 .full-width {
     width: 100%;
@@ -344,15 +217,144 @@ $count: 0;
     @include mq(s) {
         width: auto
     }
-
 }
 
 .overflow-hidden {
     overflow: hidden;
 }
 
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
 .hidden-m {
     @include mq(m) {
         display: none !important
     }
+}
+
+.to-right { margin-left: auto;}
+.to-left { margin-right: auto;}
+
+
+/* ------------------------------ */
+/* List */
+/* ------------------------------ */
+
+.list {}
+
+
+.list-item {
+
+    display: flex;
+    align-items: center;
+
+    a {
+        height: 2.5rem;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        gap: 0.75rem;
+        text-decoration: none;
+        // font-size: 0.875rem;
+        padding: 0 1rem;
+        background-color: hsl(var(--clr-default-0));
+
+        &:hover {
+            background-color: hsl(var(--clr-default-100));
+        }
+
+        i.i {
+            font-size: 1rem;
+        }
+    }
+}
+
+// "HIDE" CLASSES
+
+.hidden {
+    display: none !important;
+}
+
+.hide-xs { 
+    display: none !important;
+
+    @include mq(s) {
+        display: inherit;
+    }
+}
+
+.hide-s {
+    display: none !important;
+
+    @include mq(m) {
+        display: inherit;
+    }
+}
+
+.hide-m {
+    display: none !important;
+
+    @include mq(l) {
+        display: inherit;
+    }
+}
+
+.hide-l {
+    display: none !important;
+
+    @include mq(xl) {
+        display: initial;
+    }
+}
+
+.hide-on-mobile {
+    display: none !important;
+    
+    @include mq(s) {
+        display: inherit !important; 
+    }
+}
+
+.show-on-mobile {
+    display: inherit !important; 
+    
+    @include mq(s) {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute!important;
+    width: 1px!important;
+    height: 1px!important;
+    padding: 0!important;
+    margin: -1px!important;
+    overflow: hidden!important;
+    clip: rect(0,0,0,0)!important;
+    white-space: nowrap!important;
+    border: 0!important;
+}
+
+// MISC
+
+// Streched link
+
+.stretched-link {
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+// Circle anytning. Make sure it's square before that
+
+.rounded-circle {
+    border-radius: 50% !important;
 }

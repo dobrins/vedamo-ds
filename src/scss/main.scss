@@ -4,21 +4,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-@import 'variables';
-@import 'icons';
 @import 'mixins';
-@import 'reset';
+@import 'variables';
 @import 'base';
+@import 'colors';
+@import 'icons';
+@import 'reset';
 @import 'utilities';
 @import 'buttons';
 @import 'typography';
 @import 'grid';
 @import 'forms';
+@import 'toggles';
 @import 'alerts';
 @import 'avatars';
 @import 'shadows';
 @import 'divider';
 @import 'badges';
+@import 'blurs';
 @import 'tables';
 
 
@@ -154,12 +157,6 @@
     position: absolute;
     top: 50px;
     background-color: hsl(var(--clr-default-800));
-}
-
-.octopus {
-    background-image: url(../img/blur.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .list-group {

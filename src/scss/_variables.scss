@@ -12,6 +12,8 @@
     /* Font sizes */
     /* ------------------------- */
 
+    --fz-base: 10px;
+
     --fz-hero-xl: 6rem;         // 96px
 
     --fz-display-2xl: 4.5rem;   // 72px
@@ -135,6 +137,14 @@
     --clr-accent-1:75, 100%, 44%; 
     --clr-accent-2: 256, 84%, 59%;
 
+    /* Custom colors only for the Marketplace */
+
+    --clr-dark-purple: 260, 100%, 13%;
+    --clr-lightgreen: 72, 100%, 56%;
+    --clr-darkgreen: 155, 91%, 50%;
+
+    /* Box Shadow */
+
     --bs-xs: 0px 1px 2px hsl( var(--clr-default-900), 0.08);
     --bs-s: 0px 3px 6px -1px hsl( var(--clr-default-900), 0.04), 0px 1px 3px hsl( var(--clr-default-900), 0.04);
     --bs-m: 0px 4px 8px -2px hsl( var(--clr-default-900), 0.06), 0px 2px 4px -2px hsl( var(--clr-default-900), 0.06);
@@ -143,22 +153,12 @@
     --bs-2xl: 0px 24px 48px -12px hsl( var(--clr-default-900), 0.08); 
     --bs-3xl: 0px 32px 64px -12px hsl( var(--clr-default-900), 0.12); 
 
+    
+
     /* Custom Variables */
 
     --header-height: 5rem;
-
 }
-
-/* Sizes */
-
-/* 
-0-0px, 1-4px, 2-8px, 3-12px, 4-16px, 
-5-20px, 6-24px, 7-28px, 8-32px, 9-40px, 10-48px, 
-11-56px, 12-64px, 13-80px, 14-96px, 
-15-128px, 16-160px, 17-192px, 18-224px, 19-256px 
-*/
-
-$sizes: (0, .25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10, 12, 14, 16);
 
 /* Breakpoints */ 
 
@@ -171,6 +171,33 @@ $breakpoints : (
     2xl: 120rem     // 1920 px
 );
 
-/* Grig system */ 
+/* Sizes */
+
+/* 
+0-0px, 
+1-4px, 
+2-8px, 
+3-12px, 
+4-16px, 
+5-20px, 
+6-24px, 
+7-28px, 
+8-32px, 
+9-40px, 
+10-48px, 
+11-56px, 
+12-64px, 
+13-80px, 
+14-96px, 
+15-128px, 
+16-160px, 
+17-192px, 
+18-224px, 
+19-256px 
+*/
+
+$sizes: (0, .25, .5, .75, 1, 1.25, 1.5, 1.75, 2, 2.5, 3, 3.5, 4, 5, 6, 8, 10, 12, 14, 16);
+
+/* Grig system columns */ 
 
 $columns: 12;

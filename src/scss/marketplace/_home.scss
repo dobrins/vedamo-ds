@@ -1,8 +1,111 @@
 .hero-section {
-    margin-top: 2.5rem;
+   background-color: hsla(220, 64%, 10%, 1);
+//    background-color: radial-gradient(#e66465, #9198e5);
+   background-image: 
+    url(../../../public/icons.png), 
+    radial-gradient(circle at top center, hsla(219, 18%, 28%, 1) 20%,  hsla(220, 64%, 10%, 1) 40%);
+   background-size: 80%, 100%;
+   background-position: right bottom, left top;
+   background-repeat: no-repeat;
+   height: 268px;
+   
+}
+
+.hero-section-slogan {
+    background-image: url(../../../public/hero-lines.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.hero-section-benefit {
+
+    background-image: url(../../../public/hero-check.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 1.5rem;
+}
+
+
+
+.home-step {
+
+    & > div {
+        justify-content: start;
+
+        @include mq(s) {
+            justify-content:center;
+        }
+    }
+}
+
+.home-step-arrow-1 {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: -25%;
+        background-image: url(../../../public/arrow-1.svg);
+        background-repeat: no-repeat;
+        width: 150px; 
+        height: 80px;
+        z-index: 1;
+    }
+}
+
+.home-filters {
+    background-color: hsl(var(--clr-default-300), 32%);
+}
+
+
+.home-card {
+    background-color: hsl(var(--clr-default-50));
+    &:hover {
+        background-color: hsl(var(--clr-default-0));
+        box-shadow: var(--bs-2xl)
+    }
+}
+
+.home-card-grid {
+
+    display: grid;
 
     @include mq(m) {
-        margin-top: 8rem;
+        display: flex;
     }
-    
+
+    .home-card-description {
+        @include mq(m) {
+            margin-left: 1rem;
+        }
+    }
+
+    .play-video {
+        z-index: 2;
+    }
+
+    .home-divider {
+        height: 5rem;
+        align-self : center;
+    }
+
+    .home-card-price {
+        
+        order: 1;
+
+        @include mq(m) {
+            order: 2
+        }
+
+        div {
+            flex-direction: row;
+            align-items: end;
+
+            @include mq(m) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
 }

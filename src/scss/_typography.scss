@@ -1,5 +1,9 @@
 /* Typography */
 
+@include mq(m) {
+    --fz-base: 16px
+} 
+
 .ff-sans-normal { font-family: var(--ff-sans-normal); }
 
 .fz-hero-xl { font-size: var(--fz-hero-xl); line-height: 1.29; letter-spacing: -0.02em;}
@@ -22,10 +26,6 @@
 .txt-semibold { font-weight: 600;}
 .txt-bold { font-weight: 700;}
 
-.txt-start {text-align: left!important;}
-.txt-center {text-align: center!important;}
-.txt-end {text-align: right!important;}
-
 .txt-uppercase {text-transform: uppercase !important;}
 .txt-lowercase {text-transform: lowercase !important;}
 .txt-capitalize {text-transform: capitalize !important;}
@@ -33,11 +33,25 @@
 .txt-decoration-none {text-decoration: none !important;}
 .txt-underline {text-decoration: underline;}
 
+/* ------------------------------ */
+/* Text alignment */
+/* ------------------------------ */
+
+.txt-start {text-align: left!important;}
+.txt-center {text-align: center!important;}
+.txt-end {text-align: right!important;}
+
 .txt-truncate { 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.line-height-1 {
+    line-height: 1;
+}
+
+// -------
 
 h1, h2, h3, h4, h5, h6 {
     @extend .txt-regular

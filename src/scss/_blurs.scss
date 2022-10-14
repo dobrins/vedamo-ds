@@ -1,0 +1,39 @@
+/* Blurs */
+
+.blur-s {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.blur-m {
+    background-color: rgba(255, 255, 255, 2);
+}
+
+.blur-l {
+    background-color: rgba(255, 255, 255, 4);
+}
+
+.blur-xl {
+    background-color: rgba(255, 255, 255, 6);
+}
+
+
+@supports(backdrop-filter: blur(1rem)) { 
+    .blur-s  {
+        backdrop-filter: saturate(180%) blur(0.25rem);
+        background-color: inherit;
+    }
+    
+    .blur-m  {
+        backdrop-filter: saturate(180%) blur(0.5rem);
+    }
+    
+    .blur-l  {
+        backdrop-filter: saturate(180%) blur(1rem);
+    }
+    .blur-xl  {
+        backdrop-filter: saturate(180%) blur(.75rem);
+    }
+    .blur-s, .blur-m, .blur-l, .blur-xl {
+        background-color: rgba(255, 255, 255, .8);
+    }
+}

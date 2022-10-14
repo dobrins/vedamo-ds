@@ -1,0 +1,44 @@
+.inputToggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.inputToggle input {
+    display: none;
+}
+
+.inputToggle input:checked ~ span {
+    background-color: hsl(var(--clr-main-400));
+    border-color: hsl(var(--clr-main-400));
+}
+
+.inputToggle span {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    color: hsl(var(--clr-default-0));
+    border-radius: 10px;
+    background: hsl(var(--clr-default-300));
+    border:  1px solid hsl(var(--clr-default-300));;
+    user-select: none;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.inputToggle span:after {
+    content: "";
+    position: relative;
+    top: 1px;
+    left: 1px;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: hsl(var(--clr-default-0));
+    transition: background-color 0.1s ease-in-out, transform 0.1s ease-in-out;
+    transform: translateX(0);
+}
+
+.inputToggle input:checked ~ span:after {
+    transform: translateX(1rem);
+}

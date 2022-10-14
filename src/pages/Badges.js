@@ -22,9 +22,7 @@ export default function Badges() {
             <Heading title="Badges">
                 <p>About Badges and how to use them - can be mixed with icons library</p>
             </Heading>         
-            <ContentBox title="Variants">
-                
-                
+            <ContentBox title="Badges Solid">
                 <p>Only text</p>
                 <div className="bg-default-100 p-2">
                     <code>
@@ -37,10 +35,10 @@ export default function Badges() {
                 </div>
                 <div class="fz-display-xs flex">
                     <Badge text="Badge" /> 
-                    <Badge class-="badge-primary" text="Badge" />
-                    <Badge class-="badge-warning" text="Badge" />
-                    <Badge class-="badge-error" text="Badge" />
-                    <Badge class-="badge-info" text="Badge" />
+                    <Badge class_="badge-primary" text="Badge" />
+                    <Badge class_="badge-warning" text="Badge" />
+                    <Badge class_="badge-error" text="Badge" />
+                    <Badge class_="badge-info" text="Badge" />
                 </div>
             
                 <p className="mt-5">With icon + text</p>
@@ -74,11 +72,68 @@ export default function Badges() {
                     <Badge class_="badge-circle" icon="icon-vico-key" /> 
                     <Badge class_="badge-primary badge-circle" icon="icon-vico-key" />
                     <Badge class_="badge-warning badge-circle" icon="icon-vico-key" />
-                    <Badge class_="badge-error badge-circle" icon="icon-vico-key" />
+                    <Badge class_="badge-error badge-circle" icon="icon-vico-key" /> 
                     <Badge class_="badge-info badge-circle" icon="icon-vico-key" />
                 </div>
                 
             </ContentBox> 
+
+
+            <ContentBox title="Badges outline">
+                <p>Only text</p>
+                <div className="bg-default-100 p-2">
+                    <code>
+                        &lt;span class="badge badge-outline-default"&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-primary"&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-warning"&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-error"&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-info"&gt;Badge&lt;/span&gt;
+                    </code>
+                </div>
+                <div class="fz-display-xs flex">
+                    <Badge class_="badge-outline-default" text="Badge" /> 
+                    <Badge class_="badge-outline-primary" text="Badge" />
+                    <Badge class_="badge-outline-warning" text="Badge" />
+                    <Badge class_="badge-outline-error" text="Badge" />
+                    <Badge class_="badge-outline-info" text="Badge" />
+                </div>
+            
+                <p className="mt-5">With icon + text</p>
+                <div className="bg-default-100 p-2">
+                    <code>
+                        &lt;span class="badge badge-outline-default"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-primary"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-warning"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-error"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;Badge&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-info"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;Badge&lt;/span&gt;
+                    </code>
+                 </div>
+                <div className="fz-display-xs flex">
+                    <Badge class_="badge-outline-default" icon="icon-vico-key" text="Badge" /> 
+                    <Badge class_="badge-outline-primary" icon="icon-vico-key" text="Badge" />
+                    <Badge class_="badge-outline-warning" icon="icon-vico-key" text="Badge" />
+                    <Badge class_="badge-outline-error" icon="icon-vico-key" text="Badge" />
+                    <Badge class_="badge-outline-info" icon="icon-vico-key" text="Badge" />
+                </div>
+                <p className="mt-5">Only icon</p>
+                <div className="bg-default-100 p-2">
+                    <code>
+                        &lt;span class="badge badge-outline-default badge-circle"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-primary badge-circle"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-warning badge-circle"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-error badge-circle"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;&lt;/span&gt;<br />
+                        &lt;span class="badge badge-outline-info badge-circle"&gt;&lt;i class="i icon-vico-key"&gt;&lt;/i&gt;&lt;/span&gt;
+                    </code>
+                 </div>
+                <div className="fz-display-xs flex">
+                    <Badge class_="badge-outline-default badge-circle" icon="icon-vico-key" /> 
+                    <Badge class_="badge-outline-primary badge-circle" icon="icon-vico-key" />
+                    <Badge class_="badge-outline-warning badge-circle" icon="icon-vico-key" />
+                    <Badge class_="badge-outline-error badge-circle" icon="icon-vico-key" /> 
+                    <Badge class_="badge-outline-info badge-circle" icon="icon-vico-key" />
+                </div>
+
+            </ContentBox>
             <ContentBox title="Sizes">
                 <p>Badges scale to match the size of the immediate parent element by using relative font sizing and em units.</p>
                 <div className="grid">
@@ -86,7 +141,7 @@ export default function Badges() {
                             (
                                 <>
                                     <p key={i} className={`${h.class}`}>
-                                    {h.size}. Example text <Badge icon="icon-paperclip" text="Badge" />
+                                    {h.size}. Example text <Badge icon="icon-paperclip" class_="badge-primary" text="Badge" />
                                     </p>
                                 </>
                             ) 

@@ -7,27 +7,31 @@
     <link rel="stylesheet" type="text/css"  href="../src/css/main.css" />
     <link rel="stylesheet" type="text/css"  href="../src/css/marketplace/main.css" />
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <title>Markeplace</title>
 </head>
 <body>
     <nav class="header blur-s flex">
         <div class="container flex flex-center-v gap-12">
-            <div class="flex gap-3">
-                <button class="btn btn-square btn-tertiary hidden-m">
+            <div class="flex gap-3 flex-center-v">
+                <button class="btn btn-square btn-tertiary hidden-m mr-3 mobile-nav-open"  aria-controls="navigation-mobile" aria-expanded="false">
+                    <span class="sr-only">Menu</span>
                     <i class="i icon-menu"></i>
                 </button>
-                
                 <a href="#" class="logo flex">
-                <img src="../public/logo.svg" alt="" />
+                    <img src="../public/logo.svg" alt="" />
                 </a>
             </div>
-            <div class="flex flex-1 nav-desktop">
-                <div class="flex flex-1  flex-center-v gap-9">
-                    
+            <a href="#" class="flex-1 txt-end txt-semibold txt-decoration-none hidden-m">    
+                <i class="i icon-log-in"></i>
+                Login
+            </a>
+            <div class="flex-1 nav-desktop">
+                <div class="flex flex-1 flex-center-v">
+                    <a href="#" class="btn btn-primary bg-mp-gradient">Find a Tutor</a>
                     <div class="dropdown" data-dropdown>
-                        <button class="btn btn-tertiary btn-l dropdown-button" type="button" data-dropdown-button>
-                            <i class="i icon-vico-view-grid pointer-event-none"></i>
-                            Categories
+                        <button class="btn btn-tertiary dropdown-button" type="button" data-dropdown-button>
+                            <i class="i icon-layers pointer-event-none"></i>
+                            Subject
                         </button>
                         <div class="dropdown-menu header-dropdown-menu bg-default-0">
                             <div class="flex flex-column gap-0 full-height">
@@ -73,370 +77,272 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="txt-semibold txt-decoration-none">Find a Tutor</a>
                 </div>
                 <div class="flex flex-center-v gap-4">
-                    <a href="#" class="txt-semibold txt-decoration-none mr-6">Become a Tutor</a>
+                    <a href="#" class="txt-medium fz-text-s mr-6">Become a Tutor</a>
                     <a href="#" class="btn btn-tertiary">Register</a>
                     <a href="#" class="btn btn-secondary">Login</a>
                 </div>
             </div>
         </div>   
     </nav>
-    <section class="container-m mt-15 hero-section">
-        <div class="grid-container">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-3">
-                <h1 class="hero-title txt-semibold">On-demand Online Tutoring.<br />Tutors & Students Matched.</h1>
-                <p class="subtitle txt-default-450 mt-4"><span class="txt-mp-gradient">1218 Completed Sessions</span> AND COUNTING</p>
+
+
+
+    <!-- Main level menu -->
+
+    <nav class="navigation-mobile nav-sliding bg-default-100 flex" data-visible="false">
+
+         <!-- Close menu button -->
+
+        <div class="nav-mobile-header flex flex-center-v">
+            <div class="container">
+                <button class="btn btn-square mobile-nav-close" aria-controls="navigation-mobile" aria-expanded="false" >
+                    <span class="sr-only">Close menu</span>
+                    <i class="i icon-vico-close"></i>
+                </button>
             </div>
+        </div>
+
+        <div class="ph-8">
+            <ul>
+                <li class="pv-6"><a href="#" class="fz-display-xs txt-semibold txt-decoration-none">Find a Tutor</a></li>
+                <li class="pv-6"><a href="#" class="fz-display-xs txt-semibold txt-decoration-none">Become a Tutor</a></li>
+            </ul>
+        </div>
+
+        <div class="flex-1 overflow-y-auto">
+            <p class="ph-8 bg-default-200 txt-semibold fz-text-s txt-uppercase txt-default-500 pv-4">Categories </p>
+            <ul class=" home-list">                
+                <li class="list-item">
+                    <a href="#" class="list-link mobile-open-nav-resources pointer-event-none-children" aria-controls="nav-resources" aria-expanded="false">
+                        <img src="../public/math.svg" width="48" alt="" />
+                        Mathematics
+                        <span class="txt-end flex-1"><i class="i icon-chevron-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link mobile-open-nav-resources pointer-event-none-children" aria-controls="nav-resources" aria-expanded="false">
+                        <img src="../public/languages.svg" width="48" alt="" />
+                        Languages
+                        <span class="txt-end flex-1"><i class="i icon-chevron-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link mobile-open-nav-resources pointer-event-none-children" aria-controls="nav-resources" aria-expanded="false">
+                        <img src="../public/programming.svg" width="48" alt="" />
+                        Programming
+                        <span class="txt-end flex-1"><i class="i icon-chevron-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link mobile-open-nav-resources pointer-event-none-children" aria-controls="nav-resources" aria-expanded="false">
+                        <img src="../public/programming.svg" width="48" alt="" />
+                        Programming
+                        <span class="txt-end flex-1"><i class="i icon-chevron-right"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="p-8 flex flex-column gap-6">
+            <a href="#" class="btn full-width btn-tertiary btn-2xl">Register</a>
+            <a href="#" class="btn full-width btn-secondary btn-2xl">Login</a>
+        </div>
+        
+        <div class="p-8 flex">
+            <a href="#" class="flex-1 txt-semibold txt-decoration-none">    
+                <i class="i icon-log-in"></i>
+                Login
+            </a>
+        </div>
+    </nav>
+
+    <!-- Second level menu -->
+
+    <nav id="nav-resources" class="flex nav-sliding nav-sliding-second bg-default-100" data-visible="false">
+        
+        <div class="nav-mobile-header flex flex-center-v">
+            <div class="container">
+                <button class="btn btn-square mobile-close-nav-resources">
+                    <span class="sr-only">Close menu</span>
+                    <i class="i icon-arrow-left"></i>
+                </button>
+            </div>
+        </div>
+        <p class="flex fz-display-xs flex-center-v txt-medium ph-8 pv-10">
+            <img src="../public/math.svg" width="48" alt="" />
+            Mathematics
+        </p>
+        <div class="flex-1 overflow-y-auto">
+            <ul class=" home-list">                
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        All
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        General Mathematics
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Algebra
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Analysis
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Arithmetic
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Combinatorics
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Euclidean
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Non-Euclidean Geometries
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Game Theory
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Optimization
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#" class="list-link">
+                        Set Theory
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-section txt-center txt-default-0 container pt-9">
+        <div class="grid-container">
+            <div class="hero-section-slogan col-m-6 col-m-offset-4 col-sm-8 col-sm-offset-3 pb-5">
+                <h2 class="fz-display-l txt-bold">On-demand <br>1-on-1 Online Tutors</h2>
+            </div>
+        </div>
+        <div class="flex flex-center-h gap-9 mt-6">
+            <span class="hero-section-benefit txt-medium flex flex-center-v"><span class="txt-bold flex flex-center-v">20K+</span> Active Students</span>
+            <span class="hero-section-benefit txt-medium flex flex-center-v"><span class="txt-bold flex flex-center-v">3K+</span> On-Demand Tutors</span>
+            <span class="hero-section-benefit txt-medium flex flex-center-v"><span class="txt-bold flex flex-center-v">2M+</span> Complete Sessions</span> 
         </div>
     </section>
 
     <div>
-    <div class="container-m position-sticky" style="z-index: 1;top: 48px">
-        <div class="grid-container">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-3">
-                <div class="top-categories blur-s br-6" 
-                    style=" background-color : hsl(var(--clr-default-100), 0.8);
-                            position: relative;
-                            z-index: 1;
-                            margin-bottom: -80px">
-                    <p class="txt-uppercase fz-text-xs txt-semibold txt-default-600">Top categories</p>
-                    <div class="grid-container mt-3">
-                        <div class="col-sm-4 col-xs-12">
-                            <a href="#" class="btn btn-tertiary btn-xl full-width">Languages</a>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <a href="#" class="btn btn-tertiary btn-xl full-width">Mathematics</a>
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <a href="#" class="btn btn-tertiary btn-xl full-width">Programming</a>
-                        </div>
-                    </div>
-                    <div class="flex flex-center-h mt-6">
-                        <a href="#" class="btn btn-primary btn-xl bg-mp-gradient full-width-m">All categories</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-        </div>
-    </div>
-
-    <div class="slider">
-        <div class="slide-track slide-track-right slide-track-bottomGradient">
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div> 
-            </div>
-            <div class="slide">
-                <div class="ph-5">
-            <div class="br-4 bg-main-200 teacher-card" style="background-image: url(https://baconmockup.com/640/360); background-size: cover">
-                <div class="flex flex-center-v teacher-card-name">
-                    <div class="avatar avatar-2xl bs-xl avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </div>
-                    <span class="txt-default-0 txt-medium fz-text-s">Mata Kosmata</span>
-                </div>
-                <a href="#" class="teacher-card-name-link">123</a>
-            </div>
-        </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <div class="bg-default-100 mt-10 pv-15">
+    
+    <div class="bg-default-150 pt-7 pb-16">
         <div class="container-m">
-            <div class="grid-container">
-                <div class="col-xs-12 col-sm-4 col-sm-offset-3">
-                    <span class="txt-mp-gradient txt-semibold">LATEST TUTORS</span>
-                    <p class="fz-display-m txt-semibold">Featured tutors for your growth</p>
-                </div>
-            </div>
-            <div class="grid-container">
-                <div class="mv-10 col-xs-12 col-sm-8 col-sm-offset-3">
-                    <div class="divider"></div>
-                </div>
-            </div>
-            <div class="grid-container">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-3">
-                    <div class="flex flex-center-v">
-                        <p class="fz-text-xl txt-semibold flex-1 flex flex-center-v">
-                            <img src="../public/languages.svg" width="64" alt="" />
-                            Languages
-                        </p>
-                        <a href="#" class="btn btn-tertiary">See all<i class="i icon-arrow-up-right"></i></a>
-                    </div>
-                </div>
-            </div>
             <div class="grid-container mt-9">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <div class="bg-default-0 p-8 br-3 bs-2xl">
-                        <div class="flex gap-7 home-card">
-                            <div class="flex flex-end-v">
-                                <div class="position-relative inline-flex">
-                                    <a href="#" class="avatar avatar-3xl">MJ</a>
-                                    <a href="#" class="btn btn-secondary btn-xl btn-circle btn-play-video bottom-0 start-100 translate-middle-x position-absolute">
+                <div class="col-sm-8 col-sm-offset-3">
+                    <h2 class="fz-display-s txt-semibold">Find Tutors</h2>
+                    <label class="inputToggle">
+                        <input type="checkbox">
+                        <span></span>
+                        Toggle
+                      </label>
+                    
+                    <div class="home-filters bg-default-200 p-2 br-1 mt-2 flex space-between flex-center-v">
+                        <div class="flex flex-1 gap-1">
+                            <div class="dropdown position-relative" data-dropdown>
+                                <button type="button" class="dropdown-button btn btn-tertiary" data-dropdown-button>
+                                    <i class="i icon-layers pointer-event-none"></i>
+                                    Subject
+                                    <i class="i icon-chevron-down pointer-event-none"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <ul class="list bs-xl">
+                                        <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                        <li class="list-item"><a href="#"><i class="i icon-check"></i><span>Reschedule</span></a></li>
+                                        <li class="list-item"><a href="#" class="txt-error-600"><i class="i icon-x-circle"></i><span>Cancel</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="dropdown position-relative" data-dropdown>
+                                <button type="button" class="dropdown-button btn btn-tertiary" data-dropdown-button>
+                                    <i class="i icon-calendar pointer-event-none"></i>
+                                    Day and Time
+                                    <i class="i icon-chevron-down pointer-event-none"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right bg-default-0 p-4 bs-xl br-1">
+                                    <div class="">
+                                        When are you available?
+
+                                        <label class="inputToggle">
+                                            <input type="checkbox">
+                                            <span></span>
+                                            Toggle
+                                          </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                           
+
+                            <button class="btn btn-tertiary">
+                                <i class="i icon-dollar-sign pointer-event-none"></i>
+                                Price
+                                <i class="i icon-chevron-down pointer-event-none"></i>
+                            </button>
+
+                            <button class="btn btn-tertiary">
+                                <i class="i icon-globe pointer-event-none"></i>
+                                Language
+                                <i class="i icon-chevron-down pointer-event-none"></i>
+                            </button>
+                        </div>
+                        <a href="#" class="txt-default-450 txt-medium fz-text-xs mr-4">Clear all</a>
+                    </div>
+                    <div class="mt-9 flex flex-center-v flex-space-between">
+                        <span class="txt-default-550 fz-text-s txt-semibold txt-uppercase"><i class="i icon-search"></i> 19792 matches</span>
+                        <div>
+                            <span class="fz-text-s">Sort by:</span>
+                            <a href="#" class="txt-decoration-none fz-text-s txt-semibold">Top rated <i class="i icon-chevron-down pointer-event-none"></i></a>
+                        </div>
+                    </div>
+                    <div class="p-8 br-3 mt-4 position-relative home-card">
+                        <div class="gap-7 home-card-grid">
+                            <div>
+                                <div class="position-relative inline-block">
+                                    <a href="#" class="avatar avatar-3xl">
+                                        <img src='../public/avatar.png' alt="" />
+                                    </a>
+                                    <a href="#" class="play-video btn btn-secondary btn-xl btn-circle btn-play-video bottom-0 start-100 translate-middle-x position-absolute">
                                         <i class="i icon-play-circle"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="flex-1 home-card-description">
-                                <div class="flex gap-1">
+                                
+                                <a class="txt-bold fz-text-xl stretched-link txt-decoration-none" href="#">Andrew The Botanic</a>
+                                <div class="flex gap-1 mt-2">
                                     <span class="badge badge-primary">English</span>
                                     <span class="badge badge-primary">Nestinaria</span>
                                 </div>
-                                <p class="txt-bold fz-text-xl mt-2">Andrew The Botanic</p>
                                 <p class="txt-default-550 mt-4">A short sen tence-like paragraph sharing more about the tutors' background.</p>
                                 <button class="btn btn-tertiary btn-xs mt-3">English</button>
                             </div>
+                            <div class="divider-vertical home-divider bg-default-250"></div>
                             <div class="flex flex-center-v home-card-price">
                                 <div class="flex">
                                     <span class="fz-display-m txt-bold">$35</span>
@@ -447,98 +353,14 @@
                     </div>
                 </div>
             </div>
-            <div class="grid-container mt-4">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-3">
-                    <div class="flex gap-1">
-                        <button type="button" class="btn btn-tertiary btn-xs btn-square"><i class="i icon-chevron-left"></i></button>
-                        <button type="button" class="btn btn-tertiary btn-xs btn-square"><i class="i icon-chevron-right"></i></button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pt-13 flex flex-center">
-                <button class="btn btn-primary btn-xl bg-mp-gradient">Find a Tutor</button>
-            </div>
         </div>
     </div>
 
-    <div class="container-m bg-default-0 mt-10 pv-15 ">
-        <div class="grid-container">
-            <div class="col-sm-8 col-sm-offset-3">
-                <div class="flex flex-column">
-                    <p class="subtitle txt-mp-gradient-dark txt-center">how it works</p>
-                    <h5 class="fz-display-m txt-semibold txt-center">Find the perfect Tutors in 3 simple steps</h5>
-                </div>
-            </div>
-        </div>
-        <div class="grid-container mt-10">
-            <div class="col-sm-6 col-sm-offset-4">
-                <div class="flex flex-center-h">
-                    <img src="../public/video.png" alt="" />
-                </div>
-            </div>
-        </div>
-        <div class="grid-container mt-10">
-            <div class="col-sm-8 col-sm-offset-3">
-                <div class="grid-container">  
-                        <div class="col-m-4 p-9 br-6 flex flex-column gap-4 home-step">
-                            <div class="flex flex-center-h">
-                                <img src="../public/find-tutor.png" alt="">
-                            </div>
-                            <h4 class="fz-display-xs txt-semibold">1. Find Tutor</h4>
-                            <p class="txt-default-600">Choose the subject you want to study or advance in. Set your preferences and get a list with expert tutors to compare and pick from.</p>
-                        </div>
-                    
-                        <div class="col-m-4 p-9 br-6 flex flex-column gap-4 home-step">
-                            <div class="flex flex-center-h">
-                                <img src="../public/pick-time.png" alt="">
-                            </div>
-                            <h4 class="fz-display-xs txt-semibold">2. Pick Time</h4>
-                            <p class="txt-default-600">Found a tutor that you like? Get the perfect time to fit your schedule. Now you're ready to start learning!</p>
-                        </div>
-                    
-                        <div class="col-m-4 p-9 br-6 flex flex-column gap-4 home-step">
-                            <div class="flex flex-center-h">
-                                <img src="../public/be-there.png" alt="">
-                            </div>
-                            <h4 class="fz-display-xs txt-semibold">3. Be There</h4>
-                            <p class="txt-default-600">Take your first class and embark on your learning journey. At your pace and  on your terms. </p>
-                        </div>
-                </div>
-                <div class="pt-12 flex flex-center">
-                    <button class="btn btn-secondary btn-2xl">Start Learning</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-default-900 mt-10 pv-15">
-        <div class="container-m">
-            <div class="flex flex-center flex-column">
-                <h5 class="fz-display-s txt-semibold txt-center txt-default-0">Want to become a Tutor?</h5>
-
-                <button class="mt-5 btn btn-tertiary btn-2xl">Start Teaching</button>
-            </div>
-        </div>
-    </div>
 
     <div class="bg-default-100 pv-15">
         <div class="container-m">
-            <div class="flex flex-column">
-                <p class="subtitle txt-mp-gradient-dark txt-center">Join Our Community</p>
-                <h5 class="fz-display-m txt-semibold txt-center">Get on the list and stay in the know</h5>
-                <p class="txt-center">No Spam. Only updates and news on our products.</p>
-            </div>
-            <div class="grid-container">
-                <div class="col-sm-8 col-sm-offset-3 col-m-6 col-m-offset-4 col-l-4 col-l-offset-5">
-                    <form>
-                        <div class="flex bg-default-0 p-2 bs-xl br-2 mt-9">
-                            <input type="email" class="flex-1" placeholder="Enter your email address" style="border:none">
-                            <button type="submit" class="btn btn-xl bg-mp-gradient btn-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            
+            
             <div class="grid-container mt-13">
                 <div class="col-xs-6 col-sm-2 col-sm-offset-3 p-2 grid gap-6">
                     <p class="txt-uppercase fz-text-s txt-semibold txt-default-500">Product</p>

@@ -1,13 +1,17 @@
+html {
+    font-size: 16px;
+
+    // @include mq(s) {
+    //     font-size: 16px;
+    // }
+}
 body {
     font-family: var(--ff-sans-normal);
-    font-size: var(--fs-400);
-    line-height: 1.5;
+        line-height: 1.5;
     min-height: 100vh;
     color: hsl(var(--clr-default-900));
-    // height: 100vh;
 }
 
-/* Easy working images */
 img, picture {
     max-width: 100%;
     display: block;

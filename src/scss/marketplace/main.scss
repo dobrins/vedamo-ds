@@ -2,6 +2,26 @@
     @return #{'hsl(#{$args})'};
 }
 
+
+@mixin mq($key) {
+
+    $size: map-get($breakpoints, $key);
+    
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+$breakpoints : ( 
+    xs: 40rem,      // 640 px
+    s: 48rem,       // 768 px
+    m: 64rem,       // 1024 px
+    l: 80rem,       // 1280 px
+    xl: 96rem,      // 1536 px
+    2xl: 120rem     // 1920 px
+);
+
+
 @import 'marketplace/marketplace';
 @import 'marketplace/header';
 @import 'marketplace/home';

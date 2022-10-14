@@ -1,5 +1,7 @@
 import { TabTitle } from "../utils/functions"
 import ContentBox from "./components/ContentBox"
+import Heading from "./components/Heading"
+
 
 export default function Buttons() {
 
@@ -13,105 +15,112 @@ export default function Buttons() {
     return (
         
         <>  
+            <Heading title="Buttons">
+                <p>1001 button variations</p>
+            </Heading>
 
-                <ContentBox title="Button Types">
+            <div className="p-10">
+                <button type="button" class="btn btn-primary btn-loading">{btnValue}</button>
+            </div>
+
+            <ContentBox title="Button Types">
+
+            <div className="grid-container">
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">value</p>
+                    </div>
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn">{btnValue}</button>
+                    </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn"&gt;{btnValue}&lt;/button&gt;
+                        </code> 
+                    </div>
+                </div>
 
                 <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">value</p>
-                        </div>
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn">{btnValue}</button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn"&gt;{btnValue}&lt;/button&gt;
-                            </code> 
-                        </div>
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">icon & value</p>
                     </div>
-
-                    <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">icon & value</p>
-                        </div>
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn">
-                                <i className="i icon-menu-2"></i>
-                                {btnValue}
-                            </button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn"&gt;&lt;i class="i icon-menu-2"&gt;&lt;/i&gt;{btnValue}&lt;/button&gt;
-                            </code> 
-                        </div>
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn">
+                            <i className="i icon-menu-2"></i>
+                            {btnValue}
+                        </button>
                     </div>
-                    <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">Value & Dropdown</p>
-                        </div>
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn">
-                                {btnValue}
-                                <i className="i icon-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn"&gt;{btnValue}&lt;i class="i icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
-                            </code> 
-                        </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn"&gt;&lt;i class="i icon-menu-2"&gt;&lt;/i&gt;{btnValue}&lt;/button&gt;
+                        </code> 
                     </div>
-            
-                    <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">Icon, Value & Dropdown</p>
-                        </div>
-                        
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn">
-                                <i className="i icon-menu-2"></i>
-                                {btnValue}
-                                <i className="i  icon-chevron-down"></i>
-                            </button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn"&gt;&lt;i class="i icon-menu-2"&gt;&lt;/i&gt;{btnValue}&lt;i class="i icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
-                            </code> 
-                        </div>
+                </div>
+                <div className="grid-container">
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">Value & Dropdown</p>
                     </div>
-                    <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">Icon</p>
-                        </div>
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn btn-square">
-                            <i className="i icon-home"></i>
-                            </button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn btn-square"&gt;&lt;i class="i icon-home"&gt;&lt;/i&gt;&lt;/button&gt;
-                            </code> 
-                        </div>
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn">
+                            {btnValue}
+                            <i className="i icon-chevron-down"></i>
+                        </button>
                     </div>
-                    <div className="grid-container">
-                        <div className="col-xs-12 col-sm-2 flex flex-center-v">
-                            <p className="txt-semibold">Icon/rounded</p>
-                        </div>
-                        <div className="col-xs-12 col-sm-2 flex gap-3">
-                            <button type="button" className="btn btn-circle">
-                            <i className="i icon-more-vertical"></i>
-                            </button>
-                        </div>
-                        <div className="col-xs-12 col-sm-8 flex flex-center-v">
-                            <code>
-                                &lt;button type="button" class="btn btn-circle"&gt;&lt;i class="i icon-more-vertical"&gt;&lt;/i&gt;&lt;/button&gt;
-                            </code> 
-                        </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn"&gt;{btnValue}&lt;i class="i icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                        </code> 
                     </div>
-                </ContentBox>
+                </div>
+        
+                <div className="grid-container">
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">Icon, Value & Dropdown</p>
+                    </div>
+                    
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn">
+                            <i className="i icon-menu-2"></i>
+                            {btnValue}
+                            <i className="i  icon-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn"&gt;&lt;i class="i icon-menu-2"&gt;&lt;/i&gt;{btnValue}&lt;i class="i icon-chevron-down"&gt;&lt;/i&gt;&lt;/button&gt;
+                        </code> 
+                    </div>
+                </div>
+                <div className="grid-container">
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">Icon</p>
+                    </div>
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn btn-square">
+                        <i className="i icon-home"></i>
+                        </button>
+                    </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn btn-square"&gt;&lt;i class="i icon-home"&gt;&lt;/i&gt;&lt;/button&gt;
+                        </code> 
+                    </div>
+                </div>
+                <div className="grid-container">
+                    <div className="col-xs-12 col-sm-2 flex flex-center-v">
+                        <p className="txt-semibold">Icon/rounded</p>
+                    </div>
+                    <div className="col-xs-12 col-sm-2 flex gap-3">
+                        <button type="button" className="btn btn-circle">
+                        <i className="i icon-more-vertical"></i>
+                        </button>
+                    </div>
+                    <div className="col-xs-12 col-sm-8 flex flex-center-v">
+                        <code>
+                            &lt;button type="button" class="btn btn-circle"&gt;&lt;i class="i icon-more-vertical"&gt;&lt;/i&gt;&lt;/button&gt;
+                        </code> 
+                    </div>
+                </div>
+            </ContentBox>
             
 
             {btnType.map( (type, i) =>

@@ -1,75 +1,330 @@
-/*
-Error: Undefined mixin 'mq'.
-        on line 45 of C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss, in `mq'
-        from line 45 of C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss
-        from line 5 of src/scss/marketplace/main.scss
+:root {
+  --bg-mp-gradient: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
+  --bg-mp-gradient-dark: linear-gradient(90.62deg, #c0ec0e -2.44%, #07df85 70.86%); }
 
-Backtrace:
-C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss:45:in `mq'
-C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss:45
-src/scss/marketplace/main.scss:5
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block (2 levels) in visit_rule'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `map'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:434:in `block in visit_rule'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:432:in `visit_rule'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `map'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'mq'.\A         on line 45 of C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss, in `mq'\A         from line 45 of C:/Users/dob/Desktop/VEDAMO-DESIGN-SYSTEM/src/scss/marketplace/_marketplace.scss\A         from line 5 of src/scss/marketplace/main.scss"; }
+.txt-mp-gradient {
+  background: var(--bg-mp-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.bg-mp-gradient {
+  background: var(--bg-mp-gradient);
+  box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
+  border: none; }
+
+.txt-mp-gradient-dark {
+  background: var(--bg-mp-gradient-dark);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+
+.bg-mp-gradient-dark {
+  background: var(--bg-mp-gradient-dark);
+  box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
+  border: none; }
+
+.teacher-card {
+  min-width: 320px;
+  aspect-ratio: 1/0.6875;
+  position: relative; }
+
+.teacher-card-name {
+  text-decoration: none;
+  bottom: -0.75rem;
+  left: 1.75rem;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+  left: 1.5rem; }
+
+a.teacher-card-name-link {
+  width: 0;
+  height: 0;
+  visibility: hidden; }
+  a.teacher-card-name-link:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: visible; }
+
+.slide-track-bottomGradient a.teacher-card-name-link::after {
+  bottom: -30px;
+  background: linear-gradient(360deg, white 0%, transparent 100%); }
+
+.avatar-border {
+  border: 0.25rem solid hsl(var(--clr-default-0)); }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(calc(-360px * 5)); } }
+@keyframes scrollRight {
+  0% {
+    transform: translateX(calc(-360px * 5)); }
+  100% {
+    transform: translateX(0); } }
+.slider {
+  margin: auto;
+  overflow: hidden;
+  position: relative; }
+  .slider .slide-track {
+    animation: scroll 320s linear infinite;
+    display: flex;
+    width: calc(360px * 10); }
+    .slider .slide-track.slide-track-right {
+      animation: scrollRight 320s linear infinite; }
+  .slider .slide {
+    height: 260px;
+    width: 360px; }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  z-index: 3;
+  height: var(--header-height);
+  align-items: center; }
+
+.nav-desktop {
+  display: none; }
+  @media (min-width: 64rem) {
+    .nav-desktop {
+      display: flex; } }
+
+.utility-header {
+  display: none;
+  padding: 0 1rem;
+  box-shadow: inset 0px -1px 0px hsl(var(--clr-default-200)); }
+  @media (min-width: 64rem) {
+    .utility-header {
+      display: block; } }
+  .utility-header ul {
+    justify-content: flex-end; }
+
+.nav-l {
+  align-items: center;
+  flex: 1;
+  display: none; }
+  @media (min-width: 64rem) {
+    .nav-l {
+      display: flex; } }
+
+.navigation {
+  list-style: none; }
+  .navigation li.active a {
+    color: hsl(var(--clr-main-600)); }
+
+.secondary-navigation {
+  --gap: 0.5rem;
+  margin-left: auto;
+  align-items: center; }
+  .secondary-navigation a {
+    font-size: 0.875rem;
+    font-weight: 500; }
+  @media (min-width: 64rem) {
+    .secondary-navigation {
+      --gap: inherit; } }
+
+.right-header {
+  margin-left: auto;
+  align-items: center; }
+
+.navigation-link {
+  color: inherit;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500; }
+  .navigation-link:hover {
+    color: hsl(var(--clr-main-600)); }
+
+.navigation-link-icon {
+  display: none; }
+  @media (min-width: 64rem) {
+    .navigation-link-icon {
+      display: inline; } }
+
+.vertical-divider {
+  display: none;
+  width: 1px;
+  height: 15px; }
+  @media (min-width: 64rem) {
+    .vertical-divider {
+      display: block; } }
+
+.backdropMenu, .backdropMenu1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  outline: 0;
+  background-color: hsl(var(--clr-default-900), 16%); }
+
+.backdropBody {
+  overflow: hidden;
+  padding-right: 8px; }
+
+.dropdown-menu,
+.dropdown-menu-inner {
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  top: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  border-top: 1px solid hsl(var(--clr-default-300));
+  max-height: 100vh; }
+
+.dropdown.active > .dropdown-button + .dropdown-menu,
+.dropdown-inner.active > .dropdown-button-inner + .dropdown-menu-inner {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px); }
+
+.logo {
+  width: 125px;
+  height: 40px; }
+  @media (min-width: 64rem) {
+    .logo {
+      width: 150px;
+      height: 40px; } }
+  .logo svg {
+    width: 100%; }
+
+.start-btn {
+  width: 100%;
+  padding-inline: 0.5rem; }
+  @media (min-width: 64rem) {
+    .start-btn {
+      padding-inline: 1rem; } }
+  @media (min-width: 80rem) {
+    .start-btn {
+      margin-left: auto;
+      padding-inline: 1.25rem;
+      height: 3rem;
+      font-size: 1rem;
+      width: auto; } }
+
+@media (min-width: 64rem) {
+  .mobile-nav-open {
+    display: none; } }
+
+.nav-mobile-header {
+  height: var(--header-height); }
+
+.nav-sliding {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 3;
+  overflow: scroll;
+  transform: translateX(-100%);
+  transition: transform 100ms ease-in-out; }
+  .nav-sliding.nav-sliding-second {
+    transform: translateX(100%); }
+  .nav-sliding[data-visible="true"] {
+    transform: translateX(0);
+    transition: transform 320ms ease-in-out; }
+
+.header-dropdown-menu {
+  height: calc(100vh - var(--header-height)); }
+
+.home-list .list-item {
+  border-top: 1px solid hsl(var(--clr-default-250));
+  border-bottom: 1px solid hsl(var(--clr-default-250)); }
+.home-list > .list-item + .list-item {
+  border-top: none; }
+.home-list .list-link {
+  height: 3.5rem;
+  display: flex;
+  align-items: center; }
+
+.hero-section {
+  background-color: #09142a;
+  background-image: url(../../../public/icons.png), radial-gradient(circle at top center, #3b4454 20%, #09142a 40%);
+  background-size: 80%, 100%;
+  background-position: right bottom, left top;
+  background-repeat: no-repeat;
+  height: 268px; }
+
+.hero-section-slogan {
+  background-image: url(../../../public/hero-lines.png);
+  background-position: center bottom;
+  background-repeat: no-repeat; }
+
+.hero-section-benefit {
+  background-image: url(../../../public/hero-check.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 1.5rem; }
+
+.home-step > div {
+  justify-content: start; }
+  @media (min-width: 48rem) {
+    .home-step > div {
+      justify-content: center; } }
+
+.home-step-arrow-1 {
+  position: relative; }
+  .home-step-arrow-1::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -25%;
+    background-image: url(../../../public/arrow-1.svg);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 80px;
+    z-index: 1; }
+
+.home-filters {
+  background-color: hsl(var(--clr-default-300), 32%); }
+
+.home-card {
+  background-color: hsl(var(--clr-default-50)); }
+  .home-card:hover {
+    background-color: hsl(var(--clr-default-0));
+    box-shadow: var(--bs-2xl); }
+
+.home-card-grid {
+  display: grid; }
+  @media (min-width: 64rem) {
+    .home-card-grid {
+      display: flex; } }
+  @media (min-width: 64rem) {
+    .home-card-grid .home-card-description {
+      margin-left: 1rem; } }
+  .home-card-grid .play-video {
+    z-index: 2; }
+  .home-card-grid .home-divider {
+    height: 5rem;
+    align-self: center; }
+  .home-card-grid .home-card-price {
+    order: 1; }
+    @media (min-width: 64rem) {
+      .home-card-grid .home-card-price {
+        order: 2; } }
+    .home-card-grid .home-card-price div {
+      flex-direction: row;
+      align-items: end; }
+      @media (min-width: 64rem) {
+        .home-card-grid .home-card-price div {
+          flex-direction: column;
+          align-items: center; } }
+
+/*# sourceMappingURL=main.css.map */

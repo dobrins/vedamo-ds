@@ -2,6 +2,7 @@
 
 .grid-container{
     display: grid;
+    width: 100%;
     grid-template-columns: repeat($columns, 1fr);
     /*HERE YOU CAN SET YOUR CUSTOM COLUMN GAP*/
     
@@ -20,66 +21,71 @@
     }
 }
 
-@for $width from 1 through $columns {
-	.col-xs-#{$width} {
-		grid-column-end: span $width;
-	}  
-    .col-xs-offset-#{$width} {
-		grid-column-start: $width;
-	} 
-    
+@for $width from 1 through $columns { // OVERRIDE BIGGER GRID ITEMS - SM, M, L
     .col-sm-#{$width}, .col-m-#{$width}, .col-l-#{$width}  {
         grid-column-end: span $columns;
     }
+}
 
+@for $width from 1 through $columns { // XS LOOP
+
+	.col-xs-#{$width} {
+		grid-column-end: span $width !important;
+	}  
+    .col-xs-offset-#{$width} {
+		grid-column-start: $width !important;
+	} 
 }
 
 // @media only screen and (min-width:48em){    
 @include mq(s) {
-  
-    @for $width from 1 through $columns {
-        .col-sm-#{$width} {
-            grid-column-end: span $width;
-        }  
-        .col-sm-offset-#{$width} {
-            grid-column-start: $width;
-        }  
 
-        .col-m-#{$width}  {
+    @for $width from 1 through $columns { // OVERRIDE BIGGER GRID ITEMS - M, L
+
+        .col-m-#{$width}, .col-l-#{$width}  {
             grid-column-end: span $columns;
         }
+    }
+  
+    @for $width from 1 through $columns { // SM LOOP
 
-
+        .col-sm-#{$width} {
+            grid-column-end: span $width !important;
+        }  
+        .col-sm-offset-#{$width} {
+            grid-column-start: $width !important;
+        }
     }
 }
 
-// @media only screen and (min-width:62em){    
+// @media only screen and (min-width:64em){    
 @include mq(m) {
-    
-    @for $width from 1 through $columns {
-        .col-m-#{$width} {
-            grid-column-end: span $width;
-        }  
-        .col-m-offset-#{$width} {
-            grid-column-start: $width;
-        }  
 
+    @for $width from 1 through $columns { // OVERRIDE BIGGER GRID ITEMS - M, L
        .col-l-#{$width}  {
             grid-column-end: span $columns;
         }
     }
+    
+    @for $width from 1 through $columns { // M LOOP
+        .col-m-#{$width} {
+            grid-column-end: span $width !important;
+        }  
+        .col-m-offset-#{$width} {
+            grid-column-start: $width !important;
+        }
+    }
 }
 
-// @media only screen and (min-width:75em) {   
+// @media only screen and (min-width:80em) {   
 @include mq(l) { 
     
     @for $width from 1 through $columns {
         .col-l-#{$width} {
-            grid-column-end: span $width;
+            grid-column-end: span $width !important;
         }  
         .col-l-offset-#{$width} {
-            grid-column-start: $width;
-        }  
-
+            grid-column-start: $width !important;
+        }
     }
 }

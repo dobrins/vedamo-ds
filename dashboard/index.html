@@ -8,60 +8,138 @@
     <link rel="stylesheet" type="text/css"  href="../src/css/main.css" />
     <link rel="stylesheet" type="text/css"  href="../src/css/dashboard/dashboard.css" />
     <script src="script.js" defer></script>
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+    <title>Marketplace Dashboard</title>
 </head>
 
 <body>
-    <div class="wrapper-dashboard">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Example Modal</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+    </div>
+  </div>
+  <nav class="navigation-mobile nav-sliding bg-default-0 flex" data-visible="false">
 
+    <!-- Close menu button -->
+
+   <div class="nav-mobile-header flex container flex-center-v pv-5 flex-space-between">
+        <button class="btn btn-square mobile-nav-close" aria-controls="navigation-mobile" aria-expanded="false" >
+            <span class="sr-only">Close menu</span>
+            <i class="i icon-vico-close"></i>
+        </button>
+        
+        <a href="#" class="avatar avatar-m avatar-border">
+            <img src='../public/avatar.png' alt="" />
+        </a>
+   </div>
+
+
+   <div class="flex-1 overflow-y-auto mt-6">
+        <ul class="">
+            <li class="list-item-nav">
+                <a href="#"><i class="i icon-cast"></i><span>Sessions</span>
+                    <div class="badge-bubble sidebar-nav-notification bg-info-400">19</div></a>
+            </li>
+            <li class="list-item-nav">
+                <a href="#"><i class="i icon-layout"></i><span>Session Templates</span></a>
+            </li>
+            <li class="list-item-nav">
+                <a href="#"><i class="i icon-inbox"></i><span>File library</span></a>
+            </li>
+            <li class="list-item-nav">
+                <a href="#">
+                    <i class="i icon-star"></i><span>Reviews and Notes</span>
+                    <div class="position-absolute badge-bubble sidebar-nav-notification bg-warning-400">19</div>
+                </a>
+            </li>
+            <li class="list-item-nav">
+                <a href="#"><i class="i icon-coin-stack"></i><span>Financials</span></a>
+            </li>
+            <li class="list-item-nav">
+                <a href="#"><i class="i icon-settings"></i><span>Settings</span></a>
+            </li>
+        </ul>
+        <ul class="mobile-nav-menu-1">
+            <li>
+                <a href="#" class="fz-text-l">My Availability</a>
+            </li>
+            <li>
+                <a href="#" class="fz-text-l">Profile</a>
+            </li>
+       </ul>
+       <ul class="mobile-nav-menu-2">
+        <li>
+            <a href="#" class="fz-text-l"><i class="i icon-help-circle"></i>Guides & Tutorials</a>
+        </li>
+        <li>
+            <a href="#" class="fz-text-l"><i class="i icon-vico-chat"></i>Live Chat</a>
+        </li>
+   </ul>
+   </div>
+   
+   
+   
+   <div class="p-8 flex">
+       <a href="#" class="flex-1 txt-semibold txt-decoration-none">    
+           <i class="i icon-log-in"></i>
+           Login
+       </a>
+   </div>
+</nav>
+  <div id="overlay"></div>
+    <div class="wrapper-dashboard">
         <!-- 
             SIDEBAR 
         -->
 
-        <aside class="sidebar-dashboard bs-2xl position-relative">
+        <aside class="sidebar-dashboard bs-2xl position-relative bg-default-0">
             <div>
                 <div class="p-5 position-relative">
                     <div class="logo flex flex-center-v">
                         <a href="#">
-                            <img src="../public/logo.svg" alt="" />
+                            <img class="full-size-logo" src="../public/logo.svg" alt="" style="margin-left: 10px;" />
+                            <img class="only-v-logo hidden" src="../public/logo-only-v.svg" alt="" />
                         </a>
                     </div>
-                    <button type="button" class="toggleSidebar btn btn-tertiary btn-circle position-absolute translate-middle top-50 start-100">
-                        <i class="i icon-chevron-left"></i>
-                    </button>
                 </div>
                 <ul class="p-4 sidebar-nav grid gap-1">
-                    <li class="active">
+                    <li class="sidebar-nav-item active">
                         <a href="#">
-                            <i class="i icon-cast"></i>
+                            <i class="i icon-cast"></i> 
                             <span>Sessions</span>
+                            <div class="badge-bubble sidebar-nav-notification bg-info-400">19</div>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-nav-item">
                         <a href="#">
                             <i class="i icon-layout"></i>
                             <span>Session Templates</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-nav-item">
                         <a href="#">
                             <i class="i icon-inbox"></i>
                             <span>File library</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-nav-item">
                         <a href="#">
                             <i class="i icon-star"></i>
-                            <span>Reviews and Notes</span>
+                            <span>Reviews</span>
+                            <div class="position-absolute badge-bubble sidebar-nav-notification bg-warning-400">19</div>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-nav-item">
                         <a href="#">
                             <i class="i icon-coin-stack"></i>
                             <span>Financials</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="sidebar-nav-item">
                         <a href="#">
                             <i class="i icon-settings"></i>
                             <span>Settings</span>
@@ -69,11 +147,17 @@
                     </li>  
                 </ul>
             </div>
-            <ul class="p-4 sidebar-nav grid gap-4">
+            <ul class="p-4 sidebar-nav grid">
                 <li>
                     <a href="#">
-                        <i class="i icon-log-out"></i>
-                        <span>Log out</span>
+                        <i class="i icon-help-circle"></i>
+                        <span>Guides & Tutorials </span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <i class="i icon-vico-chat"></i>
+                        <span>Live Chat</span>
                     </a>
                 </li>               
             </ul>
@@ -84,272 +168,868 @@
         -->
 
         <main class="main-dashboard flex-1">
+
+        
+            <!-- 
+            PERSONAL NAVBAR 
+            -->
             
             <div class="container bg-default-0 pv-5">
-                <div class="header-dashboard position-relative flex flex-end-h flex-center-v gap-6">
-                    <a href="#">My Offer</a>
-                    <div class="divider-vertical"></div>
-                    <a href="#" class="avatar avatar-m avatar-border">
-                        <img src='https://avataaars.io/?avatarStyle=Transparent&facialHairType=MoustacheFancy' alt="" />
-                    </a>
-                    <span class="badge badge-info txt-uppercase">
-                        tutor
-                    </span>
+                <div class="header-dashboard position-relative flex">
+                    <div class="show-on-mobile flex flex-center-v">
+                        <button class="btn btn-square btn-tertiary mr-3 mobile-nav-open"  aria-controls="navigation-mobile" aria-expanded="false">
+                            <span class="position-absolute translate-middle top-0 start-100 for-approval badge-bubble bg-warning-400 ">
+                                
+                            </span>
+                            <span class="sr-only">Menu</span>
+                            <i class="i icon-menu"></i>
+                        </button>
+
+                        <a href="#">
+                            <img src="../public/logo.svg" alt="" />
+                        </a>
+                    </div>
+                    <div class="hide-on-mobile flex-center-v flex">
+                        <button type="button" class="toggleSidebar btn btn-close btn-circle btn-xs  ">
+                            <i class="i icon-chevron-left"></i>
+                        </button>
+                        <a href="#" class="btn btn-tertiary">My Availability</a>
+                    </div>
+                    
+                    <div class="flex">
+                        
+                        <a href="#" class="btn btn-ghost btn-circle btn-icon-dashboard-header">
+                            <i class="i icon-mail"></i>
+                            <div class="badge-bubble bg-main-500 top-0 end-0">19</div>
+                        </a>
+
+                        
+
+                        <div class="dropdown position-relative hide-on-mobile" data-dropdown>
+                            
+                            <a href="#" class="dropdown-button btn btn-ghost btn-circle btn-icon-dashboard-header" data-dropdown-button>
+                                <i class="i icon-help-circle"></i>
+                            </a>
+                            
+                            <div class="dropdown-menu dropdown-menu-right p-2 bs-l bg-default-0">
+                              
+                                <ul class="list">
+                                    <li class="list-item"><a href="#"><i class="i icon-compass"></i>Start tour</a></li>
+                                    <li class="list-item"><a href="#"><i class="i icon-book"></i>Guides & Tutorials</a></li>
+                                    <li class="list-item"><a href="#"><i class="i icon-vico-chat"></i>Contact Support</a></li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="dropdown position-relative" data-dropdown>
+                            
+                            <a href="#" class="dropdown-button avatar avatar-m avatar-border" data-dropdown-button>
+                                <img src='../public/avatar.png' alt="" />
+                            </a>
+                            
+                            <div class="dropdown-menu dropdown-menu-right p-2 bs-l bg-default-0">
+                               <div class="bg-default-150 br-2 p-4">
+                                    <p class="txt-semibold fz-text-s">
+                                        Jessica Porter
+                                    </p>
+                                    <p class="fz-text-xs">
+                                        Jessica.Porter@gmai.com
+                                    </p>
+                                    <p>
+                                        <span class="badge badge-primary">tutor</span>
+                                    </p>
+                                </div>
+                                <ul class="list">
+                                    <li class="list-item"><a href="#">My Availability</a></li>
+                                    <li class="list-item"><a href="#">Profile</a></li>
+                                    <li class="list-item"><a href="#">Log out</a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
+
+             <!-- 
+            STATISTICS 
+            -->
            
-            <div class="container bg-default-0 pv-9 position-sticky">
-                <div class="bg-success-100 br-2 p-9 ">
-                    <div class="fz-text-xl">
-                        <span class="badge">11:00 - 12:00</span>
+            <div class="container bg-default-0 pb-4">
+                <div class="grid-container">
+                    <div class="col-m-6">
+                        <p>
+                            <i class="i icon-bar-chart-2 mr-1"></i> 
+                            <span class="txt-semibold">Stats for Aug'22</span>
+                        </p>
+                        <div class="dashboard-stats flex mt-4">
+                            <div class="flex flex-column gap-1 flex-center">
+                                <div>
+                                    <i class="i icon-coins txt-main-400"></i>
+                                    <span class="fz-display-xs txt-bold">$1,379</span>
+                                </div>
+                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">income</span>
+                            </div>
+                            <div class="flex flex-column gap-1 flex-center">
+                                <div>
+                                    <i class="i icon-calendar txt-info-400"></i>
+                                    <span class="fz-display-xs txt-bold">51</span>
+                                </div>
+                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">completed</span>
+                            </div>
+                            <div class="flex flex-column gap-1 flex-center">
+                                <div>
+                                    <i class="i icon-star txt-warning-400"></i>
+                                    <span class="fz-display-xs txt-bold">4.7</span>
+                                </div>
+                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">rating</span>
+                            </div>
+                            
+                        </div>
                     </div>
-                    <div class="flex gap-9 mt-2">
-                        <p class="fz-display-xs txt-medium flex-1">You have a session with Sasha Grey starting in 8 mins. Hurry up! Don't miss your class.</p>
+                    
+                    <div class="col-m-6">
                         <div class="flex">
-                            <button class="btn btn-tertiary btn-xl">View</button>
-                            <button class="btn btn-tertiary btn-xl">Start the Session</button>
+                            
+                            <div class="dashboard-card flex-1 bg-info-100 br-2 pv-4 position-relative">
+                                
+                                <div class="flex flex-center-h">
+                                    <div class="dashboard-card-count bg-info-400 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
+                                </div>
+                                
+                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
+                                    Sessions for approval
+                                </a>
+                                <i class="i icon-arrow-up-right txt-info-400 fz-display-xs dashboard-card-icon"></i>
+                            
+                            </div>
+
+                            <div class="dashboard-card flex-1 bg-main-50 br-2 pv-4 position-relative">
+                                
+                                <div class="flex flex-center-h">
+                                    <div class="dashboard-card-count bg-main-500 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
+                                </div>
+                                
+                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
+                                    New messages
+                                </a>
+                                <i class="i icon-arrow-up-right txt-main-500 fz-display-xs dashboard-card-icon"></i>
+                            
+                            </div>
+
+                            <div class="dashboard-card flex-1 bg-warning-100 br-2 pv-4 position-relative">
+                                
+                                <div class="flex flex-center-h">
+                                    <div class="dashboard-card-count bg-warning-400 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
+                                </div>
+                                
+                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
+                                    New reviews
+                                </a>
+                                <i class="i icon-arrow-up-right txt-warning-400 fz-display-xs dashboard-card-icon"></i>
+                            
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+            ALERT 
+            -->
+           
+            <div class="container bg-warning-100 мb-2 position-sticky">
+                <div class="pv-4 dashboard-alert">
+                    <div class="grid-container">
+                        <div class="col-sm-8">
+                            <div class="fz-text-xs txt-default-550 txt-uppercase txt-semibold"><i class="i icon-arrow-right"></i> Next today</div>
+                           
+                                
+                                    <div class="flex flex-center-v mt-3">
+                                        <div>
+                                            <span class="badge">11:00 - 12:00</span>
+                                            <span class="badge badge-info">Demo</span>
+                                        </div>
+                                        <span class="txt-medium flex-1 dashboard-alert-title">Session with Sasha Grey</span>
+                                    </div>
+                                
+                              
+
+                           
+                            
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="dashboard-alert-buttons flex flex-end-h flex-end-v">
+                                <div class="flex flex-center-v flex-end-h">
+                                    <div class="fz-text-xs txt-medium mr-2 txt-default-550"><span>Starts</span> in <i class="i icon-clock"></i> <span class="txt-bold">2 hours</span></div>
+                                    <button class="btn btn-s btn-secondary">View</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container pv-9">
-                    
-                <div class="bg-default-250 br-2 ph-4 pv-3 flex flex-space-between flex-center-v">
-                    <div class="flex gap-6 flex-center-v">
-                        <button type="button" class="btn btn-tertiary btn-square">
-                            <i class="i icon-arrow-left"></i>
-                        </button>
-                        <div>
-                            <p class="fz-text-l txt-semibold">June 27 - July 03</p>
-                            <span class="txt-uppercase fz-text-xs txt-semibold">30 Sessions</span>
-                        </div>
-                        <button type="button" class="btn btn-tertiary btn-square">
-                            <i class="i icon-arrow-right"></i>
-                        </button>
-                        <a href="#" class="fz-text-s txt-semibold">This week</a>
-                    </div>
-                    <div>
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-tertiary">Leading</button>
-                            <button type="button" class="btn btn-tertiary">Middle</button>
-                            <button type="button" class="btn btn-tertiary">Trailing</button>
-                        </div>
-                    </div>
+            
+
+            <div class="container bg-default-0 pt-6">
                 
+                <div class="flex flex-space-between">
+                    <p class="fz-display-xs txt-semibold">Sessions</p>
+                    <button type="button" class="btn btn-tertiary btn-s"><i class="i icon-settings"></i> Settings</button>
                 </div>
+            
+                <!-- 
+            TABS
+            -->
+                <div class="position-relative mt-6" style="min-height: 3rem">
+                    <ul class="tabs">
+                        <li class="tabs-item active">
+                            <a href="#" class="tabs-link" id="tab-content-1">
+                                <i class="i icon-calendar"></i>
+                                <span>All</span>
+                            </a>
+                        </li>
+                        <li class="tabs-item">
+                            <a href="#" class="tabs-link" id="tab-content-2"><i class="i icon-calendar"></i> Month</a>
+                        </li>
+                        <li class="tabs-item">
+                            <a href="#" class="tabs-link" id="tab-content-3">
+                                <i class="i icon-check-square"></i> 
+                                <span>Pending</span>
+                                <div class=" badge-bubble menu-notification bg-info-400">19</div>
+                            </a>
+                        </li>
+                        <li class="tabs-item">
+                            
+                            <a href="#" class="tabs-link" id="tab-content-4">
+                                <i class="i icon-vico-calendar-upcomiming"></i>
+                                <span>Upcoming</span>
+                            </a>
+                        </li>
+                        <li class="tabs-item">
+                            <a href="#" class="tabs-link" id="tab-content-5">
+                                <i class="i icon-vico-archive"></i> 
+                                <span>Past</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                <div class="bg-default-0 br-2 p-9 mt-4">
-                    <div class="grid-container">
-                        <div class="col-sm-2">
-                            <div class="flex full-height flex-center-v ">
-                                <div class="txt-center ph-4 flex-1 position-sticky">
-                                    <div class="bg-default-0  brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250" style="border-bottom: none">
-                                        <p class="fz-display-xs">27</p>
-                                        <p class="txt-uppercase">sun</p>
+            <!-- 
+            TAB CONTENT 
+            -->
+
+            <div class="container pv-6">
+
+                <!-- 
+                TAB 1 
+                -->
+
+                <div class="tab-content tab-content-1 block">
+                    <div class="txt-uppercase txt-semibold txt-center">All sessions</div>
+                    <div class="bg-default-250 br-2 ph-4 pv-3 mt-4">
+                        <div class="grid-container">
+                            <div class="col-m-9">
+                                <div class="flex gap-6 flex-center-v">
+                                    <button type="button" class="btn btn-tertiary btn-square">
+                                        <i class="i icon-arrow-left"></i>
+                                    </button>
+                                    <div>
+                                        <p class="fz-text-l txt-semibold line-height-1">June 27 - July 03</p>
+                                        <span class="fz-text-xs line-height-1 txt-default-550">30 Sessions</span>
                                     </div>
-                                    <div class="bg-accent-1 brb-2 txt-default-0 txt-semibold txt-uppercase fz-txt-s pv-2">Today</div>
+                                    <button type="button" class="btn btn-tertiary btn-square">
+                                        <i class="i icon-arrow-right"></i>
+                                    </button>
+                                    <a href="#" class="fz-text-s txt-semibold hide-on-mobile">Show This Week</a>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class="col-sm-10">
-                            
-                            <table class="table">
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>
-                                        <div class="txt-truncate">
-                                            A very long studen name
-                                        </div>
-                                    </td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="bg-default-50 br-2 p-9 mt-4">
-                    <div class="grid-container">
-                        <div class="col-sm-2">
-                            <div class="flex full-height flex-center-v">
-                                <div class="txt-center ph-4 flex-1">
-                                    <div class="bg-default-0  brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250" style="border-bottom: none">
-                                        <p class="fz-display-xs">27</p>
-                                        <p class="txt-uppercase">sun</p>
-                                    </div>
-                                    <div class="bg-accent-1 brb-2 txt-default-0 txt-semibold txt-uppercase fz-txt-s pv-2">Today</div>
+                            <div class="col-m-3 txt-end">
+                                <div class="btn-group full-width">
+                                    <button type="button" class="btn btn-tertiary">Week</button>
+                                    <button type="button" class="btn btn-tertiary">Month</button>
                                 </div>
                             </div>
+                        </div>                    
+                    </div>
+                    <div class="bg-default-0 br-2 mt-4">
+                        <div class="grid-container">
+                            <div class="col-sm-2">
+                                <div class="flex full-height flex-center-v">
+                                    <div class="txt-center ph-4 flex-1">
+                                        <div class="bg-default-0 brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250 line-height-1" 
+                                        style="border-bottom: none;">
+                                            <p class="fz-display-xs">27</p>
+                                            <p class="txt-uppercase" style="margin-top:-10px"> sun</p>
+                                        </div>
+                                        <div class="bg-accent-1 brb-2 txt-default-0 txt-semibold txt-uppercase fz-text-xs pv-2 line-height-1">Today</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="grid-container calendar-list br-2 p-4">
+                                    <div class="col-sm-4 col-l-3 col-xs-6">
+                                        <div class="flex flex-start-v gap-1">
+                                            <div>
+                                                <div class="fz-text-s txt-bold">11:00 - 12:00</div>
+                                                <div class="txt-default-500 txt-semibold fz-text-xs mt-2 flex flex-center-v">
+                                                    <i class="i icon-clock txt-default-400 fz-text-m"></i> 
+                                                    30min
+                                                </div>
+                                            </div>
+                                            <div class="flex-1">
+                                                <span class="badge badge-info">
+                                                    Demo
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-sm-offset-10 col-xs-6">
+                                        <div class="flex flex-end-h">
+                                            <button type="button" class="btn bg-mp-gradient btn-xs" data-modal-target="#modal">Start</button>
+                                            <div class="dropdown position-relative" data-dropdown>
+                                                <button type="button" class="dropdown-button btn btn-ghost btn-circle btn-xs calendar-list-btn" data-dropdown-button>
+                                                    <i class="i icon-more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <ul class="list bs-xl">
+                                                        <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                                        <li class="list-item"><a href="#"><i class="i icon-check"></i><span>Reschedule</span></a></li>
+                                                        <li class="list-item"><a href="#" class="txt-error-600"><i class="i icon-x-circle"></i><span>Cancel</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-l-6 col-sm-5 overflow-hidden fz-text-s">
+                                        <span class="txt-medium">Sasha Grey</span>
+                                        <div class="flex mt-2 gap-3 position-relative">
+                                            <i class="i icon-vico-chat txt-default-400 fz-text-m"></i>
+                                            <div class="txt-regular txt-default-600 position-relative txt-truncate flex-1">
+                                                
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.
+                                                
+                                                <a href="#" class="txt-semibold txt-decoration-none show-less hidden">show less</a>
+                                            </div>
+                                            <a href="#" class="txt-semibold txt-decoration-none show-more">show more</a>
+                                        </div>
+                                    </div>
+                                </div>
 
+
+
+                                <div class="grid-container calendar-list br-2 p-4">
+                                    <div class="col-sm-4 col-l-3 col-xs-6">
+                                        <div class="flex flex-start-v gap-1">
+                                            <div> 
+                                                <div class="fz-text-s txt-bold">11:00 - 12:00</div>
+                                                <div class="txt-default-500 txt-semibold fz-text-xs mt-2 flex flex-center-v">
+                                                    <i class="i icon-clock txt-default-400 fz-text-m"></i> 
+                                                    1h and 30min
+                                                </div>
+                                            </div>
+                                            <div class="flex-1">
+                                                <span class="badge badge-error">
+                                                    cancelled by the student cancelled by the student
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3 col-sm-offset-10 col-xs-6">
+                                        <div class="flex flex-end-h">
+                                            <button type="button" class="btn bg-mp-gradient btn-xs" data-modal-target="#modal">Start</button>
+                                            <div class="dropdown position-relative" data-dropdown>
+                                                <button type="button" class="dropdown-button btn btn-ghost btn-circle btn-xs calendar-list-btn" data-dropdown-button>
+                                                    <i class="i icon-more-vertical"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <ul class="list bs-xl">
+                                                        <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                                        <li class="list-item"><a href="#"><i class="i icon-check"></i><span>Reschedule</span></a></li>
+                                                        <li class="list-item"><a href="#" class="txt-error-600"><i class="i icon-x-circle"></i><span>Cancel</span></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-l-6 col-sm-5 overflow-hidden fz-text-s">
+                                        <span class="txt-medium">Sasha Grey</span>
+                                        <div class="flex mt-2 gap-3 position-relative">
+                                            <i class="i icon-vico-chat txt-default-400 fz-text-m"></i>
+                                            <div class="txt-regular txt-default-600 position-relative txt-truncate flex-1">
+                                                 
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.
+                                                
+                                                <a href="#" class="txt-semibold txt-decoration-none show-less hidden">show less</a>
+                                            </div>
+                                            <a href="#" class="txt-semibold txt-decoration-none show-more">show more</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-10">
-                            
-                            <table class="table">
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>
-                                        <div class="txt-truncate">
-                                            A very long studen name
+                        
+                    </div>
+                    <div class="bg-default-50 br-2 p-9 mt-4">
+                        <div class="grid-container">
+                            <div class="col-sm-2">
+                                <div class="flex full-height flex-center-v">
+                                    <div class="txt-center ph-4 flex-1">
+                                        <div class="bg-default-0  brt-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250 line-height-1" style="border-bottom: none">
+                                            <p class="fz-display-xs">27</p>
+                                            <p class="txt-uppercase" style="margin-top:-10px">sun</p>
                                         </div>
-                                    </td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
-                                    <td>Student Name</td>
-                                    <td class="td-50">
-                                        <div class="txt-truncate">
-                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.</td>
-                                        </div>
-                                    <td class="td-10 txt-end">
-                                        <button class="btn btn-tertiary btn-circle btn-xs">
-                                            <i class="i icon-more-vertical"></i>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </table>
+                                        <div class="bg-default-900 brb-2 txt-default-0 txt-semibold txt-uppercase fz-text-xs pv-2">Tomorrow</div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="flex flex-center-v full-height">
+                                    <table class="table">
+                                        <tr>
+                                            <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                            <td>
+                                                <div class="txt-truncate">
+                                                    A very long studen name
+                                                </div>
+                                            </td>
+                                            <td class="td-50">
+                                                <div class="txt-truncate">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.
+                                                </div>
+                                            </td>
+                                            <td class="td-10 txt-end position-relative">
+                                                <div class="dropdown" data-dropdown>
+                                                    <button type="button" class="dropdown-button btn btn-ghost btn-circle btn-xs" data-dropdown-button>
+                                                        <i class="i icon-more-vertical"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <ul class="list bs-xl">
+                                                            <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-calendar"></i><span>Reschedule Session</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-x-square"></i><span>Cancel Session</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                            <td>
+                                                <div class="txt-truncate">
+                                                    A very long studen name
+                                                </div>
+                                            </td>
+                                            <td class="td-50">
+                                                <div class="txt-truncate">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.
+                                                </div>
+                                            </td>
+                                            <td class="td-10 txt-end position-relative">
+                                                <div class="dropdown" data-dropdown>
+                                                    <button type="button" class="dropdown-button btn btn-ghost btn-circle btn-xs" data-dropdown-button>
+                                                        <i class="i icon-more-vertical"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <ul class="list bs-xl">
+                                                            <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-calendar"></i><span>Reschedule Session</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-x-square"></i><span>Cancel Session</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <div class="bg-default-50 br-2 p-9 mt-4">
+                        <div class="grid-container">
+                            <div class="col-sm-2">
+                                <div class="flex full-height flex-center-v">
+                                    <div class="txt-center ph-4 flex-1">
+                                        <div class="bg-default-0 br-2 pv-6 flex flex-column flex-center-v txt-semibold border-default-250 line-height-1">
+                                            <p class="fz-display-xs">01</p>
+                                            <p class="txt-uppercase" style="margin-top:-10px">tue</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="flex flex-center-v full-height">
+                                    <table class="table">
+                                        <tr>
+                                            <td>11:00 - 12:00 <span class="badge badge-info">demo</span></td>
+                                            <td>
+                                                <div class="txt-truncate">
+                                                    A very long studen name
+                                                </div>
+                                            </td>
+                                            <td class="td-50">
+                                                <div class="txt-truncate">
+                                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus voluptate distinctio cumque doloremque molestiae hic, maiores facilis aperiam! Magni, distinctio.
+                                                </div>
+                                            </td>
+                                            <td class="td-10 txt-end position-relative">
+                                                <div class="dropdown" data-dropdown>
+                                                    <button type="button" class="dropdown-button btn btn-ghost btn-circle btn-xs" data-dropdown-button>
+                                                        <i class="i icon-more-vertical"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <ul class="list bs-xl">
+                                                            <li class="list-item"><a href="#"><i class="i icon-eye"></i><span>View</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-calendar"></i><span>Reschedule Session</span></a></li>
+                                                            <li class="list-item"><a href="#"><i class="i icon-x-square"></i><span>Cancel Session</span></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>                                
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="br-2 p-9 mt-4">
+                        <div class="grid-container">
+                            <div class="col-sm-2">
+                                <div class="flex full-height flex-center-v">
+                                    <div class="txt-center ph-4 flex-1">
+                                        <div class="br-2 pv-6 flex flex-column flex-center-v txt-semibold txt-default-550 line-height-1">
+                                            <p class="fz-display-xs">02</p>
+                                            <p class="txt-uppercase" style="margin-top:-10px">fri</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="flex full-height flex-center-v">
+                                    <p class="txt-default-550"><em>No sessions for this day</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+
+                    <div class="flex flex-center-h">
+
+                        <div >
+                            <a href="#" class="btn btn-tertiary btn-square"><i class="i icon-arrow-left"></i></a>
+                            
+                            <a href="#" class="btn btn-tertiary btn-square"><i class="i icon-arrow-right"></i></a>
+                        </div>
+
+                    </div>
+
                 </div>
+
+                <!-- 
+                TAB 2
+                -->
+
+                <div class="tab-content tab-content-2 ">
+                    <div class="txt-uppercase txt-semibold txt-center">All sessions</div>
+                    <div class="bg-default-250 br-2 ph-4 pv-3 mt-4">
+                        <div class="grid-container">
+                            <div class="col-m-9">
+                                <div class="flex gap-6 flex-center-v">
+                                    <button type="button" class="btn btn-tertiary btn-square">
+                                        <i class="i icon-arrow-left"></i>
+                                    </button>
+                                    <div>
+                                        <p class="fz-text-l txt-semibold line-height-1">June 27 - July 03</p>
+                                        <span class="fz-text-xs line-height-1 txt-default-550">30 Sessions</span>
+                                    </div>
+                                    <button type="button" class="btn btn-tertiary btn-square">
+                                        <i class="i icon-arrow-right"></i>
+                                    </button>
+                                    <a href="#" class="fz-text-s txt-semibold hide-on-mobile">Show This Month</a>
+                                </div>
+                            </div>
+                            <div class="col-m-3 txt-end">
+                                <div class="btn-group full-width">
+                                    <button type="button" class="btn btn-tertiary">Week</button>
+                                    <button type="button" class="btn btn-tertiary">Month</button>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+
+                    <table class="table calendar-table">
+                        <thead>
+                            <tr>
+                                <td class="txt-uppercase fz-text-xs">mon</td>
+                                <td class="txt-uppercase fz-text-xs">tue</td>
+                                <td class="txt-uppercase fz-text-xs">wed</td>
+                                <td class="txt-uppercase fz-text-xs">thu</td>
+                                <td class="txt-uppercase fz-text-xs">fri</td>
+                                <td class="txt-uppercase fz-text-xs">sat</td>
+                                <td class="txt-uppercase fz-text-xs">sun</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="calendar-diff-month calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>31</span>
+                                        <button type="button" class="calendar-btn btn btn-xs">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day ">
+                                    <div class="events bymonth">
+                                        <span>1</span>
+                                        <button type="button" class="calendar-btn btn btn-xs">2 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>2</span>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>3</span>
+                                       
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>4</span>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>5</span>
+                                        <button type="button" class="calendar-btn btn btn-xs">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>6</span>
+                                    </div>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>7</span>
+                                        <button type="button" class="calendar-btn btn btn-xs">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-passed-day">
+                                    <div class="events bymonth">
+                                        <span>8</span>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-current-day">
+                                    <div class="events bymonth">
+                                        <span>9</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>10</span>
+                                        <span class="for-approval badge-bubble bg-info-400 position-absolute">
+                                            <span>19</span>
+                                        </span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>11</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>12</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>13</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>                                
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>14</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>15</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">2 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>16</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>17</span>
+                                       
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>18</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>19</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>20</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>21</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>22</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>23</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>24</span>
+                                       
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>25</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">5 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>26</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>27</span>
+                                    </div>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>28</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>29</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">2 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>30</span>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div class="events bymonth">
+                                        <span>31</span>
+                                       
+                                    </div>
+                                </td>
+
+                                <td class="calendar-diff-month">
+                                    <div class="events bymonth">
+                                        <span>1</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">5 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+
+                                <td class="calendar-diff-month">
+                                    <div class="events bymonth">
+                                        <span>2</span>
+                                        <button type="button" class="calendar-btn btn btn-xs btn-secondary">3 <span>Sessions</span></button>
+                                    </div>
+                                </td>
+                                <td class="calendar-diff-month">
+                                    <div class="events bymonth">
+                                        <span>3</span>
+                                    </div>
+                                </td>                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 
+                TAB 3
+                -->
+                <div class="tab-content tab-content-3">3</div>
+                <div class="tab-content tab-content-4">4</div>
+                <div class="tab-content tab-content-5">5</div>                
             </div>
         </main>
     </div>
+
+    
 
 </body>
 

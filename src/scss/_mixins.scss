@@ -8,3 +8,47 @@
         @content;
     }
 }
+
+/* spacing system loop */
+
+@mixin sizes($size, $index) {
+    
+    $count: 0;
+
+    @each $size in $sizes {
+        
+        $size: $size * $index;
+
+        .p-#{$count} {padding: #{$size}rem}
+        .pr-#{$count} {padding-right: #{$size}rem}
+        .pl-#{$count} {padding-left: #{$size}rem}
+        .pb-#{$count} {padding-bottom: #{$size}rem}
+        .pt-#{$count} {padding-top: #{$size}rem}
+        .pv-#{$count} {padding-top: #{$size}rem;padding-bottom: #{$size}rem}
+        .ph-#{$count} {padding-left: #{$size}rem;padding-right: #{$size}rem}
+        
+        .m-#{$count} {margin: #{$size}rem}
+        .mr-#{$count} {margin-right: #{$size}rem}
+        .ml-#{$count} {margin-left: #{$size}rem}
+        .mb-#{$count} {margin-bottom: #{$size}rem}
+        .mt-#{$count} {margin-top: #{$size}rem}
+        .mv-#{$count} {margin-top: #{$size}rem;margin-bottom: #{$size}rem}
+        .mh-#{$count} {margin-left: #{$size}rem;margin-right: #{$size}rem}
+
+        .br-#{$count} {border-radius: #{$size}rem}
+        .brt-#{$count} {border-top-left-radius: #{$size}rem; border-top-right-radius: #{$size}rem}
+        .brr-#{$count} {border-top-right-radius: #{$size}rem; border-bottom-right-radius: #{$size}rem}
+        .brb-#{$count} {border-bottom-right-radius: #{$size}rem;border-bottom-left-radius: #{$size}rem}
+        .brl-#{$count} {border-bottom-left-radius: #{$size}rem;border-top-left-radius: #{$size}rem}
+
+        .brtl-#{$count} {border-top-left-radius: #{$size}rem}
+        .brtr-#{$count} {border-top-right-radius: #{$size}rem}
+        .brbr-#{$count} {border-bottom-right-radius: #{$size}rem}
+        .brbl-#{$count} {border-bottom-left-radius: #{$size}rem}
+
+        .gap-#{$count} {gap: #{$size}rem !important}
+        .grid-column-gap-#{$count} {grid-column-gap: #{$size}rem !important}
+        
+        $count: $count + 1;
+    }
+}

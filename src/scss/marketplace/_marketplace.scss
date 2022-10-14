@@ -3,12 +3,6 @@
     --bg-mp-gradient-dark :  linear-gradient(90.62deg, hsla(72, 89%, 49%, 1) -2.44%, hsla(155, 94%, 45%, 1) 70.86%);
 }
 
-.subtitle {
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    font-weight: 600;
-}
-
 .txt-mp-gradient {
     background: var(--bg-mp-gradient);
     -webkit-background-clip: text;
@@ -33,40 +27,6 @@
     border: none
 }
 
-
-
-/* ----------------- */
-/* Home */
-/* ----------------- */
-
-.hero-title {
-    font-size: var(--fz-display-m);
-
-    @include mq(m) {
-        font-size: var(--fz-display-l);
-     }
-}
-
-.top-categories {
-
-    margin-top: 1.75rem;
-    padding: 1.5rem; 
-
-    @include mq(m) {
-        margin-top: 4rem;
-        padding: 3.5rem; 
-    }
-}
-
-.container-za-trista-i-dvaise-na-dvesta-i-dvaise {
-    gap: 1.5rem;
-    padding: 0 0 40px 0;
-    background-color: hsl(var(--clr-main-100));
-
-    @include mq(m) {
-        gap: 2.5rem;
-    }
-}
 
 .teacher-card {
     min-width: 320px;
@@ -110,8 +70,6 @@ a.teacher-card-name-link {
         }
     }
 }
-
-
 
 .avatar-border {
     border: .25rem solid hsl(var(--clr-default-0));
@@ -159,46 +117,6 @@ $animationSpeed: 320s;
 	}
 }
 
-.home-step {
-    border: 1px solid hsl(var(--clr-default-250))
-}
-
-.home-card {
-    display: grid;
-    position: relative;
-
-    @include mq(m) {
-        display: flex;
-    }
-
-    .home-card-description {
-        @include mq(m) {
-            margin-left: 1.5rem;
-        }
-        
-    }
-
-    .home-card-price {
-        
-        order: 1;
-
-        @include mq(m) {
-            order: 2
-        }
-
-        div {
-            flex-direction: row;
-            align-items: end;
-
-            @include mq(m) {
-                flex-direction: column;
-                align-items: center;
-        }
-    }   
-    }
-
-    
-}
 
 
 
