@@ -22,8 +22,9 @@
 @import 'divider';
 @import 'badges';
 @import 'blurs';
+@import 'modal';
 @import 'tables';
-
+@import 'marketplace';
 
 /* classes - remove later */
 
@@ -177,8 +178,8 @@
         display: flex;
         gap: 0.75rem;
         align-items: center;
-        // justify-content: space-between;
-        padding: 0.5rem 1.5rem 0.5rem 1rem;
+        justify-content: space-between;
+        padding: 0.5rem 1rem 0.5rem 1.5rem;
         text-decoration: none;
 
         &.active {
@@ -199,9 +200,7 @@
 }
 
 .menu-inner {
-    display: none;
     width: 15rem;
-    border-top: 1px solid hsl(var(--clr-default-250));
     border-left: 1px solid hsl(var(--clr-default-250));
 }
 

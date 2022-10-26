@@ -8,14 +8,15 @@
     background-color: hsl(var(--clr-default-0));
     color: hsl(var(--clr-default-700));
     border:1px solid hsl(var(--clr-default-0));
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     font-size: 0.75em;
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
+    text-transform: uppercase;
     line-height: 1;
     outline: none;
     z-index: auto;
-    padding: 0.2em 0.5em;
+    padding: 0.3em 0.6em;
     // white-space: nowrap;
     vertical-align: baseline;
     align-self: start;
@@ -29,10 +30,9 @@
 // BADGES SOLID
 
 .badge-default {
-
-    background-color: hsl(var(--clr-default-200));
-    color: hsl(var(--clr-default-700));
-    border:1px solid hsl(var(--clr-default-200));
+    background-color: hsl(var(--clr-default-250));
+    color: hsl(var(--clr-default-900));
+    border:1px solid hsl(var(--clr-default-250));
 
     i.i {   
         color: hsl(var(--clr-default-500));
@@ -80,7 +80,7 @@
     }
 }
 
-// BADGES OTLINE
+// BADGES OUTLINE
 
 .badge-outline-default {
     color: hsl(var(--clr-default-800));
@@ -136,7 +136,6 @@
 .badge-circle {
     aspect-ratio: 1/1;
     padding: 0.2em;
-
 }
 
 /* ------------------------- */
@@ -156,4 +155,3 @@
     height: 1.25rem;
     font-weight: 600;
 }
-

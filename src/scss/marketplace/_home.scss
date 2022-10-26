@@ -1,20 +1,40 @@
 .hero-section {
    background-color: hsla(220, 64%, 10%, 1);
-//    background-color: radial-gradient(#e66465, #9198e5);
    background-image: 
     url(../../../public/icons.png), 
     radial-gradient(circle at top center, hsla(219, 18%, 28%, 1) 20%,  hsla(220, 64%, 10%, 1) 40%);
    background-size: 80%, 100%;
-   background-position: right bottom, left top;
+   background-position: center, left top;
    background-repeat: no-repeat;
-   height: 268px;
-   
+   min-height: 268px;
 }
 
 .hero-section-slogan {
     background-image: url(../../../public/hero-lines.png);
     background-position: center bottom;
     background-repeat: no-repeat;
+    background-size: 70%;
+    padding-bottom: 1.5rem;
+
+    @include mq(xs) {
+        background-size: auto;
+    }
+
+    h2 {        
+        font-size: 2.5rem;
+
+        @include mq(s) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.hero-section-benefits {
+    gap: 0.25rem;
+
+    @include mq(s) {
+        gap: 2.5rem;
+    }
 }
 
 .hero-section-benefit {
@@ -24,8 +44,6 @@
     background-position: left center;
     padding-left: 1.5rem;
 }
-
-
 
 .home-step {
 
@@ -55,34 +73,42 @@
 }
 
 .home-filters {
+    display: none;
     background-color: hsl(var(--clr-default-300), 32%);
+
+    @include mq(s) {
+        display: flex;
+    }
 }
 
-
 .home-card {
+
     background-color: hsl(var(--clr-default-50));
+    padding: 2rem 1.5rem;
+
     &:hover {
         background-color: hsl(var(--clr-default-0));
         box-shadow: var(--bs-2xl)
+    }
+
+    @include mq(m) {
+        padding: 2rem;
     }
 }
 
 .home-card-grid {
 
-    display: grid;
+    gap: 1rem;
+    flex-direction: column;
 
-    @include mq(m) {
-        display: flex;
-    }
-
-    .home-card-description {
-        @include mq(m) {
-            margin-left: 1rem;
-        }
+    @include mq(s) {
+        flex-direction: row;
+        gap: 1.5rem;
     }
 
     .play-video {
         z-index: 2;
+        right: -0.75rem;
     }
 
     .home-divider {

@@ -1,11 +1,11 @@
 @import 'icon-variables';
 
-@font-face { 
+@font-face {
   font-family: '#{$icomoon-font-family}';
   src:
-    url('../fonts/#{$icomoon-font-family}.ttf?e6xk1k') format('truetype'),
-    url('../fonts/#{$icomoon-font-family}.woff?e6xk1k') format('woff'),
-    url('../fonts/#{$icomoon-font-family}.svg?e6xk1k##{$icomoon-font-family}') format('svg');
+    url('../fonts/#{$icomoon-font-family}.ttf?rp5had') format('truetype'),
+    url('../fonts/#{$icomoon-font-family}.woff?rp5had') format('woff'),
+    url('../fonts/#{$icomoon-font-family}.svg?rp5had##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,26 @@ i {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-social-slack {
+  &:before {
+    content: $icon-social-slack; 
+  }
+}
+.icon-social-flickr {
+  &:before {
+    content: $icon-social-flickr; 
+  }
+}
+.icon-social-signal {
+  &:before {
+    content: $icon-social-signal; 
+  }
+}
+.icon-social-whatsapp {
+  &:before {
+    content: $icon-social-whatsapp; 
+  }
+}
 .icon-social-adobe-portfolio {
   &:before {
     content: $icon-social-adobe-portfolio; 
@@ -59,11 +79,6 @@ i {
 .icon-social-figma {
   &:before {
     content: $icon-social-figma; 
-  }
-}
-.icon-social-flickr {
-  &:before {
-    content: $icon-social-flickr; 
   }
 }
 .icon-social-github {
@@ -111,19 +126,9 @@ i {
     content: $icon-social-pinterest; 
   }
 }
-.icon-social-signal {
-  &:before {
-    content: $icon-social-signal; 
-  }
-}
 .icon-social-skype {
   &:before {
     content: $icon-social-skype; 
-  }
-}
-.icon-social-slack {
-  &:before {
-    content: $icon-social-slack; 
   }
 }
 .icon-social-telegram {
@@ -161,19 +166,9 @@ i {
     content: $icon-social-vk; 
   }
 }
-.icon-social-whatsapp {
-  &:before {
-    content: $icon-social-whatsapp; 
-  }
-}
 .icon-social-youtube {
   &:before {
     content: $icon-social-youtube; 
-  }
-}
-.icon-vico-archive {
-  &:before {
-    content: $icon-vico-archive; 
   }
 }
 .icon-vico-bin {
@@ -316,6 +311,16 @@ i {
     content: $icon-vico-question-circle; 
   }
 }
+.icon-vico-rating-full {
+  &:before {
+    content: $icon-vico-rating-full; 
+  }
+}
+.icon-vico-rating-half {
+  &:before {
+    content: $icon-vico-rating-half; 
+  }
+}
 .icon-vico-report-problem {
   &:before {
     content: $icon-vico-report-problem; 
@@ -334,6 +339,11 @@ i {
 .icon-vico-session-2 {
   &:before {
     content: $icon-vico-session-2; 
+  }
+}
+.icon-vico-session-3 {
+  &:before {
+    content: $icon-vico-session-3; 
   }
 }
 .icon-vico-session {
@@ -366,14 +376,19 @@ i {
     content: $icon-vico-warning; 
   }
 }
-.icon-layers {
+.icon-vico-archive {
   &:before {
-    content: $icon-layers; 
+    content: $icon-vico-archive; 
   }
 }
-.icon-layers1 {
+.icon-layers-2 {
   &:before {
-    content: $icon-layers1; 
+    content: $icon-layers-2; 
+  }
+}
+.icon-layers-3 {
+  &:before {
+    content: $icon-layers-3; 
   }
 }
 .icon-activity {

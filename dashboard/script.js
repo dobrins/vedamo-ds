@@ -53,13 +53,10 @@ toggleSidebar.addEventListener("click", e => {
     onlyVLogo.classList.toggle('hidden');
 })
 
-
 document.addEventListener("click", e => {
     const isDropDownButton = e.target.matches("[data-dropdown-button]");
 
     if(!isDropDownButton && e.target.closest("data-dropdown") != null) return;
-
-    
 
     let currentDropdown;
     if(isDropDownButton) {
@@ -169,17 +166,18 @@ function openModal(modal) {
   if (modal == null) return
   modal.classList.add('active')
   overlay.classList.add('active')
+ 
 }
 
 function closeModal(modal) {
   if (modal == null) return
   modal.classList.remove('active')
   overlay.classList.remove('active')
+
 }
 
 
 // HEIGHT ON MOBILE BROWSER
-
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;

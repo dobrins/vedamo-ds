@@ -1,0 +1,208 @@
+// MARKETPLACE CUSTOM STYLES
+
+
+
+:root {
+    --warning-mp:  50, 97%, 55%;
+    --dark-purple-mp:  260, 100%, 13%;
+    --light-green-mp: 72, 100%, 56%;
+    
+    --bg-mp-gradient : linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
+    --bg-mp-gradient-dark :  linear-gradient(90.62deg, hsla(72, 89%, 49%, 1) -2.44%, hsla(155, 94%, 45%, 1) 70.86%);
+
+    --star-size: 1.25rem;
+    --star-color: hsl(var(--clr-default-300));
+    --star-background: hsl(var(--clr-warning-400));
+}
+
+// Colors
+/* ------------------------------       */
+/* Background, text and border color classes    */
+/* ------------------------------       */
+
+// Warning
+
+.bg-warning-mp {
+    background-color: hsl( var(--warning-mp) );
+}
+
+.txt-warning-mp {
+    color: hsl( var(--warning-mp) );
+}
+
+.border-warning-mp {
+    border-color: hsl( var(--warning-mp) );
+}
+
+// Purple
+
+.bg-dark-purple-mp {
+    background-color: hsl( var(--dark-purple-mp) );
+}
+
+.txt-dark-purple-mp {
+    color: hsl( var(--dark-purple-mp) );
+}
+
+.border-dark-purple-mp {
+    border-color: hsl( var(--dark-purple-mp) );
+}
+
+// Light Green
+
+.bg-light-green-mp {
+    background-color: hsl( var(--light-green-mp) );
+}
+
+.txt-light-green-mp {
+    color: hsl( var(--light-green-mp) );
+}
+
+.border-light-green-mp {
+    border-color: hsl( var(--light-green-mp) );
+}
+
+
+// Gradient
+
+.txt-mp-gradient {
+    background: var(--bg-mp-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-mp-gradient {
+    background: var( --bg-mp-gradient);
+    box-shadow: none;
+    border: none
+}
+
+.txt-mp-gradient-dark {
+    background: var(--bg-mp-gradient-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-mp-gradient-dark {
+    background: var( --bg-mp-gradient-dark);
+    box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
+    border: none
+}
+
+// STAR RATING
+
+.starRating {
+    --percent: calc(var(--rating) / 5 * 100%);
+    font-size: var(--star-size);
+    display: inline-block;
+    line-height: 1;
+
+    &::before {
+        content: '★★★★★';
+        background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}  
+
+
+.avatar-border {
+    border: .25rem solid hsl(var(--clr-default-0));
+}
+
+// FILTER STEPS
+
+.filter-steps {
+
+}
+
+.filter-steps-numbers {
+    text-align: center;
+
+    @include mq(s) {
+        text-align: initial;
+    }
+
+}
+
+.filter-step {
+    width: 1rem;
+    height: 0.25rem;
+    display: inline-block;
+}
+
+// -----------------------
+
+.heading-underline {
+    background-image: url(../../../public/hero-lines.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    padding-bottom: 1.25rem;
+}
+
+// REGISTER STEPS
+
+.registerStep {
+
+    padding-right: .75rem;
+
+    .registerStepNumber {
+        border-style: dashed;
+        border-color: hsl(var(--clr-default-400));
+        width: 1.75rem; 
+        height: 1.75rem;
+    }
+    
+    .registerStepTitle {
+        color: hsl( var(--dark-purple-mp) );
+    }
+
+    &.passed {
+        
+        .registerStepNumber {
+            background-color: hsl( var(--light-green-mp) );
+            border-color:hsl( var(--light-green-mp) );
+            border-style:solid;
+
+            &:after {
+                font-family: '#{$icomoon-font-family}' !important;
+                content:  "\e96a";
+                color: hsl(var(--clr-default-900));
+            }
+
+            span {
+                display: none;
+            }
+        }
+        
+        .registerStepTitle {
+            color: hsl( var(--dark-purple-mp) );
+            font-weight: 600;
+        }
+    }
+
+    &.active {
+
+        background-color: hsl(var(--clr-main-50));
+        border: 1px solid hsl(var(--clr-main-100));
+        border-radius: 0.5rem;
+        position: relative;
+        
+        
+
+        .registerStepNumber {
+            color:hsl(var(--clr-default-0));
+            background-color: hsl( var(--dark-purple-mp) );
+            border-color:hsl( var(--dark-purple-mp) );
+            border-style:solid;
+        }
+
+        .registerStepTitle {
+            color: hsl( var(--clr-default-900) );
+            font-weight: 600;
+        }
+
+    }
+
+}

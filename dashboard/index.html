@@ -8,7 +8,12 @@
     <link rel="stylesheet" type="text/css"  href="../src/css/main.css" />
     <link rel="stylesheet" type="text/css"  href="../src/css/dashboard/dashboard.css" />
     <script src="script.js" defer></script>
+    <script src="components/filters.js"></script>
+
     <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <script src="components/stats.js"></script>
+
     <title>Marketplace Dashboard</title>
 </head>
 
@@ -194,13 +199,17 @@
                             <i class="i icon-chevron-left"></i>
                         </button>
                         <a href="#" class="btn btn-tertiary">My Availability</a>
+                        <a href="#" class="btn btn-ghost">Browse Marketplace</a>
                     </div>
                     
-                    <div class="flex">
+                    <div class="flex"> 
                         
                         <a href="#" class="btn btn-ghost btn-circle btn-icon-dashboard-header">
                             <i class="i icon-mail"></i>
-                            <div class="badge-bubble bg-main-500 top-0 end-0">19</div>
+                            <span class="position-absolute top-0 end-0 notification-sign badge-bubble bg-warning-400 ">
+                                
+                            </span>
+                        
                         </a>
 
                         
@@ -259,86 +268,7 @@
             STATISTICS 
             -->
            
-            <div class="container bg-default-0 pb-4">
-                <div class="grid-container">
-                    <div class="col-m-6">
-                        <p>
-                            <i class="i icon-bar-chart-2 mr-1"></i> 
-                            <span class="txt-semibold">Stats for Aug'22</span>
-                        </p>
-                        <div class="dashboard-stats flex mt-4">
-                            <div class="flex flex-column gap-1 flex-center">
-                                <div>
-                                    <i class="i icon-coins txt-main-400"></i>
-                                    <span class="fz-display-xs txt-bold">$1,379</span>
-                                </div>
-                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">income</span>
-                            </div>
-                            <div class="flex flex-column gap-1 flex-center">
-                                <div>
-                                    <i class="i icon-calendar txt-info-400"></i>
-                                    <span class="fz-display-xs txt-bold">51</span>
-                                </div>
-                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">completed</span>
-                            </div>
-                            <div class="flex flex-column gap-1 flex-center">
-                                <div>
-                                    <i class="i icon-star txt-warning-400"></i>
-                                    <span class="fz-display-xs txt-bold">4.7</span>
-                                </div>
-                                <span class="txt-default-450 fz-text-xs txt-uppercase txt-semibold">rating</span>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="col-m-6">
-                        <div class="flex">
-                            
-                            <div class="dashboard-card flex-1 bg-info-100 br-2 pv-4 position-relative">
-                                
-                                <div class="flex flex-center-h">
-                                    <div class="dashboard-card-count bg-info-400 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
-                                </div>
-                                
-                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
-                                    Sessions for approval
-                                </a>
-                                <i class="i icon-arrow-up-right txt-info-400 fz-display-xs dashboard-card-icon"></i>
-                            
-                            </div>
-
-                            <div class="dashboard-card flex-1 bg-main-50 br-2 pv-4 position-relative">
-                                
-                                <div class="flex flex-center-h">
-                                    <div class="dashboard-card-count bg-main-500 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
-                                </div>
-                                
-                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
-                                    New messages
-                                </a>
-                                <i class="i icon-arrow-up-right txt-main-500 fz-display-xs dashboard-card-icon"></i>
-                            
-                            </div>
-
-                            <div class="dashboard-card flex-1 bg-warning-100 br-2 pv-4 position-relative">
-                                
-                                <div class="flex flex-center-h">
-                                    <div class="dashboard-card-count bg-warning-400 txt-default-0 txt-bold br-12 flex-center fz-text-l flex flex-center">11</div>
-                                </div>
-                                
-                                <a href="#" class="txt-medium stretched-link txt-decoration-none block txt-center mt-2">
-                                    New reviews
-                                </a>
-                                <i class="i icon-arrow-up-right txt-warning-400 fz-display-xs dashboard-card-icon"></i>
-                            
-                            </div>
-
-                        </div>
-                       
-                    </div>
-                </div>
-            </div>
+            <stats-component></stats-component>
 
             <!-- 
             ALERT 
@@ -356,7 +286,7 @@
                                             <span class="badge">11:00 - 12:00</span>
                                             <span class="badge badge-info">Demo</span>
                                         </div>
-                                        <span class="txt-medium flex-1 dashboard-alert-title">Session with Sasha Grey</span>
+                                        <span class="txt-medium flex-1 dashboard-alert-title">Session with John Smith</span>
                                     </div>
                                 
                               
@@ -382,7 +312,7 @@
                 
                 <div class="flex flex-space-between">
                     <p class="fz-display-xs txt-semibold">Sessions</p>
-                    <button type="button" class="btn btn-tertiary btn-s"><i class="i icon-settings"></i> Settings</button>
+                    <button type="button" class="btn btn-tertiary btn-s"><i class="i icon-settings"></i> Session Settings</button>
                 </div>
             
                 <!-- 
@@ -402,8 +332,8 @@
                         <li class="tabs-item">
                             <a href="#" class="tabs-link" id="tab-content-3">
                                 <i class="i icon-check-square"></i> 
-                                <span>Pending</span>
-                                <div class=" badge-bubble menu-notification bg-info-400">19</div>
+                                <span>For Approval</span>
+                                <div class=" badge-bubble menu-notification bg-warning-400 notification-sign"></div>
                             </a>
                         </li>
                         <li class="tabs-item">
@@ -458,7 +388,7 @@
                                     <button type="button" class="btn btn-tertiary">Month</button>
                                 </div>
                             </div>
-                        </div>                    
+                        </div>
                     </div>
                     <div class="bg-default-0 br-2 mt-4">
                         <div class="grid-container">
@@ -510,7 +440,7 @@
                                         </div>
                                     </div>
                                     <div class="col-l-6 col-sm-5 overflow-hidden fz-text-s">
-                                        <span class="txt-medium">Sasha Grey</span>
+                                        <span class="txt-medium">John Smith</span>
                                         <div class="flex mt-2 gap-3 position-relative">
                                             <i class="i icon-vico-chat txt-default-400 fz-text-m"></i>
                                             <div class="txt-regular txt-default-600 position-relative txt-truncate flex-1">
@@ -561,7 +491,7 @@
                                         </div>
                                     </div>
                                     <div class="col-l-6 col-sm-5 overflow-hidden fz-text-s">
-                                        <span class="txt-medium">Sasha Grey</span>
+                                        <span class="txt-medium">John Smith</span>
                                         <div class="flex mt-2 gap-3 position-relative">
                                             <i class="i icon-vico-chat txt-default-400 fz-text-m"></i>
                                             <div class="txt-regular txt-default-600 position-relative txt-truncate flex-1">

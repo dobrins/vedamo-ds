@@ -1,85 +1,3 @@
-:root {
-  --bg-mp-gradient: linear-gradient(90.62deg, #D2FF1D -2.44%, #0EF393 70.86%);
-  --bg-mp-gradient-dark: linear-gradient(90.62deg, #c0ec0e -2.44%, #07df85 70.86%); }
-
-.txt-mp-gradient {
-  background: var(--bg-mp-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.bg-mp-gradient {
-  background: var(--bg-mp-gradient);
-  box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
-  border: none; }
-
-.txt-mp-gradient-dark {
-  background: var(--bg-mp-gradient-dark);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-
-.bg-mp-gradient-dark {
-  background: var(--bg-mp-gradient-dark);
-  box-shadow: 0px 16px 24px -12px rgba(32, 240, 179, 0.48);
-  border: none; }
-
-.teacher-card {
-  min-width: 320px;
-  aspect-ratio: 1/0.6875;
-  position: relative; }
-
-.teacher-card-name {
-  text-decoration: none;
-  bottom: -0.75rem;
-  left: 1.75rem;
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-  left: 1.5rem; }
-
-a.teacher-card-name-link {
-  width: 0;
-  height: 0;
-  visibility: hidden; }
-  a.teacher-card-name-link:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    visibility: visible; }
-
-.slide-track-bottomGradient a.teacher-card-name-link::after {
-  bottom: -30px;
-  background: linear-gradient(360deg, white 0%, transparent 100%); }
-
-.avatar-border {
-  border: 0.25rem solid hsl(var(--clr-default-0)); }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0); }
-  100% {
-    transform: translateX(calc(-360px * 5)); } }
-@keyframes scrollRight {
-  0% {
-    transform: translateX(calc(-360px * 5)); }
-  100% {
-    transform: translateX(0); } }
-.slider {
-  margin: auto;
-  overflow: hidden;
-  position: relative; }
-  .slider .slide-track {
-    animation: scroll 320s linear infinite;
-    display: flex;
-    width: calc(360px * 10); }
-    .slider .slide-track.slide-track-right {
-      animation: scrollRight 320s linear infinite; }
-  .slider .slide {
-    height: 260px;
-    width: 360px; }
-
 .header {
   position: sticky;
   top: 0;
@@ -185,7 +103,6 @@ a.teacher-card-name-link {
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-  border-top: 1px solid hsl(var(--clr-default-300));
   max-height: 100vh; }
 
 .dropdown.active > .dropdown-button + .dropdown-menu,
@@ -244,12 +161,7 @@ a.teacher-card-name-link {
 .header-dropdown-menu {
   height: calc(100vh - var(--header-height)); }
 
-.home-list .list-item {
-  border-top: 1px solid hsl(var(--clr-default-250));
-  border-bottom: 1px solid hsl(var(--clr-default-250)); }
-.home-list > .list-item + .list-item {
-  border-top: none; }
-.home-list .list-link {
+.list-link {
   height: 3.5rem;
   display: flex;
   align-items: center; }
@@ -258,14 +170,30 @@ a.teacher-card-name-link {
   background-color: #09142a;
   background-image: url(../../../public/icons.png), radial-gradient(circle at top center, #3b4454 20%, #09142a 40%);
   background-size: 80%, 100%;
-  background-position: right bottom, left top;
+  background-position: center, left top;
   background-repeat: no-repeat;
-  height: 268px; }
+  min-height: 268px; }
 
 .hero-section-slogan {
   background-image: url(../../../public/hero-lines.png);
   background-position: center bottom;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  background-size: 70%;
+  padding-bottom: 1.5rem; }
+  @media (min-width: 40rem) {
+    .hero-section-slogan {
+      background-size: auto; } }
+  .hero-section-slogan h2 {
+    font-size: 2.5rem; }
+    @media (min-width: 48rem) {
+      .hero-section-slogan h2 {
+        font-size: 3rem; } }
+
+.hero-section-benefits {
+  gap: 0.25rem; }
+  @media (min-width: 48rem) {
+    .hero-section-benefits {
+      gap: 2.5rem; } }
 
 .hero-section-benefit {
   background-image: url(../../../public/hero-check.png);
@@ -293,24 +221,32 @@ a.teacher-card-name-link {
     z-index: 1; }
 
 .home-filters {
+  display: none;
   background-color: hsl(var(--clr-default-300), 32%); }
+  @media (min-width: 48rem) {
+    .home-filters {
+      display: flex; } }
 
 .home-card {
-  background-color: hsl(var(--clr-default-50)); }
+  background-color: hsl(var(--clr-default-50));
+  padding: 2rem 1.5rem; }
   .home-card:hover {
     background-color: hsl(var(--clr-default-0));
     box-shadow: var(--bs-2xl); }
+  @media (min-width: 64rem) {
+    .home-card {
+      padding: 2rem; } }
 
 .home-card-grid {
-  display: grid; }
-  @media (min-width: 64rem) {
+  gap: 1rem;
+  flex-direction: column; }
+  @media (min-width: 48rem) {
     .home-card-grid {
-      display: flex; } }
-  @media (min-width: 64rem) {
-    .home-card-grid .home-card-description {
-      margin-left: 1rem; } }
+      flex-direction: row;
+      gap: 1.5rem; } }
   .home-card-grid .play-video {
-    z-index: 2; }
+    z-index: 2;
+    right: -0.75rem; }
   .home-card-grid .home-divider {
     height: 5rem;
     align-self: center; }

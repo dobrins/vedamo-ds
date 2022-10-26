@@ -10,14 +10,20 @@ $clrSecondaries: (100, 200, 300, 400, 600, 900);
 @each $clrVarMain in $clrVarMains {
     .bg-main-#{$clrVarMain} { background-color: hsl(var(--clr-main-#{$clrVarMain})); }
     .txt-main-#{$clrVarMain} { color: hsl(var(--clr-main-#{$clrVarMain})); }
-    .border-main-#{$clrVarMain} {box-shadow: inset 0 0 0 1px hsl(var(--clr-main-#{$clrVarMain})); }
+    .border-main-#{$clrVarMain} {
+        // box-shadow: inset 0 0 0 1px hsl(var(--clr-main-#{$clrVarMain})); 
+        border-color: hsl(var(--clr-main-#{$clrVarMain})) !important;
+    }
 }
 
 /* Default Color */
 @each $clrVarDefault in $clrVarDefaults {
     .bg-default-#{$clrVarDefault} { background-color: hsl(var(--clr-default-#{$clrVarDefault})); }
     .txt-default-#{$clrVarDefault} { color: hsl(var(--clr-default-#{$clrVarDefault})); } 
-    .border-default-#{$clrVarDefault} {box-shadow: inset 0 0 0 1px hsl(var(--clr-default-#{$clrVarDefault})); }
+    .border-default-#{$clrVarDefault} {
+        // box-shadow: inset 0 0 0 1px hsl(var(--clr-default-#{$clrVarDefault})); 
+        border-color: hsl(var(--clr-default-#{$clrVarDefault})) !important;
+    }
 }
 
 @each $clrSecondary in $clrSecondaries {
@@ -31,13 +37,24 @@ $clrSecondaries: (100, 200, 300, 400, 600, 900);
     .txt-info-#{$clrSecondary} { color: hsl(var(--clr-info-#{$clrSecondary})); } 
     .txt-success-#{$clrSecondary} { color: hsl(var(--clr-success-#{$clrSecondary})); } 
 
-    .border-warning-#{$clrSecondary} {box-shadow: inset 0 0 0 1px hsl(var(--clr-warning-#{$clrSecondary})); }
+    .border-warning-#{$clrSecondary} {
+        border-color: hsl(var(--clr-warning-#{$clrSecondary})) !important; 
+    }
+    .border-error-#{$clrSecondary} {
+        border-color: hsl(var(--clr-error-#{$clrSecondary})) !important; 
+    }
+    .border-info-#{$clrSecondary} {
+        border-color: hsl(var(--clr-info-#{$clrSecondary})) !important; 
+    }
+    .border-success-#{$clrSecondary} {
+        border-color: hsl(var(--clr-success-#{$clrSecondary})) !important; 
+    }
 }
 
 .bg-accent-1 { background-color: hsl(var(--clr-accent-1)); }
 .txt-accent-1 { color: hsl(var(--clr-accent-1)); } 
-.border-accent-1 {border: 1px solid hsl(var(--clr-accent-1)); }
+.border-accent-1 {border-color: hsl(var(--clr-accent-1)) !important; }
 
 .bg-accent-2 { background-color: hsl(var(--clr-accent-2)); }
 .txt-accent-2 { color: hsl(var(--clr-accent-2)); } 
-.border-accent-2 {border: 1px solid hsl(var(--clr-accent-2)); }
+.border-accent-2 {border-color: hsl(var(--clr-accent-2)) !important; }

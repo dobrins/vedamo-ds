@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="../src/css/main.css" />
+    <link rel="stylesheet" type="text/css"  href="../src/css/marketplace/main.css" />
+    <link rel="icon" type="image/x-icon" href="../public/favicon.ico">
+
+    <script src="script.js" defer></script>
+    <script src="components/register/header.js"></script>
+    <script src="components/register/footer.js"></script>
+    <script src="components/register/step-1.js"></script>
+    <script src="components/register/step-2.js"></script>
+    <script src="components/register/step-3.js"></script>
+    <script src="components/register/step-4.js"></script>
+    <script src="components/register/step-5.js"></script>
+
+    <title>Marketplace</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <header-register-component></header-register-component>
+
+    <!-- Mobile Nav -->
+    <mobile-navigation-component></mobile-navigation-component>
+    
+    <div class="bg-default-50 pv-2 flex flex-center-h bt border-default-200">
+        
+        <div class="registerStep passed inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>1</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Personal Information</span>
+        </div>
+        <div class="registerStep active inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>2</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Education</span>
+        </div>
+        <div class="registerStep inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>3</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Teaching</span>
+        </div>
+
+        <div class="registerStep inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 fz-text-s txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>4</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Languages</span>
+        </div>
+        <div class="registerStep inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>5</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Availability</span>
+        </div>
+        <div class="registerStep inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>6</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Offer</span>
+        </div>
+        <div class="registerStep inline-flex p-1 flex-center-v">
+            <span class="registerStepNumber bg-default-100 txt-default-450 txt-bold line-height-1 rounded-circle flex-center flex b"><span>7</span></span>
+            <span class="registerStepTitle flex-1 fz-text-xs txt-default-550">Public Profile</span>
+        </div>
+    </div>
+
+    <div class="bg-default-150 pt-12 flex-1">
+        <div class="container-m">
+            <div class="grid-container">
+                <div class="col-l-4 col-l-offset-5 col-m-6 col-m-offset-4 col-sm-6 col-sm-offset-4 ">
+                    <!-- <step-1-component></step-1-component> -->
+                    <!-- <step-2-component></step-2-component> -->
+                    <!-- <step-3-component></step-3-component> -->
+                    <!-- <step-4-component></step-4-component> -->
+                    <step-5-component></step-5-component>
+                    <!-- <step-6-component></step-6-component> -->
+                    <!-- <step-7-component></step-7-component> -->
+                    <!-- <div class="grid-container mt-9">
+                        <div class="col-sm-6 col-sm-offset-4">
+                            <button class="btn bg-mp-gradient full-width">Next</button>
+                        </div>
+                    </div> -->
+                        
+                    </div>
+             
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer component -->
+    <footer-register-component></footer-register-component>
+
+    <div class="backdropMenu1 blur-s"></div>
+    
+</body>
+</html>
