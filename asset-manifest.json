@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/vedamo-ds/static/css/main.ef93cd98.css",
+    "main.css": "/vedamo-ds/static/css/main.496a8684.css",
     "main.js": "/vedamo-ds/static/js/main.9ac7b9a8.js",
-    "static/media/VICO.svg?e6xk1k": "/vedamo-ds/static/media/VICO.6d574feefee39b193cb0.svg",
-    "static/media/VICO.woff?e6xk1k": "/vedamo-ds/static/media/VICO.3b6a0b0c96ac662ac854.woff",
-    "static/media/VICO.ttf?e6xk1k": "/vedamo-ds/static/media/VICO.1943ad7fa655a7d78e16.ttf",
+    "static/media/VICO.svg?rp5had": "/vedamo-ds/static/media/VICO.d7a47b7e354aec0fb118.svg",
+    "static/media/VICO.woff?rp5had": "/vedamo-ds/static/media/VICO.1f32d599984911b6e026.woff",
+    "static/media/VICO.ttf?rp5had": "/vedamo-ds/static/media/VICO.b325a7acea2e27983c2d.ttf",
     "static/media/logo.svg": "/vedamo-ds/static/media/logo.25df13bc2cb02843404dbcc95bc962f3.svg",
     "index.html": "/vedamo-ds/index.html",
-    "main.ef93cd98.css.map": "/vedamo-ds/static/css/main.ef93cd98.css.map",
+    "static/media/search-magnify.svg": "/vedamo-ds/static/media/search-magnify.5ad3952f60409638c463.svg",
+    "static/media/chevron-down.svg": "/vedamo-ds/static/media/chevron-down.a87f6de4ec23fc2f89d2.svg",
+    "main.496a8684.css.map": "/vedamo-ds/static/css/main.496a8684.css.map",
     "main.9ac7b9a8.js.map": "/vedamo-ds/static/js/main.9ac7b9a8.js.map"
   },
   "entrypoints": [
-    "static/css/main.ef93cd98.css",
+    "static/css/main.496a8684.css",
     "static/js/main.9ac7b9a8.js"
   ]
 }
